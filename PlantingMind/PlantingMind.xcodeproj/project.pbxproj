@@ -14,6 +14,8 @@
 		7B11F8392B4549E000346A41 /* PlantingMindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8382B4549E000346A41 /* PlantingMindTests.swift */; };
 		7B11F8432B4549E000346A41 /* PlantingMindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8422B4549E000346A41 /* PlantingMindUITests.swift */; };
 		7B11F8452B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */; };
+		7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */; };
+		7BDA3CD92B58F6E0006D74FB /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3CD82B58F6E0006D74FB /* WeekdayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		7B11F83E2B4549E000346A41 /* PlantingMindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantingMindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B11F8422B4549E000346A41 /* PlantingMindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests.swift; sourceTree = "<group>"; };
 		7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		7BDA3CD82B58F6E0006D74FB /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
+				7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */,
+				7BDA3CD82B58F6E0006D74FB /* WeekdayView.swift */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
 				7B11F82D2B4549E000346A41 /* Preview Content */,
 			);
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */,
+				7BDA3CD92B58F6E0006D74FB /* WeekdayView.swift in Sources */,
+				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,9 +445,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,9 +477,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
