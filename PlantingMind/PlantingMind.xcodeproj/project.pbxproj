@@ -14,6 +14,8 @@
 		7B11F8392B4549E000346A41 /* PlantingMindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8382B4549E000346A41 /* PlantingMindTests.swift */; };
 		7B11F8432B4549E000346A41 /* PlantingMindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8422B4549E000346A41 /* PlantingMindUITests.swift */; };
 		7B11F8452B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */; };
+		7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */; };
+		7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */; };
 		7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */; };
 		7BDA3CD92B58F6E0006D74FB /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3CD82B58F6E0006D74FB /* WeekdayView.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		7B11F83E2B4549E000346A41 /* PlantingMindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantingMindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B11F8422B4549E000346A41 /* PlantingMindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests.swift; sourceTree = "<group>"; };
 		7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
+		7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
 		7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		7BDA3CD82B58F6E0006D74FB /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,8 +106,10 @@
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
 				7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */,
 				7BDA3CD82B58F6E0006D74FB /* WeekdayView.swift */,
-				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
+				7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */,
+				7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */,
 				7B11F82D2B4549E000346A41 /* Preview Content */,
+				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
 			);
 			path = PlantingMind;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 			files = (
 				7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */,
 				7BDA3CD92B58F6E0006D74FB /* WeekdayView.swift in Sources */,
+				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
+				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
 			);

@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct CalendarHeaderView: View {
+    @Binding var currentDate: Date
+    
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy. MM"
+        return formatter
+      }()
+    
     var body: some View {
         HStack(spacing: 15, content: {
             Button(action: {
@@ -19,7 +27,7 @@ struct CalendarHeaderView: View {
             })
             
             //TODO: 날짜 설정 로직 추가
-            Text("2024. 01")
+            Text(currentDate, formatter: dateFormatter)
                 .font(.title)
                 .fontWeight(.bold)
             
@@ -37,7 +45,7 @@ struct CalendarHeaderView: View {
 
 struct CalendarHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarHeaderView()
+        CalendarHeaderView(currentDate: .constant(Date()))
     }
 }
 

@@ -16,12 +16,14 @@ struct WeekdayView: View {
                 ForEach(Self.weekdaySymbols, id: \.self) { symbol in
                     Text(symbol)
                         .frame(maxWidth: .infinity)
+                        .fontWeight(.black)
                 }
-                .padding(.bottom, 10)
+                .padding(.bottom, 6)
             }
             
             Divider()
         }
+        .padding(.bottom, 10)
     }
 }
 
