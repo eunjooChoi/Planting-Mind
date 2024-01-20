@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentDate: Date = Date()
+    
     var body: some View {
         VStack {
-            CalendarHeaderView()
+            CalendarHeaderView(currentDate: $currentDate)
             WeekdayView()
-            
+            CalendarGridView(currentDate: $currentDate)
             Spacer()
         }
         .padding()
@@ -22,6 +24,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+      ContentView()
   }
 }
