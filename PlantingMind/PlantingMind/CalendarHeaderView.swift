@@ -14,25 +14,24 @@ struct CalendarHeaderView: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy. MM"
         return formatter
-      }()
+    }()
     
     var body: some View {
         HStack(spacing: 15, content: {
             Button(action: {
-                //TODO: 이전달로 이동
+                changeMonth(value: -1)
             }, label: {
                 Image(systemName: "chevron.left")
                     .font(.title)
                     .foregroundStyle(.black)
             })
             
-            //TODO: 날짜 설정 로직 추가
             Text(currentDate, formatter: dateFormatter)
                 .font(.title)
                 .fontWeight(.bold)
             
             Button(action: {
-                //TODO: 다음달로 이동
+                changeMonth(value: 1)
             }, label: {
                 Image(systemName: "chevron.right")
                     .font(.title)
@@ -40,6 +39,14 @@ struct CalendarHeaderView: View {
             })
         })
         .padding(.bottom, 25)
+    }
+    
+    func changeMonth(value: Int) {
+        guard let newMonth = Calendar.current.date(byAdding: .month, value: value, to: currentDate) else {
+            return
+        }
+        
+        currentDate = newMonth
     }
 }
 
