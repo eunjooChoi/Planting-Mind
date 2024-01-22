@@ -8,30 +8,31 @@
 import SwiftUI
 
 struct CalendarHeaderView: View {
-    @Binding var currentDate: Date
-    
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy. MM"
-        return formatter
-    }()
+    @EnvironmentObject var calendarViewModel: CalendarViewModel
     
     var body: some View {
+        VStack {
+            header
+            weekday
+        }
+    }
+    
+    var header: some View {
         HStack(spacing: 15, content: {
             Button(action: {
-                changeMonth(value: -1)
+                calendarViewModel.addingMonth(value: -1)
             }, label: {
                 Image(systemName: "chevron.left")
                     .font(.title)
                     .foregroundStyle(.black)
             })
             
-            Text(currentDate, formatter: dateFormatter)
+            Text(calendarViewModel.currentDate, formatter: calendarViewModel.dateFormatter)
                 .font(.title)
                 .fontWeight(.bold)
             
             Button(action: {
-                changeMonth(value: 1)
+                calendarViewModel.addingMonth(value: 1)
             }, label: {
                 Image(systemName: "chevron.right")
                     .font(.title)
@@ -41,18 +42,26 @@ struct CalendarHeaderView: View {
         .padding(.bottom, 25)
     }
     
-    func changeMonth(value: Int) {
-        guard let newMonth = Calendar.current.date(byAdding: .month, value: value, to: currentDate) else {
-            return
+    var weekday: some View {
+        VStack {
+            HStack {
+                ForEach(calendarViewModel.weekdaySymbols, id: \.self) { symbol in
+                    Text(symbol)
+                        .frame(maxWidth: .infinity)
+                        .fontWeight(.black)
+                }
+                .padding(.bottom, 6)
+            }
+            
+            Divider()
         }
-        
-        currentDate = newMonth
     }
 }
 
 struct CalendarHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarHeaderView(currentDate: .constant(Date()))
+        CalendarHeaderView()
+            .environmentObject(CalendarViewModel(today: Date()))
     }
 }
 

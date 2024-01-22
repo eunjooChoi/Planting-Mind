@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var currentDate: Date = Date()
-    
     var body: some View {
         VStack {
-            CalendarHeaderView(currentDate: $currentDate)
-            WeekdayView()
-            CalendarGridView(currentDate: $currentDate)
-            Spacer()
+            CalendarView(calendarViewModel: CalendarViewModel(today: Date()))
         }
         .padding()
     }
