@@ -24,7 +24,6 @@ struct CalendarHeaderView: View {
             }, label: {
                 Image(systemName: "chevron.left")
                     .font(.title)
-                    .foregroundStyle(.black)
             })
             
             Text(calendarViewModel.currentDate, formatter: calendarViewModel.dateFormatter)
@@ -36,9 +35,9 @@ struct CalendarHeaderView: View {
             }, label: {
                 Image(systemName: "chevron.right")
                     .font(.title)
-                    .foregroundStyle(.black)
             })
         })
+        .foregroundStyle(Color.Custom.general)
         .padding(.bottom, 25)
     }
     
@@ -49,11 +48,13 @@ struct CalendarHeaderView: View {
                     Text(symbol)
                         .frame(maxWidth: .infinity)
                         .fontWeight(.black)
+                        .foregroundStyle(Color.Custom.general)
                 }
                 .padding(.bottom, 6)
             }
             
             Divider()
+                .overlay(Color.Custom.line)
         }
     }
 }

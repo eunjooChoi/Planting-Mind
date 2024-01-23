@@ -17,8 +17,8 @@ struct DayCellView: View {
                 Text("\(calendarModel.day)")
                     .frame(width: 30, height: 30)
                     .fontWeight(.semibold)
-                    .background(calendarModel.isToday ? .black : .clear)
-                    .foregroundStyle(calendarModel.isToday ? .white : .black)
+                    .background(calendarModel.isToday ? Color.Custom.general : .clear)
+                    .foregroundStyle(calendarModel.isToday ? Color.Custom.point : Color.Custom.general)
                     .clipShape(Circle())
             }
             .frame(height: 50)
