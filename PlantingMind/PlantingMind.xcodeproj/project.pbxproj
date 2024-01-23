@@ -15,6 +15,7 @@
 		7B11F8452B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */; };
 		7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */; };
 		7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */; };
+		7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
 		7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */; };
 		7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F42B5E4CE100059068 /* CalendarView.swift */; };
 		7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F62B5E525900059068 /* CalendarModel.swift */; };
@@ -51,6 +52,7 @@
 		7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
+		7BABB0102B5F850200EEEEBB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		7BC300F42B5E4CE100059068 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7BC300F62B5E525900059068 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
 				7BC300F32B5E4C2100059068 /* Calender */,
+				7BABB0102B5F850200EEEEBB /* ColorExtension.swift */,
 				7B11F82D2B4549E000346A41 /* Preview Content */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
 			);
@@ -286,6 +289,7 @@
 				7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */,
 				7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */,
 				7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */,
+				7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */,
 				7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */,
 				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
 				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
