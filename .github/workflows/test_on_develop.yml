@@ -9,12 +9,12 @@ on:
 jobs:
   build:
     name: Build and Test default scheme using any available iPhone simulator
-    runs-on: macos-14
+    runs-on: macos-13
 
     steps:
       - uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '15.0.1'
+          xcode-version: '15.2'
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build and Test
