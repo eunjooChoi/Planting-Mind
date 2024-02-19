@@ -26,9 +26,8 @@ struct CalendarGridView: View {
     }
 }
 
-struct CalendarGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarGridView()
-            .environmentObject(CalendarViewModel(today: Date()))
-    }
+#Preview {
+    CalendarGridView()
+        .environmentObject(CalendarViewModel(today: Date()))
+
 }

@@ -59,10 +59,8 @@ struct CalendarHeaderView: View {
     }
 }
 
-struct CalendarHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarHeaderView()
-            .environmentObject(CalendarViewModel(today: Date()))
-    }
+#Preview {
+    CalendarHeaderView()
+        .environmentObject(CalendarViewModel(today: Date()))
 }
 

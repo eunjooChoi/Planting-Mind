@@ -20,8 +20,6 @@ struct CalendarView: View {
     }
 }
 
-struct CalendarView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarView(calendarViewModel: CalendarViewModel(today: Date()))
-    }
+#Preview {
+    CalendarView(calendarViewModel: CalendarViewModel(today: Date()))
 }

@@ -45,8 +45,6 @@ struct MoodRecordView: View {
     }
 }
 
-struct MoodRecordView_Previews: PreviewProvider {
-  static var previews: some View {
+#Preview {
       MoodRecordView()
-  }
 }
