@@ -29,8 +29,6 @@ struct DayCellView: View {
     }
 }
 
-struct DayCellView_Previews: PreviewProvider {
-  static var previews: some View {
-      DayCellView(calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: true))
-  }
+#Preview {
+    DayCellView(calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: true))
 }
