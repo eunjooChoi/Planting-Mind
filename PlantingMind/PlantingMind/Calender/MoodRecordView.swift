@@ -7,10 +7,19 @@
 
 import SwiftUI
 
+enum Mood: String, CaseIterable {
+    case nice
+    case good
+    case normal
+    case notBad
+    case bad
+}
+
 struct MoodRecordView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
     @State var text = ""
-    
+    @State var selectedMood: Mood = .normal
     
     var body: some View {
         NavigationStack() {
@@ -22,21 +31,23 @@ struct MoodRecordView: View {
                         .padding()
                     
                     HStack(spacing: 20) {
-                        Button(action: {}, label: {
-                            Image("nice", label: Text("nice"))
-                        })
-                        Button(action: {}, label: {
-                            Image("good", label: Text("good"))
-                        })
-                        Button(action: {}, label: {
-                            Image("normal", label: Text("normal"))
-                        })
-                        Button(action: {}, label: {
-                            Image("notBad", label: Text("not bad"))
-                        })
-                        Button(action: {}, label: {
-                            Image("bad", label: Text("bad"))
-                        })
+                        ForEach(Mood.allCases, id: \.self) {mood in
+                            Button(action: {
+                                selectedMood = mood
+                            }, label: {
+                                Image("\(mood.rawValue)", label: Text("\(mood.rawValue)"))
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .overlay {
+                                if selectedMood == mood {
+                                    let color: Color = colorScheme == .dark ? .yellow : .orange
+                                    Circle()
+                                        .stroke(color, lineWidth: 4)
+                                        .foregroundStyle(.clear)
+                                        .frame(width: 60, height: 60)
+                                }
+                            }
+                        }
                     }
                     
                     Spacer()
@@ -52,6 +63,11 @@ struct MoodRecordView: View {
                             .opacity(0.8)
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             .padding(.horizontal)
+                            .onChange(of: text) { _ in
+                                if text.count > 100 {
+                                    text.removeLast()
+                                }
+                            }
                         
                         if text.isEmpty {
                             VStack {
