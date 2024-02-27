@@ -25,6 +25,7 @@ struct DayCellView: View {
         .frame(height: 50)
         .sheet(isPresented: $showMoodRecordView) {
             MoodRecordView()
+                .interactiveDismissDisabled(true)
         }
     }
 }
