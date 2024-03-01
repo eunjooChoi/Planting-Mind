@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */; };
+		7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */; };
 		7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */; };
 		7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8292B4549DF00346A41 /* ContentView.swift */; };
 		7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodRecords.xcdatamodel; sourceTree = "<group>"; };
+		7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7B11F8242B4549DF00346A41 /* PlantingMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantingMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindApp.swift; sourceTree = "<group>"; };
 		7B11F8292B4549DF00346A41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B0A76CF2B906FCF00ADC039 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */,
+				7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		7B11F81B2B4549DF00346A41 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +123,7 @@
 		7B11F8262B4549DF00346A41 /* PlantingMind */ = {
 			isa = PBXGroup;
 			children = (
+				7B0A76CF2B906FCF00ADC039 /* CoreData */,
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
 				7BC300F32B5E4C2100059068 /* Calender */,
@@ -292,7 +306,9 @@
 				7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */,
 				7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */,
 				7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */,
+				7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */,
 				7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */,
+				7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */,
 				7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */,
 				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
 				7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */,
@@ -648,6 +664,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */,
+			);
+			currentVersion = 7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */;
+			path = MoodRecords.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B11F81C2B4549DF00346A41 /* Project object */;
 }
