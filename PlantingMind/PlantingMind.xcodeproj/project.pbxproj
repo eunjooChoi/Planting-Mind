@@ -100,6 +100,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		7B0A76D22B92DA3200ADC039 /* MoodRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7B661C372B6393880082F9DB /* MoodRecordView.swift */,
+			);
+			path = MoodRecord;
+			sourceTree = "<group>";
+		};
 		7B11F81B2B4549DF00346A41 = {
 			isa = PBXGroup;
 			children = (
@@ -123,11 +131,12 @@
 		7B11F8262B4549DF00346A41 /* PlantingMind */ = {
 			isa = PBXGroup;
 			children = (
-				7B0A76CF2B906FCF00ADC039 /* CoreData */,
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
-				7BC300F32B5E4C2100059068 /* Calender */,
 				7BABB0102B5F850200EEEEBB /* ColorExtension.swift */,
+				7BC300F32B5E4C2100059068 /* Calender */,
+				7B0A76D22B92DA3200ADC039 /* MoodRecord */,
+				7B0A76CF2B906FCF00ADC039 /* CoreData */,
 				7B11F82D2B4549E000346A41 /* Preview Content */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
 			);
@@ -168,7 +177,6 @@
 				7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */,
 				7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */,
 				7BC300F62B5E525900059068 /* CalendarModel.swift */,
-				7B661C372B6393880082F9DB /* MoodRecordView.swift */,
 			);
 			path = Calender;
 			sourceTree = "<group>";

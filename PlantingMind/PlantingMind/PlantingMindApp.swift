@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct PlantingMindApp: App {
-    @State private var coreDataStack = CoreDataStack.shared
+    @StateObject private var coreDataStack = CoreDataStack()
     
     var body: some Scene {
         WindowGroup {
