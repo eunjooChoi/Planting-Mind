@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */; };
 		7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */; };
+		7B0A77112B93196D00ADC039 /* MoodRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */; };
 		7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */; };
 		7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8292B4549DF00346A41 /* ContentView.swift */; };
 		7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
@@ -18,12 +19,16 @@
 		7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */; };
 		7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */; };
 		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
+		7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
+		7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */; };
 		7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
 		7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */; };
 		7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F42B5E4CE100059068 /* CalendarView.swift */; };
 		7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F62B5E525900059068 /* CalendarModel.swift */; };
 		7BC300F92B5E5F8E00059068 /* CalendarModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F82B5E5F8E00059068 /* CalendarModelTests.swift */; };
 		7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */; };
+		7BE9D62B2B957E8400CBFFF1 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9D6292B957E8400CBFFF1 /* MoodRecord+CoreDataClass.swift */; };
+		7BE9D62C2B957E8400CBFFF1 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9D62A2B957E8400CBFFF1 /* MoodRecord+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,7 @@
 /* Begin PBXFileReference section */
 		7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodRecords.xcdatamodel; sourceTree = "<group>"; };
 		7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModel.swift; sourceTree = "<group>"; };
 		7B11F8242B4549DF00346A41 /* PlantingMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantingMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindApp.swift; sourceTree = "<group>"; };
 		7B11F8292B4549DF00346A41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,12 +64,16 @@
 		7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
+		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModelTests.swift; sourceTree = "<group>"; };
 		7BABB0102B5F850200EEEEBB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		7BC300F42B5E4CE100059068 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7BC300F62B5E525900059068 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		7BC300F82B5E5F8E00059068 /* CalendarModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModelTests.swift; sourceTree = "<group>"; };
 		7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		7BE9D6292B957E8400CBFFF1 /* MoodRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BE9D62A2B957E8400CBFFF1 /* MoodRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,8 @@
 			children = (
 				7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */,
 				7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */,
+				7BE9D6292B957E8400CBFFF1 /* MoodRecord+CoreDataClass.swift */,
+				7BE9D62A2B957E8400CBFFF1 /* MoodRecord+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -103,7 +115,9 @@
 		7B0A76D22B92DA3200ADC039 /* MoodRecord */ = {
 			isa = PBXGroup;
 			children = (
+				7BAB04F32B9466BC00948CF2 /* Mood.swift */,
 				7B661C372B6393880082F9DB /* MoodRecordView.swift */,
+				7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */,
 			);
 			path = MoodRecord;
 			sourceTree = "<group>";
@@ -155,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC300F82B5E5F8E00059068 /* CalendarModelTests.swift */,
+				7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */,
 			);
 			path = PlantingMindTests;
 			sourceTree = "<group>";
@@ -314,14 +329,18 @@
 				7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */,
 				7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */,
 				7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */,
+				7BE9D62C2B957E8400CBFFF1 /* MoodRecord+CoreDataProperties.swift in Sources */,
 				7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */,
 				7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */,
+				7B0A77112B93196D00ADC039 /* MoodRecordViewModel.swift in Sources */,
 				7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */,
 				7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */,
 				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
 				7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */,
+				7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */,
 				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
+				7BE9D62B2B957E8400CBFFF1 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */,
 				7BC300F92B5E5F8E00059068 /* CalendarModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
