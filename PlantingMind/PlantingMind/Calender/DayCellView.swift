@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DayCellView: View {
+    @Environment(\.managedObjectContext) var context
     @State var showMoodRecordView: Bool = false
+    
     var calendarModel: CalendarModel
     
     var body: some View {
@@ -24,7 +26,7 @@ struct DayCellView: View {
         })
         .frame(height: 50)
         .sheet(isPresented: $showMoodRecordView) {
-            MoodRecordView()
+            MoodRecordView(viewModel: MoodRecordViewModel(context: context, calendarModel: calendarModel))
                 .interactiveDismissDisabled(true)
         }
     }
