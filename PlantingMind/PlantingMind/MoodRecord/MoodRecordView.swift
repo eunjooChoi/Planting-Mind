@@ -7,19 +7,13 @@
 
 import SwiftUI
 
-enum Mood: String, CaseIterable {
-    case nice
-    case good
-    case normal
-    case notBad
-    case bad
-}
-
 struct MoodRecordView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     @State var text = ""
     @State var selectedMood: Mood = .normal
+    
+    @ObservedObject var viewModel: MoodRecordViewModel
     
     var body: some View {
         NavigationStack() {
@@ -124,5 +118,5 @@ struct MoodRecordView: View {
 }
 
 #Preview {
-    MoodRecordView()
+    MoodRecordView(viewModel: MoodRecordViewModel(context: CoreDataStack(.inMemory).persistentContainer.viewContext, calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: false)))
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="MoodRecord" representedClassName="MoodRecord" syncable="YES" codeGenerationType="class">
-        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="mood" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    <entity name="MoodRecord" representedClassName="MoodRecord" syncable="YES">
+        <attribute name="date" attributeType="Date" defaultDateTimeInterval="599500800" usesScalarValueType="NO"/>
+        <attribute name="mood" attributeType="String" defaultValueString="normal"/>
         <attribute name="reason" optional="YES" attributeType="String" minValueString="0" maxValueString="100"/>
     </entity>
 </model>

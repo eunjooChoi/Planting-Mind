@@ -8,21 +8,29 @@
 import Foundation
 import CoreData
 
-class CoreDataStack: ObservableObject {
-    static let shared = CoreDataStack()
+enum StorageType {
+    case persistent
+    case inMemory
+}
+
+final class CoreDataStack: ObservableObject {
+    let persistentContainer: NSPersistentContainer
     
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "MoodRecords")
+    init(_ storageType: StorageType = .persistent) {
+        self.persistentContainer = NSPersistentContainer(name: "MoodRecords")
         
-        container.loadPersistentStores { _, error in
+        // test setup
+        if storageType == .inMemory {
+            let description = NSPersistentStoreDescription(url: URL(filePath: "dev/null"))
+            self.persistentContainer.persistentStoreDescriptions = [description]
+        }
+        
+        self.persistentContainer.loadPersistentStores { _, error in
             if let error {
                 fatalError("Failed to load persistent stores: \(error.localizedDescription)")
             }
         }
-        return container
-    }()
-        
-    private init() { }
+    }
 }
 
 extension CoreDataStack {
