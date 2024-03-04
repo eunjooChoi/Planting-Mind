@@ -12,6 +12,12 @@ class MoodRecordViewModel: ObservableObject {
     private let context: NSManagedObjectContext
     private let calendarModel: CalendarModel
     private let date: Date?
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        return formatter
+    }
     
     @Published var moodRecord: MoodRecord
     
@@ -21,17 +27,16 @@ class MoodRecordViewModel: ObservableObject {
         self.moodRecord = MoodRecord(context: context)
         self.date = Calendar.current.date(from: DateComponents(year: calendarModel.year,
                                                                month: calendarModel.month,
-                                                               day: calendarModel.day,
-                                                               hour: 0,
-                                                               minute: 0,
-                                                               second: 0))
+                                                               day: calendarModel.day))
     }
     
     func fetch() {
         guard let date = date else { return }
         
+        let timestamp = dateFormatter.string(from: date)
+        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MoodRecord")
-        let predicate = NSPredicate(format: "date == %@", date as NSDate)
+        let predicate = NSPredicate(format: "timestamp == %@", timestamp)
         fetchRequest.predicate = predicate
         
         do {
@@ -47,9 +52,10 @@ class MoodRecordViewModel: ObservableObject {
     func save(mood: Mood, reason: String?) {
         guard let entity = NSEntityDescription.entity(forEntityName: "MoodRecord", in: context) else { return }
         guard let date = date else { return }
+        let timestamp = dateFormatter.string(from: date)
         
         let object = NSManagedObject(entity: entity, insertInto: context)
-        object.setValue(date, forKey: "date")
+        object.setValue(timestamp, forKey: "timestamp")
         object.setValue(mood.rawValue, forKey: "mood")
         object.setValue(reason, forKey: "reason")
         
