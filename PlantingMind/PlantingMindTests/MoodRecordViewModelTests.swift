@@ -9,6 +9,13 @@ import XCTest
 @testable import PlantingMind
 
 final class MoodRecordViewModelTests: XCTestCase {
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        return formatter
+    }
+    
     var viewModel: MoodRecordViewModel!
     
     override func setUp() {
@@ -29,14 +36,12 @@ final class MoodRecordViewModelTests: XCTestCase {
         viewModel.fetch()
         
         let expectedMood = Mood.normal
-        let expectedDate = Calendar.current.date(from: DateComponents(year: 2020,
+        let date = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2020,
                                                                       month: 1,
-                                                                      day: 1,
-                                                                      hour: 1,
-                                                                      minute: 0,
-                                                                      second: 0))
+                                                                      day: 1)))
+        let expectedTimeStamp = dateFormatter.string(from: date)
         
-        XCTAssertEqual(viewModel.moodRecord.date, expectedDate)
+        XCTAssertEqual(viewModel.moodRecord.timestamp, expectedTimeStamp)
         XCTAssertEqual(viewModel.moodRecord.mood, expectedMood.rawValue)
         XCTAssertNil(viewModel.moodRecord.reason)
     }
@@ -46,17 +51,15 @@ final class MoodRecordViewModelTests: XCTestCase {
         
         let expectedMood = Mood.nice
         let expectedReason = "reason reason"
-        let expectedDate = Calendar.current.date(from: DateComponents(year: 2024,
+        let date = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
                                                                       month: 2,
-                                                                      day: 24,
-                                                                      hour: 0,
-                                                                      minute: 0,
-                                                                      second: 0))
+                                                                      day: 24)))
+        let expectedTimeStamp = dateFormatter.string(from: date)
         
         viewModel.save(mood: expectedMood, reason: expectedReason)
         viewModel.fetch()
         
-        XCTAssertEqual(viewModel.moodRecord.date, expectedDate)
+        XCTAssertEqual(viewModel.moodRecord.timestamp, expectedTimeStamp)
         XCTAssertEqual(viewModel.moodRecord.mood, expectedMood.rawValue)
         XCTAssertEqual(viewModel.moodRecord.reason, expectedReason)
     }
