@@ -18,6 +18,7 @@
 		7B11F8452B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */; };
 		7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */; };
 		7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */; };
+		7B571B522B959B210019DEB8 /* SampleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B512B959B210019DEB8 /* SampleTest.swift */; };
 		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
 		7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
 		7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */; };
@@ -63,6 +64,7 @@
 		7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
+		7B571B512B959B210019DEB8 /* SampleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTest.swift; sourceTree = "<group>"; };
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
 		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModelTests.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				7BC300F82B5E5F8E00059068 /* CalendarModelTests.swift */,
 				7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */,
+				7B571B512B959B210019DEB8 /* SampleTest.swift */,
 			);
 			path = PlantingMindTests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			files = (
 				7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */,
 				7BC300F92B5E5F8E00059068 /* CalendarModelTests.swift in Sources */,
+				7B571B522B959B210019DEB8 /* SampleTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
