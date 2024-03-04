@@ -36,7 +36,7 @@ final class MoodRecordViewModelTests: XCTestCase {
                                                                       minute: 0,
                                                                       second: 0))
         
-        //XCTAssertEqual(viewModel.moodRecord.date, expectedDate)
+        XCTAssertEqual(viewModel.moodRecord.date, expectedDate)
         XCTAssertEqual(viewModel.moodRecord.mood, expectedMood.rawValue)
         XCTAssertNil(viewModel.moodRecord.reason)
     }
