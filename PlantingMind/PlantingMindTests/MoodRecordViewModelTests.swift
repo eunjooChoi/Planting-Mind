@@ -36,14 +36,9 @@ final class MoodRecordViewModelTests: XCTestCase {
         viewModel.fetch()
         
         let expectedMood = Mood.normal
-        let date = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2020,
-                                                                      month: 1,
-                                                                      day: 1)))
-        let expectedTimeStamp = dateFormatter.string(from: date)
         
-        XCTAssertEqual(viewModel.moodRecord.timestamp, expectedTimeStamp)
-        XCTAssertEqual(viewModel.moodRecord.mood, expectedMood.rawValue)
-        XCTAssertNil(viewModel.moodRecord.reason)
+        XCTAssertEqual(viewModel.mood, expectedMood)
+        XCTAssertTrue(viewModel.reason.isEmpty)
     }
     
     func test_데이터_저장_후_패치() throws {
@@ -51,16 +46,13 @@ final class MoodRecordViewModelTests: XCTestCase {
         
         let expectedMood = Mood.nice
         let expectedReason = "reason reason"
-        let date = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
-                                                                      month: 2,
-                                                                      day: 24)))
-        let expectedTimeStamp = dateFormatter.string(from: date)
         
-        viewModel.save(mood: expectedMood, reason: expectedReason)
+        viewModel.mood = .nice
+        viewModel.reason = "reason reason"
+        viewModel.save()
         viewModel.fetch()
         
-        XCTAssertEqual(viewModel.moodRecord.timestamp, expectedTimeStamp)
-        XCTAssertEqual(viewModel.moodRecord.mood, expectedMood.rawValue)
-        XCTAssertEqual(viewModel.moodRecord.reason, expectedReason)
+        XCTAssertEqual(viewModel.mood, expectedMood)
+        XCTAssertEqual(viewModel.reason, expectedReason)
     }
 }
