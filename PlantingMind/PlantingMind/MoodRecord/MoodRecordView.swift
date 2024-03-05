@@ -10,8 +10,6 @@ import SwiftUI
 struct MoodRecordView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @State var text = ""
-    @State var selectedMood: Mood = .normal
     
     @ObservedObject var viewModel: MoodRecordViewModel
     
@@ -27,13 +25,13 @@ struct MoodRecordView: View {
                     HStack(spacing: 20) {
                         ForEach(Mood.allCases, id: \.self) {mood in
                             Button(action: {
-                                selectedMood = mood
+                                viewModel.mood = mood
                             }, label: {
                                 Image("\(mood.rawValue)", label: Text("\(mood.rawValue)"))
                             })
                             .buttonStyle(PlainButtonStyle())
                             .overlay {
-                                if selectedMood == mood {
+                                if viewModel.mood == mood {
                                     let color: Color = colorScheme == .dark ? .yellow : .orange
                                     Circle()
                                         .stroke(color, lineWidth: 4)
@@ -51,19 +49,19 @@ struct MoodRecordView: View {
                         .bold()
                     
                     ZStack {
-                        TextEditor(text: $text)
+                        TextEditor(text: $viewModel.reason)
                             .autocorrectionDisabled(true)
                             .background(Color.Custom.line)
                             .opacity(0.8)
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             .padding(.horizontal)
-                            .onChange(of: text) { _ in
-                                if text.count > 100 {
-                                    text.removeLast()
+                            .onChange(of: viewModel.reason) { _ in
+                                if viewModel.reason.count > 100 {
+                                    viewModel.reason.removeLast()
                                 }
                             }
                         
-                        if text.isEmpty {
+                        if viewModel.reason.isEmpty {
                             VStack {
                                 HStack {
                                     Text("내용을 입력하세요.")
@@ -81,7 +79,7 @@ struct MoodRecordView: View {
                             Spacer()
                             HStack {
                                 Spacer()
-                                Text("\(text.count) / 100")
+                                Text("\(viewModel.reason.count) / 100")
                                     .foregroundStyle(Color.Custom.line)
                                     .padding(.bottom, 10)
                                     .padding(.trailing, 28)
@@ -104,6 +102,7 @@ struct MoodRecordView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
+                        viewModel.save()
                         dismiss()
                     }, label: {
                         Text("저장")
@@ -112,7 +111,9 @@ struct MoodRecordView: View {
             }
             .foregroundStyle(Color.Custom.general)
         }
-        
+        .onAppear {
+            viewModel.fetch()
+        }
         
     }
 }

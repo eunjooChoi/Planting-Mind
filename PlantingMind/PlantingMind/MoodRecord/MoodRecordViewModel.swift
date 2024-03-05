@@ -19,15 +19,17 @@ class MoodRecordViewModel: ObservableObject {
         return formatter
     }
     
-    @Published var moodRecord: MoodRecord
+    @Published var mood: Mood
+    @Published var reason: String
     
     init(context: NSManagedObjectContext, calendarModel: CalendarModel) {
         self.context = context
         self.calendarModel = calendarModel
-        self.moodRecord = MoodRecord(context: context)
         self.date = Calendar.current.date(from: DateComponents(year: calendarModel.year,
                                                                month: calendarModel.month,
                                                                day: calendarModel.day))
+        self.mood = .normal
+        self.reason = ""
     }
     
     func fetch() {
@@ -43,13 +45,15 @@ class MoodRecordViewModel: ObservableObject {
             guard let result = try context.fetch(fetchRequest) as? [MoodRecord],
                 let record = result.first else { return }
             
-            self.moodRecord = record
+            self.mood = Mood(rawValue: record.mood) ?? .normal
+            self.reason = record.reason ?? ""
+            
         } catch {
             print("Failed to fetch the mood record", error.localizedDescription)
         }
     }
     
-    func save(mood: Mood, reason: String?) {
+    func save() {
         guard let entity = NSEntityDescription.entity(forEntityName: "MoodRecord", in: context) else { return }
         guard let date = date else { return }
         let timestamp = dateFormatter.string(from: date)
