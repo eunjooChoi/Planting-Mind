@@ -14,20 +14,29 @@ struct DayCellView: View {
     var calendarModel: CalendarModel
     
     var body: some View {
-        Button(action: {
-            showMoodRecordView.toggle()
-        }, label: {
-            Text("\(calendarModel.day)")
-                .frame(width: 30, height: 30)
-                .fontWeight(.semibold)
-                .background(calendarModel.isToday ? Color.Custom.general : .clear)
-                .foregroundStyle(calendarModel.isToday ? Color.Custom.point : Color.Custom.general)
-                .clipShape(Circle())
-        })
-        .frame(height: 50)
-        .sheet(isPresented: $showMoodRecordView) {
-            MoodRecordView(viewModel: MoodRecordViewModel(context: context, calendarModel: calendarModel))
-                .interactiveDismissDisabled(true)
+        VStack(spacing: -5) {
+            Button(action: {
+                showMoodRecordView.toggle()
+            }, label: {
+                Text("\(calendarModel.day)")
+                    .frame(width: 30, height: 30)
+                    .fontWeight(.semibold)
+                    .background(calendarModel.isToday ? Color.Custom.general : .clear)
+                    .foregroundStyle(calendarModel.isToday ? Color.Custom.point : Color.Custom.general)
+                    .clipShape(Circle())
+            })
+            .frame(height: 50)
+            .sheet(isPresented: $showMoodRecordView) {
+                MoodRecordView(viewModel: MoodRecordViewModel(context: context, calendarModel: calendarModel))
+                    .interactiveDismissDisabled(true)
+            }
+            
+            Rectangle()
+                .frame(height: 16)
+                .foregroundStyle(Color.Custom.bad)
+                .overlay {
+                    Image("bad_emoji", bundle: nil)
+                }
         }
     }
 }
