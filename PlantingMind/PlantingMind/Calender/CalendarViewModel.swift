@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import CoreData
 
 class CalendarViewModel: ObservableObject {
+    private let context: NSManagedObjectContext
+    
     @Published var currentDate: Date
     @Published var days: [CalendarModel?] = []
+    @Published var moods: [MoodRecord] = []
     
     private var today: Date
     
@@ -25,10 +29,11 @@ class CalendarViewModel: ObservableObject {
         return formatter
     }()
     
-    init(today: Date) {
+    init(today: Date, context: NSManagedObjectContext) {
         self.today = today
         self.currentDate = today
-        updateDays()
+        self.context = context
+        self.updateDays()
     }
     
     func addingMonth(value: Int) {
@@ -38,6 +43,45 @@ class CalendarViewModel: ObservableObject {
         
         currentDate = newMonth
         updateDays()
+    }
+    
+    func fetch() {
+        var dateFormatter: DateFormatter {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM"
+            
+            return formatter
+        }
+        
+        let timestamp = dateFormatter.string(from: currentDate)
+        
+        let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
+        let predicate = NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(MoodRecord.timestamp), timestamp)
+        fetchRequest.predicate = predicate
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            self.moods = result
+            
+        } catch {
+            print("Failed to fetch the mood records", error.localizedDescription)
+        }
+    }
+    
+    func mood(of day: CalendarModel) -> MoodRecord? {
+        var dateFormatter: DateFormatter {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            
+            return formatter
+        }
+        
+        guard let date = Calendar.current.date(from: DateComponents(year: day.year,
+                                                                    month: day.month,
+                                                                    day: day.day)) else { return nil }
+        let timestamp = dateFormatter.string(from: date)
+        
+        return self.moods.filter { $0.timestamp == timestamp }.first
     }
     
     private func daysCount() -> Int {

@@ -22,11 +22,14 @@ struct CalendarGridView: View {
                 }
             }
         })
+        .onAppear(perform: {
+            // TODO: Call calendarViewModel.fetch
+        })
     }
 }
 
 #Preview {
     CalendarGridView()
-        .environmentObject(CalendarViewModel(today: Date()))
+        .environmentObject(CalendarViewModel(today: Date(), context: CoreDataStack(.inMemory).persistentContainer.viewContext))
     
 }
