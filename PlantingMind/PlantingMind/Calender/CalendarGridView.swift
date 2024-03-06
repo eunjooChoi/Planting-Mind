@@ -12,7 +12,6 @@ struct CalendarGridView: View {
     private let weekdays = 7
     
     var body: some View {
-        
         LazyVGrid(columns: Array(repeating: GridItem(), count: weekdays), content: {
             ForEach(calendarViewModel.days, id: \.self) { item in
                 if let item = item {
@@ -29,5 +28,5 @@ struct CalendarGridView: View {
 #Preview {
     CalendarGridView()
         .environmentObject(CalendarViewModel(today: Date()))
-
+    
 }
