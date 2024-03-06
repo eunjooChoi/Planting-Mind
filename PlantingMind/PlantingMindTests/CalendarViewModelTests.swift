@@ -10,7 +10,7 @@ import CoreData
 @testable import PlantingMind
 
 final class CalendarViewModelTests: XCTestCase {
-    var context = CoreDataStack(.inMemory).persistentContainer.viewContext
+    var context: NSManagedObjectContext!
     var viewModel: CalendarViewModel!
     
     override func setUp() {
@@ -20,7 +20,9 @@ final class CalendarViewModelTests: XCTestCase {
                                                               month: 1,
                                                               day: 1))
         
+        context = CoreDataStack(.inMemory).persistentContainer.viewContext
         viewModel = CalendarViewModel(today: date!, context: context)
+        setupCoreData()
     }
     
     override func tearDown() {
@@ -47,7 +49,6 @@ final class CalendarViewModelTests: XCTestCase {
     }
     
     func test_해당_월의_mood_list_가져오기() throws {
-        setupCoreData()
         viewModel.fetch()
         
         let expectedRecordsCount = 3
@@ -55,18 +56,24 @@ final class CalendarViewModelTests: XCTestCase {
     }
     
     func test_원하는_날짜의_mood_받기() throws {
-        setupCoreData()
         viewModel.fetch()
         
         let result = viewModel.mood(of: CalendarModel(year: 2024,
-                                                          month: 1,
-                                                          day: 1,
-                                                          isToday: false))
+                                                      month: 1,
+                                                      day: 1,
+                                                      isToday: false))
         
         let expectedMood = Mood.normal.rawValue
-        
         XCTAssertEqual(result?.mood, expectedMood)
         XCTAssertNil(result?.reason)
+        
+        // 저장된 정보 없을 경우 Nil
+        let result2 = viewModel.mood(of: CalendarModel(year: 2024,
+                                                      month: 1,
+                                                      day: 2,
+                                                      isToday: false))
+        
+        XCTAssertNil(result2)
     }
     
     private func setupCoreData() {
