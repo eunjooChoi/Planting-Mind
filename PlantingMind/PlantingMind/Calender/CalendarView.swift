@@ -21,5 +21,5 @@ struct CalendarView: View {
 }
 
 #Preview {
-    CalendarView(calendarViewModel: CalendarViewModel(today: Date()))
+    CalendarView(calendarViewModel: CalendarViewModel(today: Date(), context: CoreDataStack(.inMemory).persistentContainer.viewContext))
 }

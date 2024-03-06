@@ -61,6 +61,6 @@ struct CalendarHeaderView: View {
 
 #Preview {
     CalendarHeaderView()
-        .environmentObject(CalendarViewModel(today: Date()))
+        .environmentObject(CalendarViewModel(today: Date(), context: CoreDataStack(.inMemory).persistentContainer.viewContext))
 }
 

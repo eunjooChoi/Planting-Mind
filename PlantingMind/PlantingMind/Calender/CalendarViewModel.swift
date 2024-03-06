@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import CoreData
 
 class CalendarViewModel: ObservableObject {
+    private let context: NSManagedObjectContext
+    
     @Published var currentDate: Date
     @Published var days: [CalendarModel?] = []
+    @Published var moods: [MoodRecord] = []
     
     private var today: Date
     
@@ -25,10 +29,11 @@ class CalendarViewModel: ObservableObject {
         return formatter
     }()
     
-    init(today: Date) {
+    init(today: Date, context: NSManagedObjectContext) {
         self.today = today
         self.currentDate = today
-        updateDays()
+        self.context = context
+        self.updateDays()
     }
     
     func addingMonth(value: Int) {
@@ -38,6 +43,16 @@ class CalendarViewModel: ObservableObject {
         
         currentDate = newMonth
         updateDays()
+    }
+    
+    func fetch() {
+        // TODO: Mood 리스트 가져오기
+    }
+    
+    func mood(of day: CalendarModel) -> MoodRecord? {
+        // TODO: 날짜에 맞는 기분 리턴 없으면 nil
+        
+        return nil
     }
     
     private func daysCount() -> Int {
