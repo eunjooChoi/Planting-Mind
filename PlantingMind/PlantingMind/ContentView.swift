@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
         VStack {
-            CalendarView(calendarViewModel: CalendarViewModel(today: Date()))
+            CalendarView(calendarViewModel: CalendarViewModel(today: Date(), context: context))
         }
         .padding()
     }
