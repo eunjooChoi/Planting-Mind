@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct CalendarGridView: View {
-    @EnvironmentObject var calendarViewModel: CalendarViewModel
+    @EnvironmentObject var viewModel: CalendarViewModel
     private let weekdays = 7
     
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(), count: weekdays), content: {
-            ForEach(calendarViewModel.days, id: \.self) { item in
+            ForEach(viewModel.days, id: \.self) { item in
                 if let item = item {
-                    DayCellView(calendarModel: item)
+                    let moodRecord = viewModel.mood(of: item)
+                    DayCellView(dayCellModel: DayCellModel(calendarModel: item, moodRecord: moodRecord))
                 } else {
                     RoundedRectangle(cornerRadius: 5)
                         .foregroundColor(Color.clear)
@@ -23,7 +24,7 @@ struct CalendarGridView: View {
             }
         })
         .onAppear(perform: {
-            // TODO: Call calendarViewModel.fetch
+            viewModel.fetch()
         })
     }
 }
