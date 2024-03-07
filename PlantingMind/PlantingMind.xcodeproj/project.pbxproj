@@ -21,6 +21,8 @@
 		7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */; };
 		7B571B562B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */; };
 		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
+		7B907F732B9981E90050D05B /* DayCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F722B9981E90050D05B /* DayCellModel.swift */; };
+		7B907F752B9997060050D05B /* DayCellModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F742B9997060050D05B /* DayCellModelTest.swift */; };
 		7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
 		7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */; };
 		7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
@@ -66,6 +68,8 @@
 		7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
+		7B907F722B9981E90050D05B /* DayCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellModel.swift; sourceTree = "<group>"; };
+		7B907F742B9997060050D05B /* DayCellModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellModelTest.swift; sourceTree = "<group>"; };
 		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModelTests.swift; sourceTree = "<group>"; };
 		7BABB0102B5F850200EEEEBB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			children = (
 				7BC300F82B5E5F8E00059068 /* CalendarViewModelTests.swift */,
 				7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */,
+				7B907F742B9997060050D05B /* DayCellModelTest.swift */,
 			);
 			path = PlantingMindTests;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */,
 				7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */,
 				7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */,
+				7B907F722B9981E90050D05B /* DayCellModel.swift */,
 				7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */,
 				7BC300F62B5E525900059068 /* CalendarModel.swift */,
 			);
@@ -340,6 +346,7 @@
 				7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */,
 				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
+				7B907F732B9981E90050D05B /* DayCellModel.swift in Sources */,
 				7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
 			);
@@ -350,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */,
+				7B907F752B9997060050D05B /* DayCellModelTest.swift in Sources */,
 				7BC300F92B5E5F8E00059068 /* CalendarViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
