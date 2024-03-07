@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Mood: String, CaseIterable {
     case nice
@@ -13,4 +14,25 @@ enum Mood: String, CaseIterable {
     case normal
     case notBad
     case bad
+}
+
+extension Mood {
+    var emojiName: String {
+        self.rawValue + "_emoji"
+    }
+    
+    var color: Color {
+        switch self {
+        case .nice:
+            Color.Custom.nice
+        case .good:
+            Color.Custom.good
+        case .normal:
+            Color.Custom.normal
+        case .notBad:
+            Color.Custom.notBad
+        case .bad:
+            Color.Custom.bad
+        }
+    }
 }
