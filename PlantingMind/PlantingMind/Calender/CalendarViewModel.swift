@@ -7,9 +7,11 @@
 
 import Foundation
 import CoreData
+import Combine
 
 class CalendarViewModel: ObservableObject {
     private let context: NSManagedObjectContext
+    private var cancellables: Set<AnyCancellable>
     
     @Published var currentDate: Date
     @Published var days: [CalendarModel?] = []
@@ -30,10 +32,12 @@ class CalendarViewModel: ObservableObject {
     }()
     
     init(today: Date, context: NSManagedObjectContext) {
+        self.cancellables = []
         self.today = today
         self.currentDate = today
         self.context = context
         self.updateDays()
+        self.bindFetchNotification()
     }
     
     func addingMonth(value: Int) {
@@ -43,6 +47,7 @@ class CalendarViewModel: ObservableObject {
         
         currentDate = newMonth
         updateDays()
+        fetch()
     }
     
     func fetch() {
@@ -118,5 +123,19 @@ class CalendarViewModel: ObservableObject {
                 days.append(calendarModel)
             }
         }
+    }
+    
+    /**
+     MoodRecordViewModel로부터 노티를 받아 Fetch 작업 수행
+     */
+    private func bindFetchNotification() {
+        // TODO: 테스트가 아닌 실제 환경에서도 데이터 저장시 delay가 있는 경우가 있는지 확인 필요
+        NotificationCenter.default.publisher(for: .fetchNotification)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                self.fetch()
+            }
+            .store(in: &cancellables)
     }
 }

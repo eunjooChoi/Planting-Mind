@@ -76,6 +76,22 @@ final class CalendarViewModelTests: XCTestCase {
         XCTAssertNil(result2)
     }
     
+    func test_notification_받아서_fetch() {
+        viewModel.fetch()
+        
+        let mock = FetchNotificationSpy(context: context)
+        let expectedDataCount = 4
+        mock.sendNoticiation()
+        
+        let notiExpectation = XCTestExpectation(description: "notiExpectation")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            XCTAssertEqual(self.viewModel.moods.count, expectedDataCount)
+            notiExpectation.fulfill()
+        })
+
+        wait(for: [notiExpectation], timeout: 1.5)
+    }
+    
     private func setupCoreData() {
         let timestapms = ["2024-02-24", "2024-01-01", "2024-01-06", "2024-01-24"]
         let moods: [Mood] = [.nice, .normal, .notBad, .bad]
@@ -88,7 +104,7 @@ final class CalendarViewModelTests: XCTestCase {
             moodRecord.reason = reasons[idx]
         }
         
-        do{
+        do {
             try context.save()
         } catch {
             XCTFail(error.localizedDescription)
