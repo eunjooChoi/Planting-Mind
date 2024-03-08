@@ -17,10 +17,11 @@ final class MoodRecordViewModelTests: XCTestCase {
     }
     
     var viewModel: MoodRecordViewModel!
+    var coreDataStack: CoreDataStack!
     
     override func setUp() {
         super.setUp()
-        let coreDataStack = CoreDataStack(.inMemory)
+        self.coreDataStack = CoreDataStack(.inMemory)
         let calendarModel = CalendarModel(year: 2024, month: 2, day: 24, isToday: true)
         
         viewModel = MoodRecordViewModel(context: coreDataStack.persistentContainer.viewContext,
@@ -54,5 +55,12 @@ final class MoodRecordViewModelTests: XCTestCase {
         
         XCTAssertEqual(viewModel.mood, expectedMood)
         XCTAssertEqual(viewModel.reason, expectedReason)
+    }
+    
+    func test_notification_발송() throws {
+        let mock = FetchNotificationSpy(context: coreDataStack.persistentContainer.viewContext)
+        viewModel.save()
+        
+        XCTAssertTrue(mock.bindNoticiationIsCalled)
     }
 }
