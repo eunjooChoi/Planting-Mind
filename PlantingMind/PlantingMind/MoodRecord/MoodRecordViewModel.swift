@@ -43,7 +43,7 @@ class MoodRecordViewModel: ObservableObject {
         
         do {
             guard let result = try context.fetch(fetchRequest) as? [MoodRecord],
-                let record = result.first else { return }
+                  let record = result.first else { return }
             
             self.mood = Mood(rawValue: record.mood) ?? .normal
             self.reason = record.reason ?? ""
@@ -68,5 +68,15 @@ class MoodRecordViewModel: ObservableObject {
         } catch {
             print("Failed to save the mood record", error.localizedDescription)
         }
+        
+        self.sendFetchNotification()
+    }
+    
+    /**
+     CalendarGridView의 기분을 업데이트 하도록 노티 발송
+     */
+    private func sendFetchNotification() {
+        NotificationCenter.default.post(name: .fetchNotification,
+                                        object: nil)
     }
 }
