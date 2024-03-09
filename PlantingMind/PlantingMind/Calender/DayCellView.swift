@@ -27,7 +27,7 @@ struct DayCellView: View {
             })
             .frame(height: 50)
             .sheet(isPresented: $showMoodRecordView) {
-                MoodRecordView(viewModel: MoodRecordViewModel(context: context, calendarModel: dayCellModel.calendarModel))
+                MoodRecordView(viewModel: MoodRecordViewModel(context: context, calendarModel: dayCellModel.calendarModel, moodRecord: dayCellModel.moodRecord))
                     .interactiveDismissDisabled(true)
             }
             
