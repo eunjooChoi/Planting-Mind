@@ -111,13 +111,9 @@ struct MoodRecordView: View {
             }
             .foregroundStyle(Color.Custom.general)
         }
-        .onAppear {
-            viewModel.fetch()
-        }
-        
     }
 }
 
 #Preview {
-    MoodRecordView(viewModel: MoodRecordViewModel(context: CoreDataStack(.inMemory).persistentContainer.viewContext, calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: false)))
+    MoodRecordView(viewModel: MoodRecordViewModel(context: CoreDataStack(.inMemory).persistentContainer.viewContext, calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: false), moodRecord: nil))
 }

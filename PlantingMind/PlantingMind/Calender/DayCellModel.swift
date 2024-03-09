@@ -8,7 +8,7 @@
 import Foundation
 
 struct DayCellModel {
-    private let moodRecord: MoodRecord?
+    let moodRecord: MoodRecord?
     let calendarModel: CalendarModel
     
     var mood: Mood? {
