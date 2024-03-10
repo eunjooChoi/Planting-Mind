@@ -16,7 +16,7 @@ struct CalendarGridView: View {
             ForEach(viewModel.days, id: \.self) { item in
                 if let item = item {
                     let moodRecord = viewModel.mood(of: item)
-                    DayCellView(dayCellModel: DayCellModel(calendarModel: item, moodRecord: moodRecord))
+                    DayCellView(viewModel: DayCellViewModel(calendarModel: item, moodRecord: moodRecord))
                 } else {
                     RoundedRectangle(cornerRadius: 5)
                         .foregroundColor(Color.clear)
