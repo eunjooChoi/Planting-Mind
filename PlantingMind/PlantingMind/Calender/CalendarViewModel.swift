@@ -11,17 +11,17 @@ import Combine
 
 class CalendarViewModel: ObservableObject {
     private let context: NSManagedObjectContext
-    private var cancellables: Set<AnyCancellable>
-    
-    @Published var currentDate: Date
-    @Published var days: [CalendarModel?] = []
-    @Published var moods: [MoodRecord] = []
-    
+    private let startMonth: Date? = Calendar.current.date(from: DateComponents(year: 2024, month: 1, day: 1))
     private var today: Date
+    private var cancellables: Set<AnyCancellable>
     
     private var calendar: Calendar {
         Calendar.current
     }
+    
+    @Published var currentDate: Date
+    @Published var days: [CalendarModel?] = []
+    @Published var moods: [MoodRecord] = []
     
     let weekdaySymbols = Calendar.current.veryShortWeekdaySymbols
     
@@ -41,9 +41,15 @@ class CalendarViewModel: ObservableObject {
     }
     
     func addingMonth(value: Int) {
-        guard let newMonth = calendar.date(byAdding: .month, value: value, to: currentDate) else {
-            return
-        }
+        guard let newMonth = calendar.date(byAdding: .month, value: value, to: currentDate),
+            let startMonth = startMonth else { return }
+        
+        // newMonth가 2024년 1월 이전이라면 return
+        guard newMonth >= startMonth else { return }
+        
+        // newMonth가 today보다 다음 달이라면 return
+        guard newMonth <= today else { return }
+        
         
         currentDate = newMonth
         updateDays()
@@ -74,17 +80,10 @@ class CalendarViewModel: ObservableObject {
     }
     
     func mood(of day: CalendarModel) -> MoodRecord? {
-        var dateFormatter: DateFormatter {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd"
-            
-            return formatter
-        }
-        
         guard let date = Calendar.current.date(from: DateComponents(year: day.year,
                                                                     month: day.month,
                                                                     day: day.day)) else { return nil }
-        let timestamp = dateFormatter.string(from: date)
+        let timestamp = date.timeStampString()
         
         return self.moods.filter { $0.timestamp == timestamp }.first
     }
