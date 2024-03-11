@@ -12,7 +12,7 @@ import Combine
 class CalendarViewModel: ObservableObject {
     private let context: NSManagedObjectContext
     private let startMonth: Date? = Calendar.current.date(from: DateComponents(year: 2024, month: 1, day: 1))
-    private var today: Date
+    private(set) var today: Date
     private var cancellables: Set<AnyCancellable>
     
     private var calendar: Calendar {

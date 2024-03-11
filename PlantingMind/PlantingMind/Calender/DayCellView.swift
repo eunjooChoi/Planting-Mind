@@ -10,13 +10,18 @@ import SwiftUI
 struct DayCellView: View {
     @Environment(\.managedObjectContext) var context
     @State var showMoodRecordView: Bool = false
+    @State var showAlert: Bool = false
     
     var viewModel: DayCellViewModel
     
     var body: some View {
         VStack(spacing: -5) {
             Button(action: {
-                showMoodRecordView.toggle()
+                if viewModel.isFutureDate {
+                    showAlert.toggle()
+                } else {
+                    showMoodRecordView.toggle()
+                }
             }, label: {
                 Text("\(viewModel.calendarModel.day)")
                     .frame(width: 30, height: 30)
@@ -32,6 +37,7 @@ struct DayCellView: View {
                                                               moodRecord: viewModel.moodRecord))
                 .interactiveDismissDisabled(true)
             }
+            .disabled(viewModel.isFutureDate)
             
             RoundedRectangle(cornerRadius: 5)
                 .frame(height: 16)
@@ -44,6 +50,6 @@ struct DayCellView: View {
 }
 
 #Preview {
-    DayCellView(viewModel: DayCellViewModel(calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: true),
+    DayCellView(viewModel: DayCellViewModel(today: Date(), calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: true),
                                             moodRecord: MoodRecord(context: CoreDataStack(.inMemory).persistentContainer.viewContext)))
 }
