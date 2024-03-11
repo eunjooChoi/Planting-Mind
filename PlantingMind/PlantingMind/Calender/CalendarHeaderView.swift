@@ -26,9 +26,14 @@ struct CalendarHeaderView: View {
                     .font(.title)
             })
             
-            Text(calendarViewModel.currentDate, formatter: calendarViewModel.dateFormatter)
-                .font(.title)
-                .fontWeight(.bold)
+            Button {
+                // TODO: datePicker
+            } label: {
+                Text(calendarViewModel.currentDate, formatter: calendarViewModel.dateFormatter)
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
+            .buttonStyle(PlainButtonStyle())
             
             Button(action: {
                 calendarViewModel.addingMonth(value: 1)
