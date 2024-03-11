@@ -35,17 +35,48 @@ final class CalendarViewModelTests: XCTestCase {
     }
     
     func test_이전_달로_이동() throws {
+        let date = Calendar.current.date(from: DateComponents(year: 2024,
+                                                              month: 2,
+                                                              day: 1))
+        
+        viewModel = CalendarViewModel(today: date!, context: context)
         viewModel.addingMonth(value: -1)
         
         let nilCount = viewModel.days.filter { $0 == nil }.count
-        XCTAssertEqual(nilCount, 5) // 23년 12월은 금요일부터 시작이므로 nil이 5개 있어야 한다.
+        XCTAssertEqual(nilCount, 1) // 24년 1월은 월요일부터 시작이므로 nil이 1개 있어야 한다.
+    }
+    
+    func test_2024년_1월_이전으로_이동하려는_경우_막기() throws {
+        viewModel.addingMonth(value: -1)
+        
+        // 1월 이전으로 돌아가지 않아야 하므로 nil 갯수 변화 없어야 한다.
+        let expectedNilCount = 1
+        let nilCount = viewModel.days.filter { $0 == nil }.count
+        XCTAssertEqual(nilCount, expectedNilCount)
     }
     
     func test_다음_달로_이동() throws {
+        let date = Calendar.current.date(from: DateComponents(year: 2024,
+                                                              month: 2,
+                                                              day: 1))
+        
+        viewModel = CalendarViewModel(today: date!, context: context)
+        viewModel.currentDate = Calendar.current.date(from: DateComponents(year: 2024,
+                                                                           month: 1,
+                                                                           day: 1))!
         viewModel.addingMonth(value: 1)
         
         let nilCount = viewModel.days.filter { $0 == nil }.count
-        XCTAssertEqual(nilCount, 4) // 24년 2월은 목요일부터 시작이므로 nil이 하나 있어야 한다.
+        XCTAssertEqual(nilCount, 4) // 24년 2월은 목요일부터 시작이므로 nil이 4개 있어야 한다.
+    }
+    
+    func test_현재_달의_다음_달로_이동하려는_경우_막기() throws {
+        viewModel.addingMonth(value: 1)
+        
+        // 현재 달의 다음달로 넘어가지 않아야 하므로 nil 갯수 변화 없어야 한다.
+        let expectedNilCount = 1
+        let nilCount = viewModel.days.filter { $0 == nil }.count
+        XCTAssertEqual(nilCount, expectedNilCount)
     }
     
     func test_해당_월의_mood_list_가져오기() throws {

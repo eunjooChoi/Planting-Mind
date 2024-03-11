@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct DayCellViewModel {
+class DayCellViewModel: ObservableObject {
+    let today: Date
     let moodRecord: MoodRecord?
     let calendarModel: CalendarModel
     
@@ -18,7 +19,11 @@ struct DayCellViewModel {
     }
     
     var dayForegroundColor: Color {
-        self.calendarModel.isToday ? Color.Custom.point : Color.Custom.general
+        if self.isFutureDate {
+            return Color.gray
+        } else {
+            return self.calendarModel.isToday ? Color.Custom.point : Color.Custom.general
+        }
     }
     
     var dayBackgroundColor: Color {
@@ -35,7 +40,15 @@ struct DayCellViewModel {
         return Image(mood.emojiName, bundle: nil)
     }
     
-    init(calendarModel: CalendarModel, moodRecord: MoodRecord?) {
+    var isFutureDate: Bool {
+        guard let date = Calendar.current.date(from: DateComponents(year: self.calendarModel.year,
+                                                                    month: self.calendarModel.month,
+                                                                    day: self.calendarModel.day)) else { return false }
+        return date > self.today
+    }
+    
+    init(today: Date, calendarModel: CalendarModel, moodRecord: MoodRecord?) {
+        self.today = today
         self.calendarModel = calendarModel
         self.moodRecord = moodRecord
     }
