@@ -61,7 +61,7 @@ final class CalendarViewModelTests: XCTestCase {
                                                               day: 1))
         
         viewModel = CalendarViewModel(today: date!, context: context)
-        viewModel.currentDate = Calendar.current.date(from: DateComponents(year: 2024,
+        viewModel.selectedDate = Calendar.current.date(from: DateComponents(year: 2024,
                                                                            month: 1,
                                                                            day: 1))!
         viewModel.addingMonth(value: 1)
