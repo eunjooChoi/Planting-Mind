@@ -10,18 +10,13 @@ import SwiftUI
 struct DayCellView: View {
     @Environment(\.managedObjectContext) var context
     @State var showMoodRecordView: Bool = false
-    @State var showAlert: Bool = false
     
     var viewModel: DayCellViewModel
     
     var body: some View {
         VStack(spacing: -5) {
             Button(action: {
-                if viewModel.isFutureDate {
-                    showAlert.toggle()
-                } else {
-                    showMoodRecordView.toggle()
-                }
+                showMoodRecordView.toggle()
             }, label: {
                 Text("\(viewModel.calendarModel.day)")
                     .frame(width: 30, height: 30)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CalendarHeaderView: View {
     @EnvironmentObject var calendarViewModel: CalendarViewModel
+    @State var showPicker: Bool = false
     
     var body: some View {
         VStack {
@@ -27,13 +28,17 @@ struct CalendarHeaderView: View {
             })
             
             Button {
-                // TODO: datePicker
+                UIView.setAnimationsEnabled(false)
+                showPicker.toggle()
             } label: {
-                Text(calendarViewModel.currentDate, formatter: calendarViewModel.dateFormatter)
+                Text(calendarViewModel.selectedDate, formatter: calendarViewModel.dateFormatter)
                     .font(.title)
                     .fontWeight(.bold)
             }
             .buttonStyle(PlainButtonStyle())
+            .fullScreenCover(isPresented: $showPicker, content: {
+                DatePickerView(selectedDate: $calendarViewModel.selectedDate, pickedDate: calendarViewModel.selectedDate)
+            })
             
             Button(action: {
                 calendarViewModel.addingMonth(value: 1)
