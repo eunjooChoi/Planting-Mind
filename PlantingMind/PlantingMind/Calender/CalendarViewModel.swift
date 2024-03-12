@@ -19,7 +19,7 @@ class CalendarViewModel: ObservableObject {
         Calendar.current
     }
     
-    @Published var currentDate: Date
+    @Published var selectedDate: Date
     @Published var days: [CalendarModel?] = []
     @Published var moods: [MoodRecord] = []
     
@@ -34,14 +34,20 @@ class CalendarViewModel: ObservableObject {
     init(today: Date, context: NSManagedObjectContext) {
         self.cancellables = []
         self.today = today
-        self.currentDate = today
+        self.selectedDate = today
         self.context = context
-        self.updateDays()
         self.bindFetchNotification()
+        
+        self.$selectedDate
+            .sink {[weak self] date in
+                self?.updateDays(with: date)
+                self?.fetch(date: date)
+            }
+            .store(in: &cancellables)
     }
     
     func addingMonth(value: Int) {
-        guard let newMonth = calendar.date(byAdding: .month, value: value, to: currentDate),
+        guard let newMonth = calendar.date(byAdding: .month, value: value, to: selectedDate),
             let startMonth = startMonth else { return }
         
         // newMonth가 2024년 1월 이전이라면 return
@@ -50,13 +56,14 @@ class CalendarViewModel: ObservableObject {
         // newMonth가 today보다 다음 달이라면 return
         guard newMonth <= today else { return }
         
-        
-        currentDate = newMonth
-        updateDays()
-        fetch()
+        selectedDate = newMonth
     }
     
     func fetch() {
+        self.fetch(date: selectedDate)
+    }
+    
+    private func fetch(date: Date) {
         var dateFormatter: DateFormatter {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM"
@@ -64,7 +71,7 @@ class CalendarViewModel: ObservableObject {
             return formatter
         }
         
-        let timestamp = dateFormatter.string(from: currentDate)
+        let timestamp = dateFormatter.string(from: date)
         
         let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
         let predicate = NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(MoodRecord.timestamp), timestamp)
@@ -88,28 +95,28 @@ class CalendarViewModel: ObservableObject {
         return self.moods.filter { $0.timestamp == timestamp }.first
     }
     
-    private func daysCount() -> Int {
-        return Calendar.current.range(of: .day, in: .month, for: currentDate)?.count ?? 0
+    private func daysCount(for month: Date) -> Int {
+        return Calendar.current.range(of: .day, in: .month, for: month)?.count ?? 0
     }
     
-    private func firstDay() -> Int {
-        let components = Calendar.current.dateComponents([.year, .month], from: currentDate)
+    private func firstDay(date: Date) -> Int {
+        let components = Calendar.current.dateComponents([.year, .month], from: date)
         let firstDayOfMonth = Calendar.current.date(from: components)!
         
         return Calendar.current.component(.weekday, from: firstDayOfMonth) - 1
     }
     
-    private func updateDays() {
+    private func updateDays(with date: Date) {
         days.removeAll()
         
-        let firstDay = firstDay()
-        let daysCount = daysCount()
+        let firstDay = firstDay(date: date)
+        let daysCount = daysCount(for: date)
         
         for idx in (0 ..< daysCount + firstDay) {
             if idx < firstDay {
                 days.append(nil)
             } else {
-                let components = calendar.dateComponents([.year, .month], from: currentDate)
+                let components = calendar.dateComponents([.year, .month], from: date)
                 let day = idx - firstDay + 1
                 let date = calendar.date(from: DateComponents(year: components.year,
                                                               month: components.month,
