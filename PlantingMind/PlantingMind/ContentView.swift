@@ -20,4 +20,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(\.managedObjectContext, CoreDataStack(.inMemory).persistentContainer.viewContext)
 }
