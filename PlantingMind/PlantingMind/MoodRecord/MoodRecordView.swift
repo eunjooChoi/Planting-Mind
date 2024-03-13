@@ -17,7 +17,7 @@ struct MoodRecordView: View {
         NavigationStack() {
             HStack {
                 VStack(spacing: 20) {
-                    Text("오늘의 기분은요?")
+                    Text("mood_title")
                         .font(.title2)
                         .bold()
                         .padding()
@@ -44,7 +44,7 @@ struct MoodRecordView: View {
                     
                     Spacer()
                     
-                    Text("왜 그렇게 느꼈나요?")
+                    Text("mood_reason")
                         .font(.title2)
                         .bold()
                     
@@ -64,7 +64,7 @@ struct MoodRecordView: View {
                         if viewModel.reason.isEmpty {
                             VStack {
                                 HStack {
-                                    Text("내용을 입력하세요.")
+                                    Text("fill_in_the_blank")
                                         .foregroundStyle(Color.Custom.line)
                                         .padding(.top, 9)
                                         .padding(.leading, 22)
@@ -96,7 +96,7 @@ struct MoodRecordView: View {
                     Button(action: {
                         dismiss()
                     }, label: {
-                        Text("취소")
+                        Text("cancel")
                     })
                 }
                 
@@ -105,7 +105,7 @@ struct MoodRecordView: View {
                         viewModel.save()
                         dismiss()
                     }, label: {
-                        Text("저장")
+                        Text("save")
                     })
                 }
             }
