@@ -37,7 +37,7 @@ struct CalendarHeaderView: View {
             }
             .buttonStyle(PlainButtonStyle())
             .fullScreenCover(isPresented: $showPicker, content: {
-                DatePickerView(selectedDate: $calendarViewModel.selectedDate, pickedDate: calendarViewModel.selectedDate)
+                DatePickerView(selectedDate: $calendarViewModel.selectedDate)
             })
             
             Button(action: {
