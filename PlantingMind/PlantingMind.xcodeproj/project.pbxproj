@@ -27,6 +27,8 @@
 		7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */; };
 		7B907F7A2B9B4FBE0050D05B /* NoticiationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F792B9B4FBE0050D05B /* NoticiationExtension.swift */; };
 		7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */; };
+		7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
+		7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
 		7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
 		7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */; };
 		7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
@@ -78,6 +80,8 @@
 		7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotificationSpy.swift; sourceTree = "<group>"; };
 		7B907F792B9B4FBE0050D05B /* NoticiationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiationExtension.swift; sourceTree = "<group>"; };
 		7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7B95D1792BA1645C00484F9D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		7B95D17B2BA166AC00484F9D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModelTests.swift; sourceTree = "<group>"; };
 		7BABB0102B5F850200EEEEBB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -162,9 +166,11 @@
 				7BABB0102B5F850200EEEEBB /* ColorExtension.swift */,
 				7B907F792B9B4FBE0050D05B /* NoticiationExtension.swift */,
 				7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */,
+				7B95D17B2BA166AC00484F9D /* StringExtension.swift */,
 				7BC300F32B5E4C2100059068 /* Calender */,
 				7B0A76D22B92DA3200ADC039 /* MoodRecord */,
 				7B0A76CF2B906FCF00ADC039 /* CoreData */,
+				7B95D1762BA1627500484F9D /* Localization */,
 				7B11F82D2B4549E000346A41 /* Preview Content */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
 			);
@@ -197,6 +203,14 @@
 				7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */,
 			);
 			path = PlantingMindUITests;
+			sourceTree = "<group>";
+		};
+		7B95D1762BA1627500484F9D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7B95D1792BA1645C00484F9D /* Localizable.xcstrings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		7BC300F32B5E4C2100059068 /* Calender */ = {
@@ -300,6 +314,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 7B11F81B2B4549DF00346A41;
 			productRefGroup = 7B11F8252B4549DF00346A41 /* Products */;
@@ -320,6 +335,7 @@
 			files = (
 				7B11F82F2B4549E000346A41 /* Preview Assets.xcassets in Resources */,
 				7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */,
+				7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +363,7 @@
 				7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */,
 				7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */,
 				7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */,
+				7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */,
 				7B571B562B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift in Sources */,
 				7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */,
 				7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */,
