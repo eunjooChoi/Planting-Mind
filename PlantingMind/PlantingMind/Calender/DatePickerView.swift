@@ -35,7 +35,7 @@ struct DatePickerView: View {
                         Button {
                             dismiss()
                         } label: {
-                            Text("Cancel")
+                            Text("cancel")
                         }
                         
                         Spacer()
@@ -44,7 +44,7 @@ struct DatePickerView: View {
                             selectedDate = pickedDate
                             dismiss()
                         } label: {
-                            Text("Done")
+                            Text("done")
                         }
                     }
                     .padding([.top, .trailing, .leading])
