@@ -35,9 +35,10 @@ struct CalendarHeaderView: View {
                     .font(.title)
                     .fontWeight(.bold)
             }
-            .buttonStyle(PlainButtonStyle())
+            .buttonStyle(.plain)
             .fullScreenCover(isPresented: $showPicker, content: {
-                DatePickerView(selectedDate: $calendarViewModel.selectedDate)
+                MonthPickerView(selectedDate: $calendarViewModel.selectedDate,
+                                dateRange: DateRange(startDate: calendarViewModel.startMonth!, endDate: calendarViewModel.today))
             })
             
             Button(action: {

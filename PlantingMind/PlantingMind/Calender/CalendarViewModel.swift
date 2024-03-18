@@ -11,7 +11,6 @@ import Combine
 
 class CalendarViewModel: ObservableObject {
     private let context: NSManagedObjectContext
-    private let startMonth: Date? = Calendar.current.date(from: DateComponents(year: 2024, month: 1, day: 1))
     private(set) var today: Date
     private var cancellables: Set<AnyCancellable>
     
@@ -24,6 +23,7 @@ class CalendarViewModel: ObservableObject {
     @Published var moods: [MoodRecord] = []
     
     let weekdaySymbols = Calendar.current.veryShortWeekdaySymbols
+    let startMonth: Date? = Calendar.current.date(from: DateComponents(year: 2024, month: 1, day: 1))
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
