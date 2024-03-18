@@ -23,7 +23,7 @@ struct DayCellView: View {
                     .fontWeight(.semibold)
                     .background(viewModel.dayBackgroundColor)
                     .foregroundStyle(viewModel.dayForegroundColor)
-                    .clipShape(Circle())
+                    .clipShape(.circle)
             })
             .frame(height: 50)
             .sheet(isPresented: $showMoodRecordView) {
