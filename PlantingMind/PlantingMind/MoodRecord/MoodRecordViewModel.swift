@@ -29,12 +29,23 @@ class MoodRecordViewModel: ObservableObject {
         guard let date = self.date else { return }
         let timestamp = date.timeStampString()
         
-        let record = MoodRecord(context: context)
-        record.timestamp = timestamp
-        record.mood = self.mood.rawValue
-        record.reason = self.reason
+        let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
+        let predicate = NSPredicate(format: "timestamp == %@", timestamp)
+        fetchRequest.predicate = predicate
         
         do {
+            let result = try context.fetch(fetchRequest)
+            
+            if result.count == 1 {
+                let record = result[0]
+                record.mood = self.mood.rawValue
+                record.reason = self.reason
+            } else {
+                let record = MoodRecord(context: context)
+                record.timestamp = timestamp
+                record.mood = self.mood.rawValue
+                record.reason = self.reason
+            }
             try context.save()
         } catch {
             print("Failed to save the mood record", error.localizedDescription)
