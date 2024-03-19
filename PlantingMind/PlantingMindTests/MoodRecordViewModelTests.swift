@@ -63,6 +63,8 @@ final class MoodRecordViewModelTests: XCTestCase {
                                             calendarModel: calendarModel,
                                             moodRecord: moodRecord)
         
+        viewModel.save()
+        
         let expectedMood = Mood.normal
         let expectedReason = "Change Reason"
         
