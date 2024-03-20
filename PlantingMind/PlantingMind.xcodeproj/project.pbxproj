@@ -23,6 +23,12 @@
 		7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */; };
 		7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */; };
 		7B571B562B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */; };
+		7B63CA9E2BA9CB4600943DED /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B63CA9D2BA9CB4600943DED /* WidgetKit.framework */; };
+		7B63CAA02BA9CB4600943DED /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B63CA9F2BA9CB4600943DED /* SwiftUI.framework */; };
+		7B63CAA32BA9CB4600943DED /* PlantingWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63CAA22BA9CB4600943DED /* PlantingWidgetBundle.swift */; };
+		7B63CAA52BA9CB4600943DED /* PlantingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63CAA42BA9CB4600943DED /* PlantingWidget.swift */; };
+		7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B63CAA62BA9CB4700943DED /* Assets.xcassets */; };
+		7B63CAAB2BA9CB4700943DED /* PlantingWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
 		7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F722B9981E90050D05B /* DayCellViewModel.swift */; };
 		7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F742B9997060050D05B /* DayCellViewModelTest.swift */; };
@@ -31,6 +37,12 @@
 		7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */; };
 		7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
 		7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
+		7BA079922BAAD660009B5E46 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */; };
+		7BA079932BAAD662009B5E46 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */; };
+		7BA079942BAAD666009B5E46 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */; };
+		7BA079952BAAD669009B5E46 /* MoodRecords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */; };
+		7BA079962BAAD834009B5E46 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
+		7BA079972BAAD87A009B5E46 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
 		7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
 		7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */; };
 		7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
@@ -56,7 +68,28 @@
 			remoteGlobalIDString = 7B11F8232B4549DF00346A41;
 			remoteInfo = PlantingMind;
 		};
+		7B63CAA92BA9CB4700943DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B11F81C2B4549DF00346A41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B63CA9A2BA9CB4600943DED;
+			remoteInfo = PlantingWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B63CAAC2BA9CB4700943DED /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7B63CAAB2BA9CB4700943DED /* PlantingWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7B02AD612BA0222900D5C850 /* MonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerView.swift; sourceTree = "<group>"; };
@@ -78,6 +111,13 @@
 		7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewModelTests.swift; sourceTree = "<group>"; };
 		7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlantingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B63CA9D2BA9CB4600943DED /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7B63CA9F2BA9CB4600943DED /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7B63CAA22BA9CB4600943DED /* PlantingWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingWidgetBundle.swift; sourceTree = "<group>"; };
+		7B63CAA42BA9CB4600943DED /* PlantingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingWidget.swift; sourceTree = "<group>"; };
+		7B63CAA62BA9CB4700943DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B63CAA82BA9CB4700943DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
 		7B907F722B9981E90050D05B /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
 		7B907F742B9997060050D05B /* DayCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModelTest.swift; sourceTree = "<group>"; };
@@ -86,6 +126,8 @@
 		7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7B95D1792BA1645C00484F9D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7B95D17B2BA166AC00484F9D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7BA079902BAAD5CB009B5E46 /* PlantingMind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantingMind.entitlements; sourceTree = "<group>"; };
+		7BA079912BAAD5EA009B5E46 /* PlantingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantingWidgetExtension.entitlements; sourceTree = "<group>"; };
 		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModelTests.swift; sourceTree = "<group>"; };
 		7BABB0102B5F850200EEEEBB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -118,6 +160,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B63CA982BA9CB4600943DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B63CAA02BA9CB4600943DED /* SwiftUI.framework in Frameworks */,
+				7B63CA9E2BA9CB4600943DED /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,9 +196,12 @@
 		7B11F81B2B4549DF00346A41 = {
 			isa = PBXGroup;
 			children = (
+				7BA079912BAAD5EA009B5E46 /* PlantingWidgetExtension.entitlements */,
 				7B11F8262B4549DF00346A41 /* PlantingMind */,
+				7B63CAA12BA9CB4600943DED /* PlantingWidget */,
 				7B11F8372B4549E000346A41 /* PlantingMindTests */,
 				7B11F8412B4549E000346A41 /* PlantingMindUITests */,
+				7B63CA9C2BA9CB4600943DED /* Frameworks */,
 				7B11F8252B4549DF00346A41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +212,7 @@
 				7B11F8242B4549DF00346A41 /* PlantingMind.app */,
 				7B11F8342B4549E000346A41 /* PlantingMindTests.xctest */,
 				7B11F83E2B4549E000346A41 /* PlantingMindUITests.xctest */,
+				7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +220,7 @@
 		7B11F8262B4549DF00346A41 /* PlantingMind */ = {
 			isa = PBXGroup;
 			children = (
+				7BA079902BAAD5CB009B5E46 /* PlantingMind.entitlements */,
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
 				7BABB0102B5F850200EEEEBB /* ColorExtension.swift */,
@@ -228,6 +284,26 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
+		7B63CA9C2BA9CB4600943DED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B63CA9D2BA9CB4600943DED /* WidgetKit.framework */,
+				7B63CA9F2BA9CB4600943DED /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B63CAA12BA9CB4600943DED /* PlantingWidget */ = {
+			isa = PBXGroup;
+			children = (
+				7B63CAA22BA9CB4600943DED /* PlantingWidgetBundle.swift */,
+				7B63CAA42BA9CB4600943DED /* PlantingWidget.swift */,
+				7B63CAA62BA9CB4700943DED /* Assets.xcassets */,
+				7B63CAA82BA9CB4700943DED /* Info.plist */,
+			);
+			path = PlantingWidget;
+			sourceTree = "<group>";
+		};
 		7B95D1762BA1627500484F9D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,10 +336,12 @@
 				7B11F8202B4549DF00346A41 /* Sources */,
 				7B11F8212B4549DF00346A41 /* Frameworks */,
 				7B11F8222B4549DF00346A41 /* Resources */,
+				7B63CAAC2BA9CB4700943DED /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7B63CAAA2BA9CB4700943DED /* PBXTargetDependency */,
 			);
 			name = PlantingMind;
 			productName = PlantingMind;
@@ -306,6 +384,23 @@
 			productReference = 7B11F83E2B4549E000346A41 /* PlantingMindUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7B63CA9A2BA9CB4600943DED /* PlantingWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B63CAAF2BA9CB4700943DED /* Build configuration list for PBXNativeTarget "PlantingWidgetExtension" */;
+			buildPhases = (
+				7B63CA972BA9CB4600943DED /* Sources */,
+				7B63CA982BA9CB4600943DED /* Frameworks */,
+				7B63CA992BA9CB4600943DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlantingWidgetExtension;
+			productName = PlantingWidgetExtension;
+			productReference = 7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -327,6 +422,9 @@
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 7B11F8232B4549DF00346A41;
 					};
+					7B63CA9A2BA9CB4600943DED = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 7B11F81F2B4549DF00346A41 /* Build configuration list for PBXProject "PlantingMind" */;
@@ -346,6 +444,7 @@
 				7B11F8232B4549DF00346A41 /* PlantingMind */,
 				7B11F8332B4549E000346A41 /* PlantingMindTests */,
 				7B11F83D2B4549E000346A41 /* PlantingMindUITests */,
+				7B63CA9A2BA9CB4600943DED /* PlantingWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +471,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B63CA992BA9CB4600943DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +535,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B63CA972BA9CB4600943DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA079942BAAD666009B5E46 /* CoreDataStack.swift in Sources */,
+				7BA079922BAAD660009B5E46 /* MoodRecord+CoreDataProperties.swift in Sources */,
+				7B63CAA52BA9CB4600943DED /* PlantingWidget.swift in Sources */,
+				7BA079972BAAD87A009B5E46 /* ColorExtension.swift in Sources */,
+				7BA079962BAAD834009B5E46 /* Mood.swift in Sources */,
+				7BA079952BAAD669009B5E46 /* MoodRecords.xcdatamodeld in Sources */,
+				7B63CAA32BA9CB4600943DED /* PlantingWidgetBundle.swift in Sources */,
+				7BA079932BAAD662009B5E46 /* MoodRecord+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -440,6 +562,11 @@
 			isa = PBXTargetDependency;
 			target = 7B11F8232B4549DF00346A41 /* PlantingMind */;
 			targetProxy = 7B11F83F2B4549E000346A41 /* PBXContainerItemProxy */;
+		};
+		7B63CAAA2BA9CB4700943DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B63CA9A2BA9CB4600943DED /* PlantingWidgetExtension */;
+			targetProxy = 7B63CAA92BA9CB4700943DED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,8 +693,10 @@
 		7B11F8492B4549E000346A41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlantingMind/PlantingMind.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantingMind/Preview Content\"";
@@ -598,8 +727,10 @@
 		7B11F84A2B4549E000346A41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlantingMind/PlantingMind.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantingMind/Preview Content\"";
@@ -717,6 +848,70 @@
 			};
 			name = Release;
 		};
+		7B63CAAD2BA9CB4700943DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PlantingWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PS5XYD2TU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PlantingWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind.PlantingWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7B63CAAE2BA9CB4700943DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PlantingWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PS5XYD2TU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PlantingWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind.PlantingWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -752,6 +947,15 @@
 			buildConfigurations = (
 				7B11F84F2B4549E000346A41 /* Debug */,
 				7B11F8502B4549E000346A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B63CAAF2BA9CB4700943DED /* Build configuration list for PBXNativeTarget "PlantingWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B63CAAD2BA9CB4700943DED /* Debug */,
+				7B63CAAE2BA9CB4700943DED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
