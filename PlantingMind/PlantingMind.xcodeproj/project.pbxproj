@@ -119,6 +119,7 @@
 		7B63CAA62BA9CB4700943DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B63CAA82BA9CB4700943DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
+		7B715EDB2BAC734400B4F720 /* PlantingMind.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlantingMind.xctestplan; sourceTree = "<group>"; };
 		7B907F722B9981E90050D05B /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
 		7B907F742B9997060050D05B /* DayCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModelTest.swift; sourceTree = "<group>"; };
 		7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotificationSpy.swift; sourceTree = "<group>"; };
@@ -196,6 +197,7 @@
 		7B11F81B2B4549DF00346A41 = {
 			isa = PBXGroup;
 			children = (
+				7B715EDB2BAC734400B4F720 /* PlantingMind.xctestplan */,
 				7BA079912BAAD5EA009B5E46 /* PlantingWidgetExtension.entitlements */,
 				7B11F8262B4549DF00346A41 /* PlantingMind */,
 				7B63CAA12BA9CB4600943DED /* PlantingWidget */,

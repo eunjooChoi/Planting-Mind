@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "495F86FC-B535-4A9B-9436-5D9FDB9DECC7",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:PlantingMind.xcodeproj",
+      "identifier" : "7B11F8232B4549DF00346A41",
+      "name" : "PlantingMind"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:PlantingMind.xcodeproj",
+        "identifier" : "7B11F8332B4549E000346A41",
+        "name" : "PlantingMindTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:PlantingMind.xcodeproj",
+        "identifier" : "7B11F83D2B4549E000346A41",
+        "name" : "PlantingMindUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

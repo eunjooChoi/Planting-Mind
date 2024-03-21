@@ -13,16 +13,16 @@ final class CalendarViewModelTests: XCTestCase {
     var context: NSManagedObjectContext!
     var viewModel: CalendarViewModel!
     
-    override func setUp() {
-        super.setUp()
+    override func setUpWithError() throws {
+        try super.setUpWithError()
         
-        let date = Calendar.current.date(from: DateComponents(year: 2024,
-                                                              month: 1,
-                                                              day: 1))
+        let date = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                            month: 1,
+                                                                            day: 1)))
         
         context = CoreDataStack(.inMemory).persistentContainer.viewContext
-        viewModel = CalendarViewModel(today: date!, context: context)
-        setupCoreData()
+        viewModel = CalendarViewModel(today: date, context: context)
+        try setupCoreData()
     }
     
     override func tearDown() {
@@ -61,9 +61,9 @@ final class CalendarViewModelTests: XCTestCase {
                                                               day: 1))
         
         viewModel = CalendarViewModel(today: date!, context: context)
-        viewModel.selectedDate = Calendar.current.date(from: DateComponents(year: 2024,
-                                                                           month: 1,
-                                                                           day: 1))!
+        viewModel.selectedDate = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                                          month: 1,
+                                                                                          day: 1)))
         viewModel.addingMonth(value: 1)
         
         let nilCount = viewModel.days.filter { $0 == nil }.count
@@ -83,7 +83,7 @@ final class CalendarViewModelTests: XCTestCase {
         viewModel.fetch()
         
         let expectedRecordsCount = 3
-        XCTAssertTrue(viewModel.moods.count == expectedRecordsCount)
+        XCTAssertEqual(viewModel.moods.count, expectedRecordsCount)
     }
     
     func test_원하는_날짜의_mood_받기() throws {
@@ -100,9 +100,9 @@ final class CalendarViewModelTests: XCTestCase {
         
         // 저장된 정보 없을 경우 Nil
         let result2 = viewModel.mood(of: CalendarModel(year: 2024,
-                                                      month: 1,
-                                                      day: 2,
-                                                      isToday: false))
+                                                       month: 1,
+                                                       day: 2,
+                                                       isToday: false))
         
         XCTAssertNil(result2)
     }
@@ -119,12 +119,28 @@ final class CalendarViewModelTests: XCTestCase {
             XCTAssertEqual(self.viewModel.moods.count, expectedDataCount)
             notiExpectation.fulfill()
         })
-
+        
         wait(for: [notiExpectation], timeout: 1.5)
     }
     
-    private func setupCoreData() {
-        let timestapms = ["2024-02-24", "2024-01-01", "2024-01-06", "2024-01-24"]
+    private func setupCoreData() throws {
+        let date1 = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                             month: 2,
+                                                                             day: 24)))
+        
+        let date2 = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                             month: 1,
+                                                                             day: 1)))
+        
+        let date3 = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                             month: 1,
+                                                                             day: 6)))
+        
+        let date4 = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                             month: 1,
+                                                                             day: 24)))
+        
+        let timestapms = [date1, date2, date3, date4]
         let moods: [Mood] = [.nice, .normal, .notBad, .bad]
         let reasons: [String?] = ["happy birthday", nil, "developing...", "eww"]
         

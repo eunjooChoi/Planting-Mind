@@ -30,10 +30,16 @@ final class FetchNotificationSpy {
     func sendNoticiation() {
         self.saveCoreData()
         
-        let timestamp = "2024-01"
+        let startOfMonth = Calendar.current.date(from: DateComponents(year: 2024,
+                                                                      month: 1,
+                                                                      day: 1))!
+        
+        let endOfMonth = Calendar.current.date(from: DateComponents(year: 2024,
+                                                                      month: 1,
+                                                                      day: 31))!
         
         let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
-        let predicate = NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(MoodRecord.timestamp), timestamp)
+        let predicate = NSPredicate(format: "%K >= %@ && %K <= %@", #keyPath(MoodRecord.timestamp), startOfMonth as NSDate, #keyPath(MoodRecord.timestamp), endOfMonth as NSDate)
         fetchRequest.predicate = predicate
         
         do {
@@ -49,7 +55,9 @@ final class FetchNotificationSpy {
     
     private func saveCoreData() {
         let moodRecord = MoodRecord(context: context)
-        moodRecord.timestamp = "2024-01-07"
+        moodRecord.timestamp = Calendar.current.date(from: DateComponents(year: 2024,
+                                                                          month: 1,
+                                                                          day: 7))!
         moodRecord.mood = Mood.good.rawValue
         moodRecord.reason = "i wanna sleep"
         

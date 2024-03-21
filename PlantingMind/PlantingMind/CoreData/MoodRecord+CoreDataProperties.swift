@@ -16,7 +16,7 @@ extension MoodRecord {
         return NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
     }
 
-    @NSManaged public var timestamp: String
+    @NSManaged public var timestamp: Date
     @NSManaged public var mood: String
     @NSManaged public var reason: String?
 

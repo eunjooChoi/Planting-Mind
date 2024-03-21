@@ -3,6 +3,6 @@
     <entity name="MoodRecord" representedClassName="MoodRecord" syncable="YES">
         <attribute name="mood" attributeType="String" defaultValueString="normal"/>
         <attribute name="reason" optional="YES" attributeType="String" minValueString="0" maxValueString="100"/>
-        <attribute name="timestamp" attributeType="String" defaultValueString="2020-01-01"/>
+        <attribute name="timestamp" attributeType="Date" defaultDateTimeInterval="725731200" usesScalarValueType="NO"/>
     </entity>
 </model>
