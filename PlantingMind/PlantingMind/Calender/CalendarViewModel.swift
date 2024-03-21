@@ -48,7 +48,7 @@ class CalendarViewModel: ObservableObject {
     
     func addingMonth(value: Int) {
         guard let newMonth = calendar.date(byAdding: .month, value: value, to: selectedDate),
-            let startMonth = startMonth else { return }
+              let startMonth = startMonth else { return }
         
         // newMonth가 2024년 1월 이전이라면 return
         guard newMonth >= startMonth else { return }
@@ -64,17 +64,11 @@ class CalendarViewModel: ObservableObject {
     }
     
     private func fetch(date: Date) {
-        var dateFormatter: DateFormatter {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM"
-            
-            return formatter
-        }
-        
-        let timestamp = dateFormatter.string(from: date)
+        guard let startOfMonth = date.startOfMonth,
+              let endOfMonth = date.endOfMonth else { return }
         
         let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
-        let predicate = NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(MoodRecord.timestamp), timestamp)
+        let predicate = NSPredicate(format: "%K >= %@ && %K <= %@", #keyPath(MoodRecord.timestamp), startOfMonth as NSDate, #keyPath(MoodRecord.timestamp), endOfMonth as NSDate)
         fetchRequest.predicate = predicate
         
         do {
@@ -90,9 +84,8 @@ class CalendarViewModel: ObservableObject {
         guard let date = Calendar.current.date(from: DateComponents(year: day.year,
                                                                     month: day.month,
                                                                     day: day.day)) else { return nil }
-        let timestamp = date.timeStampString()
         
-        return self.moods.filter { $0.timestamp == timestamp }.first
+        return self.moods.filter { $0.timestamp == date }.first
     }
     
     private func daysCount(for month: Date) -> Int {
