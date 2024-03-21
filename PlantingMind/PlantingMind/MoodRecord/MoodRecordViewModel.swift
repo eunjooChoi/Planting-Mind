@@ -27,10 +27,9 @@ class MoodRecordViewModel: ObservableObject {
     
     func save() {
         guard let date = self.date else { return }
-        let timestamp = date.timeStampString()
         
         let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
-        let predicate = NSPredicate(format: "timestamp == %@", timestamp)
+        let predicate = NSPredicate(format: "timestamp == %@", date as NSDate)
         fetchRequest.predicate = predicate
         
         do {
@@ -42,7 +41,7 @@ class MoodRecordViewModel: ObservableObject {
                 record.reason = self.reason
             } else {
                 let record = MoodRecord(context: context)
-                record.timestamp = timestamp
+                record.timestamp = date
                 record.mood = self.mood.rawValue
                 record.reason = self.reason
             }

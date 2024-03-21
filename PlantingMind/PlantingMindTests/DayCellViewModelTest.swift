@@ -22,7 +22,9 @@ final class DayCellViewModelTest: XCTestCase {
     func test_DayCellModel_record_non_nil() throws {
         let coreDataStack = CoreDataStack(.inMemory)
         let moodRecord = MoodRecord(context: coreDataStack.persistentContainer.viewContext)
-        moodRecord.timestamp = "2024-02-24"
+        moodRecord.timestamp = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                                        month: 2,
+                                                                                        day: 24)))
         moodRecord.mood = Mood.nice.rawValue
         
         let model = DayCellViewModel(today: Date(), calendarModel: CalendarModel(year: 2024, month: 2, day: 24, isToday: false),

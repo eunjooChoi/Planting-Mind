@@ -72,7 +72,7 @@ final class MoodRecordViewModelTests: XCTestCase {
         viewModel.reason = expectedReason
         viewModel.save()
         
-        let record = self.fetch()
+        let record = try self.fetch()
         
         XCTAssertNotNil(record)
         XCTAssertEqual(record?.mood, expectedMood.rawValue)
@@ -90,11 +90,13 @@ final class MoodRecordViewModelTests: XCTestCase {
         XCTAssertTrue(mock.bindNoticiationIsCalled)
     }
     
-    private func fetch() -> MoodRecord? {
-        let timestamp = "2024-02-24"
+    private func fetch() throws -> MoodRecord? {
+        let timestamp = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                                 month: 2,
+                                                                                 day: 24)))
         
         let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
-        let predicate = NSPredicate(format: "timestamp == %@", timestamp)
+        let predicate = NSPredicate(format: "timestamp == %@", timestamp as NSDate)
         fetchRequest.predicate = predicate
         
         do {
