@@ -9,15 +9,10 @@ import Foundation
 
 extension Date {
     var startOfMonth: Date? {
-        Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: self))
+        Calendar.current.dateInterval(of: .month, for: self)?.start
     }
     
     var endOfMonth: Date? {
-        guard let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: self),
-              let startOfNextMonth = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: nextMonth)) else {
-            return nil
-        }
-        
-        return Calendar.current.date(byAdding: .second, value: -1, to: startOfNextMonth)
+        Calendar.current.dateInterval(of: .month, for: self)?.end
     }
 }

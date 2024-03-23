@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import WidgetKit
 
 class MoodRecordViewModel: ObservableObject {
     private let context: NSManagedObjectContext
@@ -46,6 +47,7 @@ class MoodRecordViewModel: ObservableObject {
                 record.reason = self.reason
             }
             try context.save()
+            WidgetCenter.shared.reloadAllTimelines()
         } catch {
             print("Failed to save the mood record", error.localizedDescription)
         }
