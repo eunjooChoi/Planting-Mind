@@ -15,6 +15,12 @@ enum StorageType {
 
 final class CoreDataStack: ObservableObject {
     let persistentContainer: NSPersistentContainer
+    private let datebaseName = "PlantingMind.sqlite"
+    
+    var sharedStoreURL: URL? {
+        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.eunjoo.planting-mind.PlantingMind")
+        return container?.appendingPathComponent(datebaseName)
+    }
     
     init(_ storageType: StorageType = .persistent) {
         self.persistentContainer = NSPersistentContainer(name: "MoodRecords")
@@ -23,6 +29,8 @@ final class CoreDataStack: ObservableObject {
         if storageType == .inMemory {
             let description = NSPersistentStoreDescription(url: URL(filePath: "dev/null"))
             self.persistentContainer.persistentStoreDescriptions = [description]
+        } else {
+            self.persistentContainer.persistentStoreDescriptions.first?.url = self.sharedStoreURL
         }
         
         self.persistentContainer.loadPersistentStores { _, error in

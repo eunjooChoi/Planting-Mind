@@ -11,6 +11,9 @@
 		7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */; };
 		7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */; };
 		7B0A77112B93196D00ADC039 /* MoodRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */; };
+		7B0E1BCE2BAD57940060458D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
+		7B0E1BCF2BAD57A70060458D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
+		7B0E1BD32BAD6C240060458D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
 		7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */; };
 		7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8292B4549DF00346A41 /* ContentView.swift */; };
 		7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
@@ -480,6 +483,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0E1BCE2BAD57940060458D /* Localizable.xcstrings in Resources */,
+				7B0E1BD32BAD6C240060458D /* Assets.xcassets in Resources */,
 				7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +551,7 @@
 				7B63CAA52BA9CB4600943DED /* PlantingWidget.swift in Sources */,
 				7BA079972BAAD87A009B5E46 /* ColorExtension.swift in Sources */,
 				7BA079962BAAD834009B5E46 /* Mood.swift in Sources */,
+				7B0E1BCF2BAD57A70060458D /* StringExtension.swift in Sources */,
 				7BA079952BAAD669009B5E46 /* MoodRecords.xcdatamodeld in Sources */,
 				7B63CAA32BA9CB4600943DED /* PlantingWidgetBundle.swift in Sources */,
 				7BA079932BAAD662009B5E46 /* MoodRecord+CoreDataClass.swift in Sources */,
