@@ -32,9 +32,8 @@ struct MoodRecordView: View {
                             .buttonStyle(PlainButtonStyle())
                             .overlay {
                                 if viewModel.mood == mood {
-                                    let color: Color = colorScheme == .dark ? .yellow : .orange
                                     Circle()
-                                        .stroke(color, lineWidth: 4)
+                                        .stroke(Color.Custom.select, lineWidth: 2)
                                         .foregroundStyle(.clear)
                                         .frame(width: 60, height: 60)
                                 }

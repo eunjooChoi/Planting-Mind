@@ -90,13 +90,13 @@ struct PlantingWidgetEntryView : View {
             ForEach(1...brickCount, id: \.self) { count in
                 if count <= weekday {
                     RoundedRectangle(cornerRadius: 2)
-                        .foregroundColor(Color.Custom.general.opacity(0.2))
+                        .foregroundColor(Color.Custom.select)
                         .frame(width: 15)
                         .overlay {
                             Text(day[count - 1].localized)
                                 .font(.system(size: 11))
                                 .fontWeight(.heavy)
-                                .foregroundStyle(count == 1 ? .red : Color.Custom.general)
+                                .foregroundStyle(count == 1 ? .red : Color.Custom.point)
                         }
                 } else if blockDisplayRange >= count {
                     // (요일 표기를 위한 7칸) 다음부터 기분 블록 시작
