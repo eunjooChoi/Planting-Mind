@@ -1,6 +1,18 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    " - " : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
     "app_title" : {
       "extractionState" : "manual",
       "localizations" : {

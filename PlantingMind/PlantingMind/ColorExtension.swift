@@ -11,6 +11,7 @@ import SwiftUI
 private enum CustomColor: String {
     case background
     case widgetBackground
+    case select
     case line
     case general
     case point
@@ -26,6 +27,7 @@ extension Color {
         // Basic Color
         static let background = Color(CustomColor.background.rawValue)
         static let widgetBackground = Color(CustomColor.widgetBackground.rawValue)
+        static let select = Color(CustomColor.select.rawValue)
         static let line = Color(CustomColor.line.rawValue)
         static let general = Color(CustomColor.general.rawValue)
         static let point = Color(CustomColor.point.rawValue)
