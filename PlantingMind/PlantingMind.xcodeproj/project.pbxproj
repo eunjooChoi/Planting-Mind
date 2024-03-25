@@ -14,6 +14,8 @@
 		7B0E1BCE2BAD57940060458D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
 		7B0E1BCF2BAD57A70060458D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
 		7B0E1BD32BAD6C240060458D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
+		7B0E1BD62BB15A220060458D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */; };
+		7B0E1BD72BB15A220060458D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */; };
 		7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */; };
 		7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8292B4549DF00346A41 /* ContentView.swift */; };
 		7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
@@ -99,6 +101,8 @@
 		7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodRecords.xcdatamodel; sourceTree = "<group>"; };
 		7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModel.swift; sourceTree = "<group>"; };
+		7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		7B0E1BD82BB15AAD0060458D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7B11F8242B4549DF00346A41 /* PlantingMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantingMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindApp.swift; sourceTree = "<group>"; };
 		7B11F8292B4549DF00346A41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,6 +201,14 @@
 			path = MoodRecord;
 			sourceTree = "<group>";
 		};
+		7B0E1BD42BB159CD0060458D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		7B11F81B2B4549DF00346A41 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +237,7 @@
 		7B11F8262B4549DF00346A41 /* PlantingMind */ = {
 			isa = PBXGroup;
 			children = (
+				7B0E1BD82BB15AAD0060458D /* Info.plist */,
 				7BA079902BAAD5CB009B5E46 /* PlantingMind.entitlements */,
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
@@ -236,6 +249,7 @@
 				7B0A76D22B92DA3200ADC039 /* MoodRecord */,
 				7B0A76CF2B906FCF00ADC039 /* CoreData */,
 				7B95D1762BA1627500484F9D /* Localization */,
+				7B0E1BD42BB159CD0060458D /* Font */,
 				7B11F82D2B4549E000346A41 /* Preview Content */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
 			);
@@ -461,6 +475,7 @@
 			files = (
 				7B11F82F2B4549E000346A41 /* Preview Assets.xcassets in Resources */,
 				7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */,
+				7B0E1BD62BB15A220060458D /* Pretendard-Black.otf in Resources */,
 				7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +500,7 @@
 			files = (
 				7B0E1BCE2BAD57940060458D /* Localizable.xcstrings in Resources */,
 				7B0E1BD32BAD6C240060458D /* Assets.xcassets in Resources */,
+				7B0E1BD72BB15A220060458D /* Pretendard-Black.otf in Resources */,
 				7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +727,7 @@
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingMind/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -745,6 +762,7 @@
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingMind/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
