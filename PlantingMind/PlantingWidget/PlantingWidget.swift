@@ -94,7 +94,7 @@ struct PlantingWidgetEntryView : View {
                         .frame(width: 15)
                         .overlay {
                             Text(day[count - 1].localized)
-                                .font(.system(size: 11))
+                                .font(.custom("Pretendard-Black", size: 11))
                                 .fontWeight(.heavy)
                                 .foregroundStyle(count == 1 ? .red : Color.Custom.point)
                         }
