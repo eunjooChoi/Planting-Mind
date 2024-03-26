@@ -88,6 +88,19 @@ class CalendarViewModel: ObservableObject {
         return self.moods.filter { $0.timestamp == date }.first
     }
     
+    func checkDate(date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let currentToday = dateFormatter.string(from: self.today)
+        let currentDate = dateFormatter.string(from: date)
+        
+        if currentToday != currentDate {
+            self.today = date
+            self.selectedDate = today
+        }
+    }
+    
     private func daysCount(for month: Date) -> Int {
         return Calendar.current.range(of: .day, in: .month, for: month)?.count ?? 0
     }
