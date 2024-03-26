@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @Environment(\.scenePhase) var phase
     @StateObject var calendarViewModel: CalendarViewModel
     
     var body: some View {
@@ -17,6 +18,11 @@ struct CalendarView: View {
             Spacer()
         }
         .environmentObject(calendarViewModel)
+        .onChange(of: phase) { newValue in
+            if newValue == .active {
+                calendarViewModel.checkDate(date: Date())
+            }
+        }
     }
 }
 
