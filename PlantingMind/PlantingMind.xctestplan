@@ -9,7 +9,6 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
     "targetForVariableExpansion" : {
       "containerPath" : "container:PlantingMind.xcodeproj",
       "identifier" : "7B11F8232B4549DF00346A41",
