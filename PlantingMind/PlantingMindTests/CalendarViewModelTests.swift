@@ -56,11 +56,11 @@ final class CalendarViewModelTests: XCTestCase {
     }
     
     func test_다음_달로_이동() throws {
-        let date = Calendar.current.date(from: DateComponents(year: 2024,
-                                                              month: 2,
-                                                              day: 1))
+        let date = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                            month: 2,
+                                                                            day: 1)))
         
-        viewModel = CalendarViewModel(today: date!, context: context)
+        viewModel = CalendarViewModel(today: date, context: context)
         viewModel.selectedDate = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
                                                                                           month: 1,
                                                                                           day: 1)))
@@ -121,6 +121,14 @@ final class CalendarViewModelTests: XCTestCase {
         })
         
         wait(for: [notiExpectation], timeout: 1.5)
+    }
+    
+    func test_백포전환시_날짜가_변경된_경우() throws {
+        let date = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
+                                                                            month: 1,
+                                                                            day: 2)))
+        viewModel.checkDate(date: date)
+        XCTAssertEqual(viewModel.selectedDate, date)
     }
     
     private func setupCoreData() throws {
