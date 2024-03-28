@@ -26,6 +26,15 @@ struct CalendarGridView: View {
         .onAppear(perform: {
             viewModel.fetch()
         })
+        .gesture(DragGesture(minimumDistance: 10, coordinateSpace: .local)
+            .onEnded { value in
+                let horizontalAmount = value.translation.width
+                let verticalAmount = value.translation.height
+                
+                guard abs(horizontalAmount) > abs(verticalAmount) else { return }
+                let addingValue = horizontalAmount < 0 ? 1 : -1
+                viewModel.addingMonth(value: addingValue)
+            })
     }
 }
 
