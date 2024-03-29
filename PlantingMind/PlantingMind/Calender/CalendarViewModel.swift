@@ -47,8 +47,8 @@ class CalendarViewModel: ObservableObject {
     }
     
     func addingMonth(value: Int) {
-        guard let newMonth = calendar.date(byAdding: .month, value: value, to: selectedDate),
-              let startMonth = startMonth else { return }
+        guard let newMonth = self.calendar.date(byAdding: .month, value: value, to: selectedDate),
+              let startMonth = self.startMonth else { return }
         
         // newMonth가 2024년 1월 이전이라면 return
         guard newMonth >= startMonth else { return }
@@ -60,7 +60,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     func fetch() {
-        self.fetch(date: selectedDate)
+        self.fetch(date: self.selectedDate)
     }
     
     private func fetch(date: Date) {
@@ -106,33 +106,35 @@ class CalendarViewModel: ObservableObject {
     }
     
     private func firstDay(date: Date) -> Int {
-        let components = Calendar.current.dateComponents([.year, .month], from: date)
-        let firstDayOfMonth = Calendar.current.date(from: components)!
+        let components = self.calendar.dateComponents([.year, .month], from: date)
+        let firstDayOfMonth = self.calendar.date(from: components)!
         
-        return Calendar.current.component(.weekday, from: firstDayOfMonth) - 1
+        return self.calendar.component(.weekday, from: firstDayOfMonth) - 1
     }
     
-    private func updateDays(with date: Date) {
-        days.removeAll()
+    private func updateDays(with selectedDate: Date) {
+        self.days.removeAll()
         
-        let firstDay = firstDay(date: date)
-        let daysCount = daysCount(for: date)
+        let firstDay = self.firstDay(date: selectedDate)
+        let daysCount = self.daysCount(for: selectedDate)
         
         for idx in (0 ..< daysCount + firstDay) {
             if idx < firstDay {
-                days.append(nil)
+                self.days.append(nil)
             } else {
-                let components = calendar.dateComponents([.year, .month], from: date)
+                let components = self.calendar.dateComponents([.year, .month], from: selectedDate)
                 let day = idx - firstDay + 1
-                let date = calendar.date(from: DateComponents(year: components.year,
+                if let date = self.calendar.date(from: DateComponents(year: components.year,
                                                               month: components.month,
-                                                              day: day))
-                
-                let calendarModel = CalendarModel(year: components.year,
-                                                  month: components.month,
-                                                  day: day,
-                                                  isToday: calendar.isDate(today, equalTo: date!, toGranularity: .day))
-                days.append(calendarModel)
+                                                                      day: day)) {
+                    let calendarModel = CalendarModel(year: components.year,
+                                                      month: components.month,
+                                                      day: day,
+                                                      isToday: self.calendar.isDate(self.today, equalTo: date, toGranularity: .day))
+                    self.days.append(calendarModel)
+                } else {
+                    self.days.append(nil)
+                }
             }
         }
     }
