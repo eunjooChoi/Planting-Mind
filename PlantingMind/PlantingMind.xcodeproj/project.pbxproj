@@ -26,6 +26,10 @@
 		7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */; };
 		7B34415D2BA1B87A00DA43F6 /* MonthPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */; };
 		7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */; };
+		7B4C07B62BB6B42E00B60CCD /* MoodAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */; };
+		7B4C07B82BB6B6B200B60CCD /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */; };
+		7B4C07BC2BB6C1F200B60CCD /* AnalysisViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */; };
+		7B4C07BE2BB6C85D00B60CCD /* AnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07BD2BB6C85D00B60CCD /* AnalysisViewModel.swift */; };
 		7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */; };
 		7B571B562B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */; };
 		7B63CA9E2BA9CB4600943DED /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B63CA9D2BA9CB4600943DED /* WidgetKit.framework */; };
@@ -116,6 +120,10 @@
 		7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
 		7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewModel.swift; sourceTree = "<group>"; };
 		7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewModelTests.swift; sourceTree = "<group>"; };
+		7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnalysisModel.swift; sourceTree = "<group>"; };
+		7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
+		7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewModelTests.swift; sourceTree = "<group>"; };
+		7B4C07BD2BB6C85D00B60CCD /* AnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewModel.swift; sourceTree = "<group>"; };
 		7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlantingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +280,7 @@
 				7B907F742B9997060050D05B /* DayCellViewModelTest.swift */,
 				7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */,
 				7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */,
+				7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */,
 			);
 			path = PlantingMindTests;
 			sourceTree = "<group>";
@@ -301,6 +310,16 @@
 				7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		7B4C07B02BB6A4DD00B60CCD /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */,
+				7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */,
+				7B4C07BD2BB6C85D00B60CCD /* AnalysisViewModel.swift */,
+			);
+			path = Analysis;
 			sourceTree = "<group>";
 		};
 		7B63CA9C2BA9CB4600943DED /* Frameworks */ = {
@@ -341,6 +360,7 @@
 				7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */,
 				7B3441582BA1903300DA43F6 /* Day */,
 				7B3441592BA190AE00DA43F6 /* Picker */,
+				7B4C07B02BB6A4DD00B60CCD /* Analysis */,
 			);
 			path = Calender;
 			sourceTree = "<group>";
@@ -520,8 +540,10 @@
 				7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */,
 				7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */,
 				7B02AD622BA0222900D5C850 /* MonthPickerView.swift in Sources */,
+				7B4C07B62BB6B42E00B60CCD /* MoodAnalysisModel.swift in Sources */,
 				7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */,
 				7B0A77112B93196D00ADC039 /* MoodRecordViewModel.swift in Sources */,
+				7B4C07B82BB6B6B200B60CCD /* AnalysisView.swift in Sources */,
 				7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */,
 				7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */,
 				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
@@ -531,6 +553,7 @@
 				7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */,
 				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
+				7B4C07BE2BB6C85D00B60CCD /* AnalysisViewModel.swift in Sources */,
 				7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */,
 				7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
@@ -543,6 +566,7 @@
 			files = (
 				7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */,
 				7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */,
+				7B4C07BC2BB6C1F200B60CCD /* AnalysisViewModelTests.swift in Sources */,
 				7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */,
 				7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */,
 				7BC300F92B5E5F8E00059068 /* CalendarViewModelTests.swift in Sources */,
