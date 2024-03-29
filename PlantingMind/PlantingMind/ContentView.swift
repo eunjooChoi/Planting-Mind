@@ -14,7 +14,7 @@ struct ContentView: View {
         VStack {
             CalendarView(calendarViewModel: CalendarViewModel(today: Date(), context: context))
         }
-        .padding()
+        .padding([.horizontal, .top])
     }
 }
 
