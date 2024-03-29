@@ -13,8 +13,9 @@ struct CalendarGridView: View {
     
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(), count: weekdays), content: {
-            ForEach(viewModel.days, id: \.self) { item in
-                if let item = item {
+            let daysCount = viewModel.days.count
+            ForEach(0..<daysCount, id:\.self) {idx in
+                if let item = viewModel.days[idx] {
                     let moodRecord = viewModel.mood(of: item)
                     DayCellView(viewModel: DayCellViewModel(today: viewModel.today, calendarModel: item, moodRecord: moodRecord))
                 } else {
@@ -27,14 +28,14 @@ struct CalendarGridView: View {
             viewModel.fetch()
         })
         .gesture(DragGesture(minimumDistance: 10, coordinateSpace: .local)
-            .onEnded { value in
-                let horizontalAmount = value.translation.width
-                let verticalAmount = value.translation.height
-                
-                guard abs(horizontalAmount) > abs(verticalAmount) else { return }
-                let addingValue = horizontalAmount < 0 ? 1 : -1
-                viewModel.addingMonth(value: addingValue)
-            })
+                    .onEnded { value in
+                        let horizontalAmount = value.translation.width
+                        let verticalAmount = value.translation.height
+                        
+                        guard abs(horizontalAmount) > abs(verticalAmount) else { return }
+                        let addingValue = horizontalAmount < 0 ? 1 : -1
+                        viewModel.addingMonth(value: addingValue)
+                    })
     }
 }
 
