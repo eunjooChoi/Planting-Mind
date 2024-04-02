@@ -68,6 +68,22 @@
         }
       }
     },
+    "confirm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discard Changes"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "변경 사항 폐기"
+          }
+        }
+      }
+    },
     "done" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -165,7 +181,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "왜 그렇게 느꼈어요?"
+            "value" : "무슨 일이 있었나요?"
           }
         }
       }
@@ -249,7 +265,7 @@
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "그저 그럼"
           }
         }
@@ -268,6 +284,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "나쁘진 않음"
+          }
+        }
+      }
+    },
+    "record_cancel_alert" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to discard changes?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "변경 사항을 폐기하겠습니까?"
           }
         }
       }

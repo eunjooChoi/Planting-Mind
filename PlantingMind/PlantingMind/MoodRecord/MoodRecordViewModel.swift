@@ -11,24 +11,42 @@ import WidgetKit
 
 class MoodRecordViewModel: ObservableObject {
     private let context: NSManagedObjectContext
-    private let date: Date?
+    private let originalMood: Mood
+    private let originalReason: String
+    
+    let date: Date
     
     @Published var mood: Mood
     @Published var reason: String
+    
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy. MM. dd"
+        return formatter
+    }()
     
     init(context: NSManagedObjectContext, calendarModel: CalendarModel, moodRecord: MoodRecord?) {
         self.context = context
         self.date = Calendar.current.date(from: DateComponents(year: calendarModel.year,
                                                                month: calendarModel.month,
-                                                               day: calendarModel.day))
+                                                               day: calendarModel.day)) ?? Date()
         
-        self.mood = Mood(rawValue: moodRecord?.mood ?? Mood.normal.rawValue) ?? .normal
-        self.reason = moodRecord?.reason ?? ""
+        let mood = Mood(rawValue: moodRecord?.mood ?? Mood.normal.rawValue) ?? .normal
+        let reason = moodRecord?.reason ?? ""
+        
+        self.mood = mood
+        self.reason = reason
+        self.originalMood = mood
+        self.originalReason = reason
+    }
+    
+    func needCancelAlert() -> Bool {
+        guard self.originalReason == self.reason else { return true }
+        guard self.originalMood == self.mood else { return true }
+        return false
     }
     
     func save() {
-        guard let date = self.date else { return }
-        
         let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
         let predicate = NSPredicate(format: "timestamp == %@", date as NSDate)
         fetchRequest.predicate = predicate
