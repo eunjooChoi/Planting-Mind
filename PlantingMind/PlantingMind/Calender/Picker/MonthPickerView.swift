@@ -79,17 +79,18 @@ struct MonthPickerView: View {
             .labelsHidden()
             .frame(width: 100, height: 200)
             
-            Text(" - ")
+            Text(". ")
                 .font(.title)
+                .bold()
             
             Picker("", selection: $viewModel.selectedMonth) {
                 ForEach(viewModel.months, id: \.self) { month in
-                    Text("\(month)")
+                    Text(String(format: "%02d", month))
                         .bold()
                 }
             }
             .labelsHidden()
-            .frame(width: 50, height: 200)
+            .frame(width: 70, height: 200)
         }
         .pickerStyle(.wheel)
         .compositingGroup()

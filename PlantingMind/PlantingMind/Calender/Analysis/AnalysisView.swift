@@ -28,8 +28,7 @@ struct AnalysisView: View {
                 BarMark(x: .value("Count", analysis.count))
                     .foregroundStyle(by: .value("Category", analysis.mood.moodString))
                     .annotation(position: .overlay, alignment: .center) {
-                        let color: Color = analysis.mood == Mood.nice ? .black : .white
-                        
+                        let color = analysis.mood == .nice ? Color.gray.opacity(0.8) : .white
                         Text("\(analysis.count)")
                             .foregroundStyle(color)
                             .font(.caption)
@@ -46,8 +45,8 @@ struct AnalysisView: View {
             .chartXScale(domain: 0...viewModel.recordsCount)
             .chartXAxis {
                 AxisMarks(position: .bottom) { _ in
-                     AxisGridLine().foregroundStyle(.clear)
-                     AxisTick().foregroundStyle(.clear)
+                    AxisGridLine().foregroundStyle(.clear)
+                    AxisTick().foregroundStyle(.clear)
                 }
             }
             .frame(height: 50)
