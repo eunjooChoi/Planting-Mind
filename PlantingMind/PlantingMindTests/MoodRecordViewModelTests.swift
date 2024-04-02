@@ -79,6 +79,38 @@ final class MoodRecordViewModelTests: XCTestCase {
         XCTAssertEqual(record?.reason, expectedReason)
     }
     
+    func test_취소했을_때_변경사항_없는_경우() throws {
+        let moodRecord = MoodRecord(context: coreDataStack.persistentContainer.viewContext)
+        moodRecord.mood = Mood.nice.rawValue
+        moodRecord.reason = "reason reason"
+        
+        let viewModel = MoodRecordViewModel(context: coreDataStack.persistentContainer.viewContext,
+                                            calendarModel: calendarModel,
+                                            moodRecord: moodRecord)
+        
+        let expectedResult = false
+        let result = viewModel.needCancelAlert()
+        
+        XCTAssertEqual(expectedResult, result)
+    }
+    
+    func test_취소했을_때_변경사항_있는_경우() throws {
+        let moodRecord = MoodRecord(context: coreDataStack.persistentContainer.viewContext)
+        moodRecord.mood = Mood.nice.rawValue
+        moodRecord.reason = "reason reason"
+        
+        let viewModel = MoodRecordViewModel(context: coreDataStack.persistentContainer.viewContext,
+                                            calendarModel: calendarModel,
+                                            moodRecord: moodRecord)
+        
+        viewModel.mood = Mood.normal
+        
+        let expectedResult = true
+        let result = viewModel.needCancelAlert()
+        
+        XCTAssertEqual(expectedResult, result)
+    }
+    
     func test_notification_발송() throws {
         let viewModel = MoodRecordViewModel(context: coreDataStack.persistentContainer.viewContext,
                                             calendarModel: calendarModel,
