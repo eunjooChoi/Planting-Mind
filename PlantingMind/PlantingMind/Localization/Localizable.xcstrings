@@ -165,7 +165,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "왜 그렇게 느꼈어요?"
+            "value" : "무슨 일이 있었나요?"
           }
         }
       }
@@ -249,7 +249,7 @@
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "그저 그럼"
           }
         }
