@@ -17,29 +17,15 @@ struct MoodRecordView: View {
         NavigationStack() {
             HStack {
                 VStack(spacing: 20) {
+                    Text("\(viewModel.dateFormatter.string(from: viewModel.date))")
+                        .italic()
+                    
                     Text("mood_title")
                         .font(.title2)
                         .bold()
-                        .padding()
+                        .padding(.horizontal)
                     
-                    HStack(spacing: 20) {
-                        ForEach(Mood.allCases, id: \.self) {mood in
-                            Button(action: {
-                                viewModel.mood = mood
-                            }, label: {
-                                Image("\(mood.rawValue)", label: Text("\(mood.rawValue)"))
-                            })
-                            .buttonStyle(PlainButtonStyle())
-                            .overlay {
-                                if viewModel.mood == mood {
-                                    Circle()
-                                        .stroke(Color.Custom.select, lineWidth: 2)
-                                        .foregroundStyle(.clear)
-                                        .frame(width: 60, height: 60)
-                                }
-                            }
-                        }
-                    }
+                    moodSelectView
                     
                     Spacer()
                     
@@ -48,43 +34,13 @@ struct MoodRecordView: View {
                         .bold()
                     
                     ZStack {
-                        TextEditor(text: $viewModel.reason)
-                            .autocorrectionDisabled(true)
-                            .background(Color.Custom.line)
-                            .opacity(0.8)
-                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                            .padding(.horizontal)
-                            .onChange(of: viewModel.reason) { _ in
-                                if viewModel.reason.count > 100 {
-                                    viewModel.reason.removeLast()
-                                }
-                            }
+                        textEditorView
                         
                         if viewModel.reason.isEmpty {
-                            VStack {
-                                HStack {
-                                    Text("fill_in_the_blank")
-                                        .foregroundStyle(Color.Custom.line)
-                                        .padding(.top, 9)
-                                        .padding(.leading, 22)
-                                    
-                                    Spacer()
-                                }
-                                Spacer()
-                            }
+                            emptyStringView
                         }
                         
-                        VStack {
-                            Spacer()
-                            HStack {
-                                Spacer()
-                                Text("text_limit".localized(with: [viewModel.reason.count]))
-                                    .foregroundStyle(Color.Custom.line)
-                                    .padding(.bottom, 10)
-                                    .padding(.trailing, 28)
-                                
-                            }
-                        }
+                        limitStringView
                     }
                     
                     Spacer()
@@ -109,6 +65,69 @@ struct MoodRecordView: View {
                 }
             }
             .foregroundStyle(Color.Custom.general)
+        }
+    }
+    
+    var moodSelectView: some View {
+        HStack(spacing: 20) {
+            ForEach(Mood.allCases, id: \.self) {mood in
+                Button(action: {
+                    viewModel.mood = mood
+                }, label: {
+                    Image("\(mood.rawValue)", label: Text("\(mood.rawValue)"))
+                })
+                .buttonStyle(PlainButtonStyle())
+                .overlay {
+                    if viewModel.mood == mood {
+                        Circle()
+                            .stroke(Color.Custom.select, lineWidth: 2)
+                            .foregroundStyle(.clear)
+                            .frame(width: 60, height: 60)
+                    }
+                }
+            }
+        }
+    }
+    
+    var textEditorView: some View {
+        TextEditor(text: $viewModel.reason)
+            .autocorrectionDisabled(true)
+            .background(Color.Custom.line)
+            .opacity(0.8)
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .padding(.horizontal)
+            .onChange(of: viewModel.reason) { _ in
+                if viewModel.reason.count > 100 {
+                    viewModel.reason.removeLast()
+                }
+            }
+    }
+    
+    var emptyStringView: some View {
+        VStack {
+            HStack {
+                Text("fill_in_the_blank")
+                    .foregroundStyle(Color.Custom.line)
+                    .padding(.top, 9)
+                    .padding(.leading, 22)
+                
+                Spacer()
+            }
+            Spacer()
+        }
+    }
+    
+    var limitStringView: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Text("text_limit".localized(with: [viewModel.reason.count]))
+                    .foregroundStyle(Color.Custom.line)
+                    .padding(.bottom, 10)
+                    .padding(.trailing, 28)
+                
+            }
         }
     }
 }
