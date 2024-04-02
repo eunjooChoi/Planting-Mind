@@ -12,6 +12,7 @@ struct MoodRecordView: View {
     @Environment(\.colorScheme) var colorScheme
     
     @ObservedObject var viewModel: MoodRecordViewModel
+    @State var isDialogPresent: Bool = false
     
     var body: some View {
         NavigationStack() {
@@ -49,10 +50,19 @@ struct MoodRecordView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {
-                        dismiss()
+                        if viewModel.needCancelAlert() {
+                            isDialogPresent = true
+                        } else {
+                            dismiss()
+                        }
                     }, label: {
                         Text("cancel")
                     })
+                    .confirmationDialog("record_cancel_alert", isPresented: $isDialogPresent, titleVisibility: .visible) {
+                        Button("confirm", role: .destructive) {
+                            dismiss()
+                        }
+                    }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
