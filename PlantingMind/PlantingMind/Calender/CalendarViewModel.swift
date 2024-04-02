@@ -81,7 +81,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     func mood(of day: CalendarModel) -> MoodRecord? {
-        guard let date = Calendar.current.date(from: DateComponents(year: day.year,
+        guard let date = self.calendar.date(from: DateComponents(year: day.year,
                                                                     month: day.month,
                                                                     day: day.day)) else { return nil }
         
@@ -102,7 +102,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     private func daysCount(for month: Date) -> Int {
-        return Calendar.current.range(of: .day, in: .month, for: month)?.count ?? 0
+        return self.calendar.range(of: .day, in: .month, for: month)?.count ?? 0
     }
     
     private func firstDay(date: Date) -> Int {

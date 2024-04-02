@@ -15,19 +15,25 @@ enum StorageType {
 
 final class CoreDataStack: ObservableObject {
     let persistentContainer: NSPersistentContainer
-    private let datebaseName = "PlantingMind.sqlite"
+    
+    private struct Constant {
+        static let identifier = "group.eunjoo.planting-mind.PlantingMind"
+        static let datebaseName = "PlantingMind.sqlite"
+        static let containerName = "MoodRecords"
+        static let testFilePath = "dev/null"
+    }
     
     var sharedStoreURL: URL? {
-        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.eunjoo.planting-mind.PlantingMind")
-        return container?.appendingPathComponent(datebaseName)
+        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Constant.identifier)
+        return container?.appendingPathComponent(Constant.datebaseName)
     }
     
     init(_ storageType: StorageType = .persistent) {
-        self.persistentContainer = NSPersistentContainer(name: "MoodRecords")
+        self.persistentContainer = NSPersistentContainer(name: Constant.containerName)
         
         // test setup
         if storageType == .inMemory {
-            let description = NSPersistentStoreDescription(url: URL(filePath: "dev/null"))
+            let description = NSPersistentStoreDescription(url: URL(filePath: Constant.testFilePath))
             self.persistentContainer.persistentStoreDescriptions = [description]
         } else {
             self.persistentContainer.persistentStoreDescriptions.first?.url = self.sharedStoreURL
@@ -37,20 +43,6 @@ final class CoreDataStack: ObservableObject {
             if let error {
                 fatalError("Failed to load persistent stores: \(error.localizedDescription)")
             }
-        }
-    }
-}
-
-extension CoreDataStack {
-    func save() {
-        let viewContext = persistentContainer.viewContext
-        
-        guard viewContext.hasChanges else { return }
-        
-        do {
-            try viewContext.save()
-        } catch {
-            print("Failed to save the context:", error.localizedDescription)
         }
     }
 }
