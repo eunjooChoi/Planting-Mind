@@ -20,7 +20,7 @@ final class AnalysisViewModelTests: XCTestCase {
         let record2 = MoodRecord(context: context)
         record2.mood = Mood.bad.rawValue
         
-        var records: [MoodRecord] = [record1, record2]
+        let records: [MoodRecord] = [record1, record2]
         
         viewModel = AnalysisViewModel(moods: records)
     }

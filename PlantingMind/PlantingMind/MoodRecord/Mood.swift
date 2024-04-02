@@ -35,4 +35,8 @@ extension Mood {
             Color.Custom.bad
         }
     }
+    
+    var moodString: String {
+        self.rawValue.localized
+    }
 }
