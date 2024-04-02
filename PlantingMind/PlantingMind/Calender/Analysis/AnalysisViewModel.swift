@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct AnalysisViewModel {
     let moodAnalysis: [MoodAnalysis]
@@ -18,7 +19,7 @@ struct AnalysisViewModel {
         var result: [MoodAnalysis] = []
         for mood in Mood.allCases {
             let count = moods.filter { $0.mood == mood.rawValue }.count
-            result.append(MoodAnalysis(mood: mood.rawValue, count: count))
+            result.append(MoodAnalysis(mood: mood, count: count))
         }
         
         self.moodAnalysis = result

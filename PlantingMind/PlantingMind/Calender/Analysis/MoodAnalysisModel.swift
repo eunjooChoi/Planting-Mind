@@ -8,6 +8,6 @@
 import Foundation
 
 struct MoodAnalysis: Hashable {
-    let mood: String
+    let mood: Mood
     let count: Int
 }

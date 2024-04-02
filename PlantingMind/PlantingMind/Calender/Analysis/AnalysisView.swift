@@ -22,21 +22,35 @@ struct AnalysisView: View {
             Text("mood_statistics")
                 .font(.title3)
                 .bold()
-                .padding([.top, .horizontal])
+                .padding()
             
-            Chart(viewModel.moodAnalysis, id: \.self) {
-                BarMark(x: .value("Count", $0.count))
-                .foregroundStyle(by: .value("Category", $0.mood))
+            Chart(viewModel.moodAnalysis, id: \.mood) { analysis in
+                BarMark(x: .value("Count", analysis.count))
+                    .foregroundStyle(by: .value("Category", analysis.mood.moodString))
+                    .annotation(position: .overlay, alignment: .center) {
+                        let color: Color = analysis.mood == Mood.nice ? .black : .white
+                        
+                        Text("\(analysis.count)")
+                            .foregroundStyle(color)
+                            .font(.caption)
+                            .bold()
+                    }
             }
             .chartForegroundStyleScale([
-                "nice": Mood.nice.color,
-                "good": Mood.good.color,
-                "normal": Mood.normal.color,
-                "notBad": Mood.notBad.color,
-                "bad": Mood.bad.color
+                Mood.nice.moodString: Mood.nice.color,
+                Mood.good.moodString: Mood.good.color,
+                Mood.normal.moodString: Mood.normal.color,
+                Mood.notBad.moodString: Mood.notBad.color,
+                Mood.bad.moodString: Mood.bad.color
             ])
-            .frame(height: 60)
-            .padding()
+            .chartXScale(domain: 0...viewModel.recordsCount)
+            .chartXAxis {
+                AxisMarks(position: .bottom) { _ in
+                     AxisGridLine().foregroundStyle(.clear)
+                     AxisTick().foregroundStyle(.clear)
+                }
+            }
+            .frame(height: 50)
         }
     }
 }
