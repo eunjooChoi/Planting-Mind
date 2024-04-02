@@ -87,10 +87,8 @@ class MonthPickerViewModel: ObservableObject {
     func verify(year: Int?) {
         self.updateMonthPicker(year: year)
         
-        //guard let selectedMonth = self.selectedMonth else { return }
-        
         if year == self.years.last,
-           selectedMonth > self.months.count {
+           self.selectedMonth > self.months.count {
             self.selectedMonth = self.months.count
         }
     }
