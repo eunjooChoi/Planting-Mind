@@ -34,7 +34,7 @@ class MoodRecordViewModel: ObservableObject {
         fetchRequest.predicate = predicate
         
         do {
-            let result = try context.fetch(fetchRequest)
+            let result = try self.context.fetch(fetchRequest)
             
             if result.count == 1 {
                 let record = result[0]

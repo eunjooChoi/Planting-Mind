@@ -28,15 +28,16 @@ class MonthPickerViewModel: ObservableObject {
     @Published var selectedMonth: Int
     
     init(dateRange: DateRange, selectedDate: Date) {
+        let calendar = Calendar.current
         self.cancellables = []
         
-        let startMonthComponent = Calendar.current.dateComponents([.year, .month], from: dateRange.startDate)
+        let startMonthComponent = calendar.dateComponents([.year, .month], from: dateRange.startDate)
         self.startDate = YearMonth(year: startMonthComponent.year, month: startMonthComponent.month)
         
-        let endMonthComponent = Calendar.current.dateComponents([.year, .month], from: dateRange.endDate)
+        let endMonthComponent = calendar.dateComponents([.year, .month], from: dateRange.endDate)
         self.endDate = YearMonth(year: endMonthComponent.year, month: endMonthComponent.month)
         
-        let selectedDateComponent = Calendar.current.dateComponents([.year, .month], from: selectedDate)
+        let selectedDateComponent = calendar.dateComponents([.year, .month], from: selectedDate)
         self.selectedYear = selectedDateComponent.year ?? 2024
         self.selectedMonth = selectedDateComponent.month ?? 1
         
