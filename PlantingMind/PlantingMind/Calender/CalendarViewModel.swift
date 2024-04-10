@@ -10,7 +10,7 @@ import CoreData
 import Combine
 
 class CalendarViewModel: ObservableObject {
-    private let context: NSManagedObjectContext
+    let context: NSManagedObjectContext
     private(set) var today: Date
     private var cancellables: Set<AnyCancellable>
     

@@ -45,6 +45,12 @@
 		7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */; };
 		7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
 		7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
+		7B9F19ED2BC5160F0063E613 /* UTTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19EC2BC5160F0063E613 /* UTTypeExtension.swift */; };
+		7B9F19F02BC528980063E613 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19EF2BC528980063E613 /* SettingsView.swift */; };
+		7B9F19F22BC52FED0063E613 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19F12BC52FED0063E613 /* SettingsViewModel.swift */; };
+		7B9F19F42BC688060063E613 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19F32BC688060063E613 /* SettingsViewModelTests.swift */; };
+		7B9F19F62BC694BF0063E613 /* MindDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19F52BC694BF0063E613 /* MindDocument.swift */; };
+		7B9F19F72BC69CF00063E613 /* test.mind in Resources */ = {isa = PBXBuildFile; fileRef = 7B9F19EB2BC512510063E613 /* test.mind */; };
 		7BA079922BAAD660009B5E46 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */; };
 		7BA079932BAAD662009B5E46 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */; };
 		7BA079942BAAD666009B5E46 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */; };
@@ -142,6 +148,12 @@
 		7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7B95D1792BA1645C00484F9D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7B95D17B2BA166AC00484F9D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7B9F19EB2BC512510063E613 /* test.mind */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.mind; sourceTree = "<group>"; };
+		7B9F19EC2BC5160F0063E613 /* UTTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTTypeExtension.swift; sourceTree = "<group>"; };
+		7B9F19EF2BC528980063E613 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7B9F19F12BC52FED0063E613 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		7B9F19F32BC688060063E613 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
+		7B9F19F52BC694BF0063E613 /* MindDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindDocument.swift; sourceTree = "<group>"; };
 		7BA079902BAAD5CB009B5E46 /* PlantingMind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantingMind.entitlements; sourceTree = "<group>"; };
 		7BA079912BAAD5EA009B5E46 /* PlantingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantingWidgetExtension.entitlements; sourceTree = "<group>"; };
 		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
@@ -253,6 +265,8 @@
 				7B907F792B9B4FBE0050D05B /* NoticiationExtension.swift */,
 				7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */,
 				7B95D17B2BA166AC00484F9D /* StringExtension.swift */,
+				7B9F19EC2BC5160F0063E613 /* UTTypeExtension.swift */,
+				7B9F19EE2BC528820063E613 /* Settings */,
 				7BC300F32B5E4C2100059068 /* Calender */,
 				7B0A76D22B92DA3200ADC039 /* MoodRecord */,
 				7B0A76CF2B906FCF00ADC039 /* CoreData */,
@@ -281,6 +295,8 @@
 				7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */,
 				7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */,
 				7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */,
+				7B9F19F32BC688060063E613 /* SettingsViewModelTests.swift */,
+				7B9F19EB2BC512510063E613 /* test.mind */,
 			);
 			path = PlantingMindTests;
 			sourceTree = "<group>";
@@ -348,6 +364,16 @@
 				7B95D1792BA1645C00484F9D /* Localizable.xcstrings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		7B9F19EE2BC528820063E613 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7B9F19F52BC694BF0063E613 /* MindDocument.swift */,
+				7B9F19EF2BC528980063E613 /* SettingsView.swift */,
+				7B9F19F12BC52FED0063E613 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		7BC300F32B5E4C2100059068 /* Calender */ = {
@@ -504,6 +530,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9F19F72BC69CF00063E613 /* test.mind in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +565,7 @@
 				7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */,
 				7B571B562B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift in Sources */,
 				7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */,
+				7B9F19ED2BC5160F0063E613 /* UTTypeExtension.swift in Sources */,
 				7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */,
 				7B02AD622BA0222900D5C850 /* MonthPickerView.swift in Sources */,
 				7B4C07B62BB6B42E00B60CCD /* MoodAnalysisModel.swift in Sources */,
@@ -552,11 +580,14 @@
 				7B34415D2BA1B87A00DA43F6 /* MonthPickerViewModel.swift in Sources */,
 				7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */,
 				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
+				7B9F19F02BC528980063E613 /* SettingsView.swift in Sources */,
+				7B9F19F62BC694BF0063E613 /* MindDocument.swift in Sources */,
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
 				7B4C07BE2BB6C85D00B60CCD /* AnalysisViewModel.swift in Sources */,
 				7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */,
 				7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
+				7B9F19F22BC52FED0063E613 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +598,7 @@
 				7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */,
 				7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */,
 				7B4C07BC2BB6C1F200B60CCD /* AnalysisViewModelTests.swift in Sources */,
+				7B9F19F42BC688060063E613 /* SettingsViewModelTests.swift in Sources */,
 				7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */,
 				7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */,
 				7BC300F92B5E5F8E00059068 /* CalendarViewModelTests.swift in Sources */,

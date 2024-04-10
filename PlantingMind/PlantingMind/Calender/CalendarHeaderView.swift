@@ -10,6 +10,7 @@ import SwiftUI
 struct CalendarHeaderView: View {
     @EnvironmentObject var calendarViewModel: CalendarViewModel
     @State var showPicker: Bool = false
+    @State var showSettings: Bool = false
     
     var body: some View {
         VStack {
@@ -46,6 +47,18 @@ struct CalendarHeaderView: View {
             }, label: {
                 Image(systemName: "chevron.right")
                     .font(.title)
+            })
+            
+            Spacer()
+            
+            Button {
+                showSettings.toggle()
+            } label: {
+                Image(systemName: "gearshape")
+                    .font(.title)
+            }
+            .fullScreenCover(isPresented: $showSettings, content: {
+                SettingsView(viewModel: SettingsViewModel(context: calendarViewModel.context))
             })
         })
         .foregroundStyle(Color.Custom.general)
