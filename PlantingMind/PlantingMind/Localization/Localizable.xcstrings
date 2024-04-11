@@ -27,6 +27,23 @@
     "%lld" : {
 
     },
+    "%lld / 100" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld / 100"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld / 100"
+          }
+        }
+      }
+    },
     "app_title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -517,23 +534,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ㅇ"
-          }
-        }
-      }
-    },
-    "text_limit" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld / 100"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld / 100"
           }
         }
       }
