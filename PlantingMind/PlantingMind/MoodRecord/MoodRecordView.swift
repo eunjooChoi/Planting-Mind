@@ -132,7 +132,7 @@ struct MoodRecordView: View {
             Spacer()
             HStack {
                 Spacer()
-                Text("text_limit".localized(with: [viewModel.reason.count]))
+                Text("\(viewModel.reason.count) / 100")
                     .foregroundStyle(Color.Custom.line)
                     .padding(.bottom, 10)
                     .padding(.trailing, 28)
