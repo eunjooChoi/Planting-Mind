@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 import Combine
+import WidgetKit
 
 class SettingsViewModel: ObservableObject {
     private let context: NSManagedObjectContext
@@ -89,6 +90,7 @@ class SettingsViewModel: ObservableObject {
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 self.showImportSuccessAlert.toggle()
+                WidgetCenter.shared.reloadAllTimelines()
                 NotificationCenter.default.post(name: .fetchNotification,
                                                 object: nil)
             }
