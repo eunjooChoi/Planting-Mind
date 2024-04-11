@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct PlantingMindApp: App {
     @StateObject private var coreDataStack = CoreDataStack()
+    
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {
