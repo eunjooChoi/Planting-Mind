@@ -17,7 +17,9 @@ struct MindDocument: FileDocument {
         if let data = configuration.file.regularFileContents {
             self.jsonData = data
         } else {
-            throw NSError()
+            let error = MindDocumentError.regularFileContestsFail
+            CrashlyticsLog.shared.record(error: error)
+            throw error
         }
     }
     
@@ -28,4 +30,8 @@ struct MindDocument: FileDocument {
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
         FileWrapper(regularFileWithContents: self.jsonData)
     }
+}
+
+enum MindDocumentError: Error {
+    case regularFileContestsFail
 }

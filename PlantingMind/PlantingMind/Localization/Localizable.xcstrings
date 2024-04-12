@@ -22,10 +22,24 @@
       }
     },
     "%@" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "%lld" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "%lld / 100" : {
       "extractionState" : "manual",
@@ -96,7 +110,14 @@
       }
     },
     "Category" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "change_month" : {
       "localizations" : {
@@ -131,7 +152,14 @@
       }
     },
     "Count" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "done" : {
       "extractionState" : "manual",
@@ -163,6 +191,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "내보낼 기록이 없습니다."
+          }
+        }
+      }
+    },
+    "error_description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error Occurred"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에러 발생"
           }
         }
       }

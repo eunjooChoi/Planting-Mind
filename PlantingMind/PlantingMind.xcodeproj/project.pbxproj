@@ -38,6 +38,9 @@
 		7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B63CAA62BA9CB4700943DED /* Assets.xcassets */; };
 		7B63CAAB2BA9CB4700943DED /* PlantingWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
+		7B8430A22BC7C1DE00D5939E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */; };
+		7B8430AB2BC81FC400D5939E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */; };
+		7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */; };
 		7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F722B9981E90050D05B /* DayCellViewModel.swift */; };
 		7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F742B9997060050D05B /* DayCellViewModelTest.swift */; };
 		7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */; };
@@ -142,6 +145,8 @@
 		7B63CAA82BA9CB4700943DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
 		7B715EDB2BAC734400B4F720 /* PlantingMind.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlantingMind.xctestplan; sourceTree = "<group>"; };
+		7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsLog.swift; sourceTree = "<group>"; };
 		7B907F722B9981E90050D05B /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
 		7B907F742B9997060050D05B /* DayCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModelTest.swift; sourceTree = "<group>"; };
 		7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotificationSpy.swift; sourceTree = "<group>"; };
@@ -173,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8430AB2BC81FC400D5939E /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,10 +278,11 @@
 				7BC300F32B5E4C2100059068 /* Calender */,
 				7B0A76D22B92DA3200ADC039 /* MoodRecord */,
 				7B0A76CF2B906FCF00ADC039 /* CoreData */,
-				7B95D1762BA1627500484F9D /* Localization */,
-				7B0E1BD42BB159CD0060458D /* Font */,
-				7B11F82D2B4549E000346A41 /* Preview Content */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
+				7B11F82D2B4549E000346A41 /* Preview Content */,
+				7B0E1BD42BB159CD0060458D /* Font */,
+				7B95D1762BA1627500484F9D /* Localization */,
+				7B8430AC2BC8DD7B00D5939E /* Firebase */,
 			);
 			path = PlantingMind;
 			sourceTree = "<group>";
@@ -360,6 +367,15 @@
 			path = PlantingWidget;
 			sourceTree = "<group>";
 		};
+		7B8430AC2BC8DD7B00D5939E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */,
+				7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		7B95D1762BA1627500484F9D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +421,7 @@
 				7B11F8212B4549DF00346A41 /* Frameworks */,
 				7B11F8222B4549DF00346A41 /* Resources */,
 				7B63CAAC2BA9CB4700943DED /* Embed Foundation Extensions */,
+				7B8430A82BC7E79700D5939E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -412,6 +429,9 @@
 				7B63CAAA2BA9CB4700943DED /* PBXTargetDependency */,
 			);
 			name = PlantingMind;
+			packageProductDependencies = (
+				7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */,
+			);
 			productName = PlantingMind;
 			productReference = 7B11F8242B4549DF00346A41 /* PlantingMind.app */;
 			productType = "com.apple.product-type.application";
@@ -505,6 +525,9 @@
 				ko,
 			);
 			mainGroup = 7B11F81B2B4549DF00346A41;
+			packageReferences = (
+				7B8430A92BC81FC400D5939E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7B11F8252B4549DF00346A41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -527,6 +550,7 @@
 				7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */,
 				7B0E1BD62BB15A220060458D /* Pretendard-Black.otf in Resources */,
 				7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */,
+				7B8430A22BC7C1DE00D5939E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +581,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B8430A82BC7E79700D5939E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B11F8202B4549DF00346A41 /* Sources */ = {
@@ -589,6 +639,7 @@
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
 				7B4C07BE2BB6C85D00B60CCD /* AnalysisViewModel.swift in Sources */,
 				7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */,
+				7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */,
 				7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
 				7B9F19F22BC52FED0063E613 /* SettingsViewModel.swift in Sources */,
@@ -783,6 +834,7 @@
 				CODE_SIGN_ENTITLEMENTS = PlantingMind/PlantingMind.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"PlantingMind/Preview Content\"";
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				ENABLE_PREVIEWS = YES;
@@ -798,6 +850,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -833,6 +890,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1047,6 +1109,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B8430A92BC81FC400D5939E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B8430A92BC81FC400D5939E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */ = {

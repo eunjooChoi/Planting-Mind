@@ -76,6 +76,9 @@ struct MoodRecordView: View {
             }
             .foregroundStyle(Color.Custom.general)
         }
+        .alert("error_description", isPresented: $viewModel.showErrorAlert) {
+            Button("ok", role: .cancel) { }
+        }
     }
     
     var moodSelectView: some View {

@@ -42,7 +42,8 @@ struct SettingsView: View {
                         case .success:
                             showExportSuccessAlert.toggle()
                         case .failure(let error):
-                            let _ = print(error.localizedDescription )
+                            viewModel.showErrorAlert.toggle()
+                            CrashlyticsLog.shared.record(error: error)
                         }
                     }
                     .alert("empty_record", isPresented: $showEmptyRecordAlert) {
@@ -64,7 +65,8 @@ struct SettingsView: View {
                             importedURL = url
                             showImportAlert.toggle()
                         case .failure(let error):
-                            let _ = print(error.localizedDescription )
+                            viewModel.showErrorAlert.toggle()
+                            CrashlyticsLog.shared.record(error: error)
                         }
                     })
                     .alert("import_remove_all_record_alert", isPresented: $showImportAlert) {
@@ -93,6 +95,9 @@ struct SettingsView: View {
                     })
                 }
             }
+        }
+        .alert("error_description", isPresented: $viewModel.showErrorAlert) {
+            Button("ok", role: .cancel) { }
         }
     }
 }
