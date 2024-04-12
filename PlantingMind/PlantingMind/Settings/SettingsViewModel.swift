@@ -16,6 +16,7 @@ class SettingsViewModel: ObservableObject {
     private var result: [MoodRecord] = []
     
     @Published var showImportSuccessAlert: Bool = false
+    @Published var showErrorAlert: Bool = false
     
     init(context: NSManagedObjectContext) {
         self.cancellables = []
@@ -33,10 +34,10 @@ class SettingsViewModel: ObservableObject {
             let jsonData = try JSONEncoder().encode(self.result)
             return MindDocument(json: jsonData)
         } catch {
-            print(error.localizedDescription)
+            self.showErrorAlert.toggle()
+            CrashlyticsLog.shared.record(error: error)
+            return nil
         }
-        
-        return nil
     }
     
     func importData(url: URL) {
@@ -57,7 +58,8 @@ class SettingsViewModel: ObservableObject {
             try self.context.save()
             
         } catch {
-            print(error)
+            self.showErrorAlert.toggle()
+            CrashlyticsLog.shared.record(error: error)
         }
     }
     
@@ -68,7 +70,8 @@ class SettingsViewModel: ObservableObject {
         do {
             try context.execute(batchDeleteRequest)
         } catch {
-            print(error)
+            self.showErrorAlert.toggle()
+            CrashlyticsLog.shared.record(error: error)
         }
     }
     
@@ -80,7 +83,8 @@ class SettingsViewModel: ObservableObject {
             let result = try self.context.fetch(fetchRequest)
             self.result = result
         } catch {
-            print(error.localizedDescription)
+            self.showErrorAlert.toggle()
+            CrashlyticsLog.shared.record(error: error)
         }
     }
     
