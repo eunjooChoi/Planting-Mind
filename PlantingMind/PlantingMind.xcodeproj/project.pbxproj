@@ -40,6 +40,7 @@
 		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
 		7B8430A22BC7C1DE00D5939E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */; };
 		7B8430AB2BC81FC400D5939E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */; };
+		7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */; };
 		7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F722B9981E90050D05B /* DayCellViewModel.swift */; };
 		7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F742B9997060050D05B /* DayCellViewModelTest.swift */; };
 		7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */; };
@@ -145,6 +146,7 @@
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
 		7B715EDB2BAC734400B4F720 /* PlantingMind.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlantingMind.xctestplan; sourceTree = "<group>"; };
 		7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsLog.swift; sourceTree = "<group>"; };
 		7B907F722B9981E90050D05B /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
 		7B907F742B9997060050D05B /* DayCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModelTest.swift; sourceTree = "<group>"; };
 		7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotificationSpy.swift; sourceTree = "<group>"; };
@@ -263,7 +265,6 @@
 		7B11F8262B4549DF00346A41 /* PlantingMind */ = {
 			isa = PBXGroup;
 			children = (
-				7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */,
 				7B0E1BD82BB15AAD0060458D /* Info.plist */,
 				7BA079902BAAD5CB009B5E46 /* PlantingMind.entitlements */,
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
@@ -277,10 +278,11 @@
 				7BC300F32B5E4C2100059068 /* Calender */,
 				7B0A76D22B92DA3200ADC039 /* MoodRecord */,
 				7B0A76CF2B906FCF00ADC039 /* CoreData */,
-				7B95D1762BA1627500484F9D /* Localization */,
-				7B0E1BD42BB159CD0060458D /* Font */,
-				7B11F82D2B4549E000346A41 /* Preview Content */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
+				7B11F82D2B4549E000346A41 /* Preview Content */,
+				7B0E1BD42BB159CD0060458D /* Font */,
+				7B95D1762BA1627500484F9D /* Localization */,
+				7B8430AC2BC8DD7B00D5939E /* Firebase */,
 			);
 			path = PlantingMind;
 			sourceTree = "<group>";
@@ -363,6 +365,15 @@
 				7B63CAA82BA9CB4700943DED /* Info.plist */,
 			);
 			path = PlantingWidget;
+			sourceTree = "<group>";
+		};
+		7B8430AC2BC8DD7B00D5939E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */,
+				7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		7B95D1762BA1627500484F9D /* Localization */ = {
@@ -628,6 +639,7 @@
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
 				7B4C07BE2BB6C85D00B60CCD /* AnalysisViewModel.swift in Sources */,
 				7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */,
+				7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */,
 				7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
 				7B9F19F22BC52FED0063E613 /* SettingsViewModel.swift in Sources */,

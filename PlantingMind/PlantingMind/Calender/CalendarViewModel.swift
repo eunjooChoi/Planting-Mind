@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 import Combine
+import Firebase
 
 class CalendarViewModel: ObservableObject {
     let context: NSManagedObjectContext
@@ -21,6 +22,7 @@ class CalendarViewModel: ObservableObject {
     @Published var selectedDate: Date
     @Published var days: [CalendarModel?] = []
     @Published var moods: [MoodRecord] = []
+    @Published var showErrorAlert: Bool = false
     
     let weekdaySymbols = Calendar.current.veryShortWeekdaySymbols
     let startMonth: Date? = Calendar.current.date(from: DateComponents(year: 2024, month: 1, day: 1))
@@ -76,7 +78,8 @@ class CalendarViewModel: ObservableObject {
             self.moods = result
             
         } catch {
-            print("Failed to fetch the mood records", error.localizedDescription)
+            self.showErrorAlert.toggle()
+            CrashlyticsLog.shared.record(error: error)
         }
     }
     

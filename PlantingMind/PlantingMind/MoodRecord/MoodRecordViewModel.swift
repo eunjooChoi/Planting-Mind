@@ -18,6 +18,7 @@ class MoodRecordViewModel: ObservableObject {
     
     @Published var mood: Mood
     @Published var reason: String
+    @Published var showErrorAlert: Bool = false
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -67,7 +68,8 @@ class MoodRecordViewModel: ObservableObject {
             try context.save()
             WidgetCenter.shared.reloadAllTimelines()
         } catch {
-            print("Failed to save the mood record", error.localizedDescription)
+            self.showErrorAlert.toggle()
+            CrashlyticsLog.shared.record(error: error)
         }
         
         self.sendFetchNotification()

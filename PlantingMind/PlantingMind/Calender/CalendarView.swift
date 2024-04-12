@@ -29,6 +29,9 @@ struct CalendarView: View {
                 calendarViewModel.checkDate(date: Date())
             }
         }
+        .alert("error_description", isPresented: $calendarViewModel.showErrorAlert) {
+            Button("ok", role: .cancel) { }
+        }
     }
 }
 
