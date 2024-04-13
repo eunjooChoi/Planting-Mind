@@ -57,6 +57,16 @@ final class SettingsViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.checkExportable())
         XCTAssertNotNil(viewModel.setupMindDocument())
     }
+    
+    func test_privacy_policy() throws {
+        let viewModel = SettingsViewModel(context: context, languageCode: "ko")
+        let expectedURL = try XCTUnwrap(URL(string: "https://planting-mind.notion.site/48f9b3289a5d4cd999d08955802f8d19"))
+        XCTAssertEqual(viewModel.privacyPolicyURL(), expectedURL)
+        
+        let viewModel2 = SettingsViewModel(context: context, languageCode: "en")
+        let expectedURL2 = try XCTUnwrap(URL(string: "https://planting-mind.notion.site/Privacy-Policy-af91fa5d528544ef9a30c1a95ec951c2?pvs=74"))
+        XCTAssertEqual(viewModel2.privacyPolicyURL(), expectedURL2)
+    }
 
     private func setupCoreData() throws {
         let date1 = try XCTUnwrap(Calendar.current.date(from: DateComponents(year: 2024,
