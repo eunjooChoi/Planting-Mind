@@ -46,9 +46,9 @@ class SettingsViewModel: ObservableObject {
     
     func privacyPolicyURL() -> URL {
         if self.languageCode == "ko" {
-            return URL(string:"https://planting-mind.notion.site/48f9b3289a5d4cd999d08955802f8d19")!
+            return URL(string:"https://choieunjoo.notion.site/48f9b3289a5d4cd999d08955802f8d19?pvs=4")!
         } else {
-            return URL(string:"https://planting-mind.notion.site/Privacy-Policy-af91fa5d528544ef9a30c1a95ec951c2?pvs=74")!
+            return URL(string:"https://choieunjoo.notion.site/Privacy-Policy-af91fa5d528544ef9a30c1a95ec951c2?pvs=4")!
         }
     }
     

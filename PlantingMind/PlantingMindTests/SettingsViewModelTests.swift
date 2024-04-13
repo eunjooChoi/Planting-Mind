@@ -60,11 +60,11 @@ final class SettingsViewModelTests: XCTestCase {
     
     func test_privacy_policy() throws {
         let viewModel = SettingsViewModel(context: context, languageCode: "ko")
-        let expectedURL = try XCTUnwrap(URL(string: "https://planting-mind.notion.site/48f9b3289a5d4cd999d08955802f8d19"))
+        let expectedURL = try XCTUnwrap(URL(string: "https://choieunjoo.notion.site/48f9b3289a5d4cd999d08955802f8d19?pvs=4"))
         XCTAssertEqual(viewModel.privacyPolicyURL(), expectedURL)
         
         let viewModel2 = SettingsViewModel(context: context, languageCode: "en")
-        let expectedURL2 = try XCTUnwrap(URL(string: "https://planting-mind.notion.site/Privacy-Policy-af91fa5d528544ef9a30c1a95ec951c2?pvs=74"))
+        let expectedURL2 = try XCTUnwrap(URL(string: "https://choieunjoo.notion.site/Privacy-Policy-af91fa5d528544ef9a30c1a95ec951c2?pvs=4"))
         XCTAssertEqual(viewModel2.privacyPolicyURL(), expectedURL2)
     }
 
