@@ -58,7 +58,7 @@ struct CalendarHeaderView: View {
                     .font(.title)
             }
             .fullScreenCover(isPresented: $showSettings, content: {
-                SettingsView(viewModel: SettingsViewModel(context: calendarViewModel.context))
+                SettingsView(viewModel: SettingsViewModel(context: calendarViewModel.context, languageCode: Locale.current.language.languageCode?.identifier))
             })
         })
         .foregroundStyle(Color.Custom.general)

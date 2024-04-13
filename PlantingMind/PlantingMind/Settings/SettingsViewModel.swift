@@ -12,15 +12,19 @@ import WidgetKit
 
 class SettingsViewModel: ObservableObject {
     private let context: NSManagedObjectContext
+    private let languageCode: String?
+    
     private var cancellables: Set<AnyCancellable>
     private var result: [MoodRecord] = []
     
     @Published var showImportSuccessAlert: Bool = false
     @Published var showErrorAlert: Bool = false
     
-    init(context: NSManagedObjectContext) {
+    init(context: NSManagedObjectContext, languageCode: String? = "ko") {
         self.cancellables = []
         self.context = context
+        self.languageCode = languageCode
+        
         self.fetchAllData()
         self.bindSaveNotification()
     }
@@ -37,6 +41,14 @@ class SettingsViewModel: ObservableObject {
             self.showErrorAlert.toggle()
             CrashlyticsLog.shared.record(error: error)
             return nil
+        }
+    }
+    
+    func privacyPolicyURL() -> URL {
+        if self.languageCode == "ko" {
+            return URL(string:"https://planting-mind.notion.site/48f9b3289a5d4cd999d08955802f8d19")!
+        } else {
+            return URL(string:"https://planting-mind.notion.site/Privacy-Policy-af91fa5d528544ef9a30c1a95ec951c2?pvs=74")!
         }
     }
     
