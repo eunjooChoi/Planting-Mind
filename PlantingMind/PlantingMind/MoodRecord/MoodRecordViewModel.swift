@@ -15,6 +15,7 @@ class MoodRecordViewModel: ObservableObject {
     private let originalReason: String
     
     let date: Date
+    let isFirstRecord: Bool
     
     @Published var mood: Mood
     @Published var reason: String
@@ -28,6 +29,8 @@ class MoodRecordViewModel: ObservableObject {
     
     init(context: NSManagedObjectContext, calendarModel: CalendarModel, moodRecord: MoodRecord?) {
         self.context = context
+        self.isFirstRecord = moodRecord == nil
+        
         self.date = Calendar.current.date(from: DateComponents(year: calendarModel.year,
                                                                month: calendarModel.month,
                                                                day: calendarModel.day)) ?? Date()
@@ -45,6 +48,30 @@ class MoodRecordViewModel: ObservableObject {
         guard self.originalReason == self.reason else { return true }
         guard self.originalMood == self.mood else { return true }
         return false
+    }
+    
+    func deleteRecord(completionHandler: (Bool) -> Void) {
+        let fetchRequest = NSFetchRequest<MoodRecord>(entityName: "MoodRecord")
+        let predicate = NSPredicate(format: "timestamp == %@", date as NSDate)
+        fetchRequest.predicate = predicate
+        
+        do {
+            guard let result = try self.context.fetch(fetchRequest).first else {
+                completionHandler(false)
+                return
+            }
+            
+            context.delete(result)
+            try context.save()
+            WidgetCenter.shared.reloadAllTimelines()
+            
+            self.sendFetchNotification()
+            completionHandler(true)
+        } catch {
+            self.showErrorAlert.toggle()
+            CrashlyticsLog.shared.record(error: error)
+            completionHandler(false)
+        }
     }
     
     func save() {
