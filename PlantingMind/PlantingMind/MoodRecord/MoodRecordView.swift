@@ -10,9 +10,11 @@ import SwiftUI
 struct MoodRecordView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    @FocusState var isFocused: Bool
     
     @ObservedObject var viewModel: MoodRecordViewModel
     @State var isDialogPresent: Bool = false
+    @State var isDeleteAlertPresent: Bool = false
     
     var body: some View {
         NavigationStack() {
@@ -42,6 +44,19 @@ struct MoodRecordView: View {
                         }
                         
                         limitStringView
+                    }
+                    
+                    if isFocused == false, viewModel.isFirstRecord == false {
+                        Button {
+                            isDeleteAlertPresent.toggle()
+                        } label: {
+                            Image(systemName: "trash.fill")
+                                .foregroundStyle(.white)
+                                .padding()
+                                .padding(.horizontal, 10)
+                                .background(.red)
+                                .clipShape(Capsule(style: .continuous))
+                        }
                     }
                     
                     Spacer()
@@ -76,6 +91,15 @@ struct MoodRecordView: View {
             }
             .foregroundStyle(Color.Custom.general)
         }
+        .alert("delete_alert", isPresented: $isDeleteAlertPresent, actions: {
+            Button("cancel", role: .cancel) { }
+            Button("ok", role: .destructive) {
+                viewModel.deleteRecord(completionHandler: {result in
+                    guard result else { return }
+                    dismiss()
+                })
+            }
+        })
         .alert("error_description", isPresented: $viewModel.showErrorAlert) {
             Button("ok", role: .cancel) { }
         }
@@ -109,6 +133,7 @@ struct MoodRecordView: View {
             .opacity(0.8)
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             .padding(.horizontal)
+            .focused($isFocused)
             .onChange(of: viewModel.reason) { _ in
                 if viewModel.reason.count > 100 {
                     viewModel.reason.removeLast()

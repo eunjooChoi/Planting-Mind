@@ -35,6 +35,7 @@ final class MoodRecordViewModelTests: XCTestCase {
         
         XCTAssertEqual(viewModel.mood, expectedMood)
         XCTAssertEqual(viewModel.reason, expectedReason)
+        XCTAssertTrue(viewModel.isFirstRecord)
     }
     
     func test_기분_데이터_넘겨주는_경우() throws {
@@ -77,6 +78,29 @@ final class MoodRecordViewModelTests: XCTestCase {
         XCTAssertNotNil(record)
         XCTAssertEqual(record?.mood, expectedMood.rawValue)
         XCTAssertEqual(record?.reason, expectedReason)
+    }
+    
+    func test_기록_삭제_확인() throws {
+        let moodRecord = MoodRecord(context: coreDataStack.persistentContainer.viewContext)
+        moodRecord.mood = Mood.nice.rawValue
+        moodRecord.reason = "reason reason"
+        
+        let viewModel = MoodRecordViewModel(context: coreDataStack.persistentContainer.viewContext,
+                                            calendarModel: calendarModel,
+                                            moodRecord: moodRecord)
+        
+        viewModel.deleteRecord { result in
+            // 기록 저장안한 경우 false 리턴
+            XCTAssertFalse(result)
+        }
+        
+        viewModel.save()
+        viewModel.deleteRecord { result in
+            XCTAssertTrue(result)
+        }
+        
+        let record = try self.fetch()
+        XCTAssertNil(record)
     }
     
     func test_취소했을_때_변경사항_없는_경우() throws {
