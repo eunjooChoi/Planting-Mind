@@ -15,6 +15,9 @@ struct ContentView: View {
             CalendarView(calendarViewModel: CalendarViewModel(today: Date(), context: context))
         }
         .padding([.horizontal, .top])
+        .onAppear {
+            UNUserNotificationCenter.current().setBadgeCount(0, withCompletionHandler: nil)
+        }
     }
 }
 

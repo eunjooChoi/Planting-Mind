@@ -26,6 +26,7 @@ struct SettingsView: View {
                 Section {
                     exportButton
                     importButton
+                    notificationButton
                     privacyPolicyButton
                 }
             }
@@ -44,6 +45,7 @@ struct SettingsView: View {
                 }
             }
         }
+        .tint(Color.Custom.general)
         .alert("error_description", isPresented: $viewModel.showErrorAlert) {
             Button("ok", role: .cancel) { }
         }
@@ -111,6 +113,14 @@ struct SettingsView: View {
     
     var privacyPolicyButton: some View {
         Link("privacy_policy", destination: viewModel.privacyPolicyURL())
+    }
+    
+    var notificationButton: some View {
+        NavigationLink {
+            NotificationSettingView(viewModel: NotificationSettingViewModel(notificationManager: NotificationManager()))
+        } label: {
+            Text("notification_setting")
+        }
     }
 }
 
