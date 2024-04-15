@@ -38,13 +38,17 @@
 		7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B63CAA62BA9CB4700943DED /* Assets.xcassets */; };
 		7B63CAAB2BA9CB4700943DED /* PlantingWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
+		7B786A6F2BCD0458005D69A0 /* NotifiactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A6E2BCD0458005D69A0 /* NotifiactionManager.swift */; };
+		7B786A712BCD08D3005D69A0 /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A702BCD08D3005D69A0 /* NotificationSettingView.swift */; };
+		7B786A772BCD0DC6005D69A0 /* NotificationSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A762BCD0DC6005D69A0 /* NotificationSettingViewModel.swift */; };
+		7B786A792BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A782BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift */; };
 		7B8430A22BC7C1DE00D5939E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */; };
 		7B8430AB2BC81FC400D5939E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */; };
 		7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */; };
 		7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F722B9981E90050D05B /* DayCellViewModel.swift */; };
 		7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F742B9997060050D05B /* DayCellViewModelTest.swift */; };
 		7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */; };
-		7B907F7A2B9B4FBE0050D05B /* NoticiationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F792B9B4FBE0050D05B /* NoticiationExtension.swift */; };
+		7B907F7A2B9B4FBE0050D05B /* UpdateNoticiationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F792B9B4FBE0050D05B /* UpdateNoticiationExtension.swift */; };
 		7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */; };
 		7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
 		7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
@@ -146,12 +150,16 @@
 		7B63CAA82BA9CB4700943DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
 		7B715EDB2BAC734400B4F720 /* PlantingMind.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlantingMind.xctestplan; sourceTree = "<group>"; };
+		7B786A6E2BCD0458005D69A0 /* NotifiactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiactionManager.swift; sourceTree = "<group>"; };
+		7B786A702BCD08D3005D69A0 /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
+		7B786A762BCD0DC6005D69A0 /* NotificationSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewModel.swift; sourceTree = "<group>"; };
+		7B786A782BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewModelTests.swift; sourceTree = "<group>"; };
 		7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsLog.swift; sourceTree = "<group>"; };
 		7B907F722B9981E90050D05B /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
 		7B907F742B9997060050D05B /* DayCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModelTest.swift; sourceTree = "<group>"; };
 		7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotificationSpy.swift; sourceTree = "<group>"; };
-		7B907F792B9B4FBE0050D05B /* NoticiationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiationExtension.swift; sourceTree = "<group>"; };
+		7B907F792B9B4FBE0050D05B /* UpdateNoticiationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNoticiationExtension.swift; sourceTree = "<group>"; };
 		7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7B95D1792BA1645C00484F9D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7B95D17B2BA166AC00484F9D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -272,7 +280,7 @@
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
 				7BABB0102B5F850200EEEEBB /* ColorExtension.swift */,
-				7B907F792B9B4FBE0050D05B /* NoticiationExtension.swift */,
+				7B907F792B9B4FBE0050D05B /* UpdateNoticiationExtension.swift */,
 				7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */,
 				7B95D17B2BA166AC00484F9D /* StringExtension.swift */,
 				7B9F19EC2BC5160F0063E613 /* UTTypeExtension.swift */,
@@ -307,6 +315,7 @@
 				7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */,
 				7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */,
 				7B9F19F32BC688060063E613 /* SettingsViewModelTests.swift */,
+				7B786A782BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift */,
 				7B9F19EB2BC512510063E613 /* test.mind */,
 			);
 			path = PlantingMindTests;
@@ -369,6 +378,16 @@
 			path = PlantingWidget;
 			sourceTree = "<group>";
 		};
+		7B786A722BCD09FE005D69A0 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				7B786A6E2BCD0458005D69A0 /* NotifiactionManager.swift */,
+				7B786A762BCD0DC6005D69A0 /* NotificationSettingViewModel.swift */,
+				7B786A702BCD08D3005D69A0 /* NotificationSettingView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		7B8430AC2BC8DD7B00D5939E /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +409,7 @@
 		7B9F19EE2BC528820063E613 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				7B786A722BCD09FE005D69A0 /* Notification */,
 				7B9F19F52BC694BF0063E613 /* MindDocument.swift */,
 				7BE2475E2BCA3CA900DD3B76 /* PrivacyPolicyWebview.swift */,
 				7B9F19EF2BC528980063E613 /* SettingsView.swift */,
@@ -630,14 +650,16 @@
 				7B0A77112B93196D00ADC039 /* MoodRecordViewModel.swift in Sources */,
 				7B4C07B82BB6B6B200B60CCD /* AnalysisView.swift in Sources */,
 				7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */,
+				7B786A772BCD0DC6005D69A0 /* NotificationSettingViewModel.swift in Sources */,
 				7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */,
 				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
 				7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */,
 				7BE2475F2BCA3CA900DD3B76 /* PrivacyPolicyWebview.swift in Sources */,
-				7B907F7A2B9B4FBE0050D05B /* NoticiationExtension.swift in Sources */,
+				7B907F7A2B9B4FBE0050D05B /* UpdateNoticiationExtension.swift in Sources */,
 				7B34415D2BA1B87A00DA43F6 /* MonthPickerViewModel.swift in Sources */,
 				7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */,
 				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
+				7B786A6F2BCD0458005D69A0 /* NotifiactionManager.swift in Sources */,
 				7B9F19F02BC528980063E613 /* SettingsView.swift in Sources */,
 				7B9F19F62BC694BF0063E613 /* MindDocument.swift in Sources */,
 				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
@@ -646,6 +668,7 @@
 				7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */,
 				7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
+				7B786A712BCD08D3005D69A0 /* NotificationSettingView.swift in Sources */,
 				7B9F19F22BC52FED0063E613 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,6 +679,7 @@
 			files = (
 				7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */,
 				7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */,
+				7B786A792BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift in Sources */,
 				7B4C07BC2BB6C1F200B60CCD /* AnalysisViewModelTests.swift in Sources */,
 				7B9F19F42BC688060063E613 /* SettingsViewModelTests.swift in Sources */,
 				7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */,
