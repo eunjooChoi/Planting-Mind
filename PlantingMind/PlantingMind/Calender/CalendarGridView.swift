@@ -12,7 +12,7 @@ struct CalendarGridView: View {
     private let weekdays = 7
     
     var body: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(), count: weekdays), content: {
+        LazyVGrid(columns: Array(repeating: GridItem(), count: weekdays), spacing: 20, content: {
             let daysCount = viewModel.days.count
             ForEach(0..<daysCount, id:\.self) {idx in
                 if let item = viewModel.days[idx] {

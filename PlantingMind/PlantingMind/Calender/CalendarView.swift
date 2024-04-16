@@ -12,16 +12,14 @@ struct CalendarView: View {
     @StateObject var calendarViewModel: CalendarViewModel
     
     var body: some View {
-        ScrollView {
-            VStack() {
-                CalendarHeaderView()
-                CalendarGridView()
-                Divider()
-                    .overlay(Color.Custom.line)
-                
-                AnalysisView(viewModel: AnalysisViewModel(moods: calendarViewModel.moods))
-                Spacer()
-            }
+        VStack() {
+            CalendarHeaderView()
+            CalendarGridView()
+            Divider()
+                .overlay(Color.Custom.line)
+            
+            AnalysisView(viewModel: AnalysisViewModel(moods: calendarViewModel.moods))
+            Spacer()
         }
         .environmentObject(calendarViewModel)
         .onChange(of: phase) { newValue in

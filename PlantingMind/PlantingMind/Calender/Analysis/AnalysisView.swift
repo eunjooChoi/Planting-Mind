@@ -22,7 +22,7 @@ struct AnalysisView: View {
             Text("mood_statistics")
                 .font(.title3)
                 .bold()
-                .padding()
+                .padding([.top, .horizontal])
             
             Chart(viewModel.moodAnalysis, id: \.mood) { analysis in
                 BarMark(x: .value("Count", analysis.count))
@@ -49,7 +49,7 @@ struct AnalysisView: View {
                     AxisTick().foregroundStyle(.clear)
                 }
             }
-            .frame(height: 50)
+            .frame(height: 45)
         }
     }
 }
