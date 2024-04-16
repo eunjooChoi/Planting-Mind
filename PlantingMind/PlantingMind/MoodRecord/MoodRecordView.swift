@@ -22,6 +22,7 @@ struct MoodRecordView: View {
                 VStack(spacing: 20) {
                     Text("\(viewModel.dateFormatter.string(from: viewModel.date))")
                         .italic()
+                        .padding([.bottom], -5)
                     
                     Text("mood_title")
                         .font(.title2)
@@ -117,7 +118,7 @@ struct MoodRecordView: View {
                 .overlay {
                     if viewModel.mood == mood {
                         Circle()
-                            .stroke(Color.Custom.select, lineWidth: 2)
+                            .stroke(viewModel.mood.color.opacity(0.8), lineWidth: 3)
                             .foregroundStyle(.clear)
                             .frame(width: 60, height: 60)
                     }
@@ -129,8 +130,8 @@ struct MoodRecordView: View {
     var textEditorView: some View {
         TextEditor(text: $viewModel.reason)
             .autocorrectionDisabled(true)
-            .background(Color.Custom.line)
             .opacity(0.8)
+            .background(Color.Custom.line)
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             .padding(.horizontal)
             .focused($isFocused)
@@ -145,7 +146,7 @@ struct MoodRecordView: View {
         VStack {
             HStack {
                 Text("fill_in_the_blank")
-                    .foregroundStyle(Color.Custom.line)
+                    .foregroundStyle(Color.Custom.general.opacity(0.6))
                     .padding(.top, 9)
                     .padding(.leading, 22)
                 
@@ -161,7 +162,7 @@ struct MoodRecordView: View {
             HStack {
                 Spacer()
                 Text("\(viewModel.reason.count) / 100")
-                    .foregroundStyle(Color.Custom.line)
+                    .foregroundStyle(Color.Custom.line.opacity(0.6))
                     .padding(.bottom, 10)
                     .padding(.trailing, 28)
                 
