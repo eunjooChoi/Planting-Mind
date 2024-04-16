@@ -14,18 +14,18 @@ struct DayCellView: View {
     var viewModel: DayCellViewModel
     
     var body: some View {
-        VStack(spacing: -5) {
+        VStack(spacing: 1) {
             Button(action: {
                 showMoodRecordView.toggle()
             }, label: {
                 Text("\(viewModel.calendarModel.day)")
-                    .frame(width: 30, height: 30)
+                    .frame(width: 25, height: 25)
                     .fontWeight(.semibold)
                     .background(viewModel.dayBackgroundColor)
                     .foregroundStyle(viewModel.dayForegroundColor)
                     .clipShape(.circle)
             })
-            .frame(height: 50)
+            .frame(height: 27)
             .sheet(isPresented: $showMoodRecordView) {
                 MoodRecordView(viewModel: MoodRecordViewModel(context: context,
                                                               calendarModel: viewModel.calendarModel,
@@ -35,7 +35,7 @@ struct DayCellView: View {
             .disabled(viewModel.isFutureDate)
             
             RoundedRectangle(cornerRadius: 5)
-                .frame(height: 16)
+                .frame(height: 15)
                 .foregroundStyle(viewModel.moodForegroundColor)
                 .overlay {
                     viewModel.moodEmoji
