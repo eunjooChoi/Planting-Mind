@@ -15,6 +15,7 @@ struct CalendarView: View {
         VStack() {
             CalendarHeaderView()
             CalendarGridView()
+                .accessibilityIdentifier(AccessibilityIdentifiers.calendarGridView.rawValue)
             Divider()
                 .overlay(Color.Custom.line)
             

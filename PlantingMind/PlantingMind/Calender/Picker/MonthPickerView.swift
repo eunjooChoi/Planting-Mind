@@ -64,6 +64,7 @@ struct MonthPickerView: View {
             } label: {
                 Text("done")
             }
+            .accessibilityIdentifier(AccessibilityIdentifiers.doneButton.rawValue)
         }
         .padding([.top, .trailing, .leading])
     }
@@ -78,6 +79,7 @@ struct MonthPickerView: View {
             }
             .labelsHidden()
             .frame(width: 100, height: 200)
+            .accessibilityIdentifier(AccessibilityIdentifiers.yearPicker.rawValue)
             
             Text(". ")
                 .font(.title)
@@ -91,6 +93,7 @@ struct MonthPickerView: View {
             }
             .labelsHidden()
             .frame(width: 70, height: 200)
+            .accessibilityIdentifier(AccessibilityIdentifiers.monthPicker.rawValue)
         }
         .pickerStyle(.wheel)
         .compositingGroup()
