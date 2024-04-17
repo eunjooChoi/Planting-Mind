@@ -27,6 +27,7 @@ struct CalendarHeaderView: View {
                 Image(systemName: "chevron.left")
                     .font(.title)
             })
+            .accessibilityIdentifier(AccessibilityIdentifiers.previousMonthButton.rawValue)
             
             Button {
                 UIView.setAnimationsEnabled(false)
@@ -41,6 +42,7 @@ struct CalendarHeaderView: View {
                 MonthPickerView(selectedDate: $calendarViewModel.selectedDate,
                                 dateRange: DateRange(startDate: calendarViewModel.startMonth!, endDate: calendarViewModel.today))
             })
+            .accessibilityIdentifier(AccessibilityIdentifiers.monthPickerButton.rawValue)
             
             Button(action: {
                 calendarViewModel.addingMonth(value: 1)
@@ -48,6 +50,7 @@ struct CalendarHeaderView: View {
                 Image(systemName: "chevron.right")
                     .font(.title)
             })
+            .accessibilityIdentifier(AccessibilityIdentifiers.nextMonthButton.rawValue)
             
             Spacer()
             
@@ -60,6 +63,7 @@ struct CalendarHeaderView: View {
             .fullScreenCover(isPresented: $showSettings, content: {
                 SettingsView(viewModel: SettingsViewModel(context: calendarViewModel.context, languageCode: Locale.current.language.languageCode?.identifier))
             })
+            .accessibilityIdentifier(AccessibilityIdentifiers.settingsButton.rawValue)
         })
         .foregroundStyle(Color.Custom.general)
         .padding(.bottom, 25)
