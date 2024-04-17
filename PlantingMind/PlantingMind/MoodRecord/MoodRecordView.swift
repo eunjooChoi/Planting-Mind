@@ -28,6 +28,7 @@ struct MoodRecordView: View {
                         .font(.title2)
                         .bold()
                         .padding(.horizontal)
+                        .accessibilityIdentifier(AccessibilityIdentifiers.moodTitleText.rawValue)
                     
                     moodSelectView
                     
@@ -58,6 +59,7 @@ struct MoodRecordView: View {
                                 .background(.red)
                                 .clipShape(Capsule(style: .continuous))
                         }
+                        .accessibilityIdentifier(AccessibilityIdentifiers.removeButton.rawValue)
                     }
                     
                     Spacer()
@@ -78,7 +80,9 @@ struct MoodRecordView: View {
                         Button("confirm", role: .destructive) {
                             dismiss()
                         }
+                        .accessibilityIdentifier(AccessibilityIdentifiers.confirmButton.rawValue)
                     }
+                    .accessibilityIdentifier(AccessibilityIdentifiers.cancelButton.rawValue)
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -88,6 +92,7 @@ struct MoodRecordView: View {
                     }, label: {
                         Text("save")
                     })
+                    .accessibilityIdentifier(AccessibilityIdentifiers.saveButton.rawValue)
                 }
             }
             .foregroundStyle(Color.Custom.general)
@@ -100,6 +105,7 @@ struct MoodRecordView: View {
                     dismiss()
                 })
             }
+            .accessibilityIdentifier(AccessibilityIdentifiers.confirmButton.rawValue)
         })
         .alert("error_description", isPresented: $viewModel.showErrorAlert) {
             Button("ok", role: .cancel) { }
@@ -108,7 +114,7 @@ struct MoodRecordView: View {
     
     var moodSelectView: some View {
         HStack(spacing: 20) {
-            ForEach(Mood.allCases, id: \.self) {mood in
+            ForEach(Mood.allCases, id: \.self) { mood in
                 Button(action: {
                     viewModel.mood = mood
                 }, label: {
@@ -123,6 +129,7 @@ struct MoodRecordView: View {
                             .frame(width: 60, height: 60)
                     }
                 }
+                .accessibilityIdentifier(mood.rawValue)
             }
         }
     }
@@ -140,6 +147,7 @@ struct MoodRecordView: View {
                     viewModel.reason.removeLast()
                 }
             }
+            .accessibilityIdentifier(AccessibilityIdentifiers.moodReasonTextEditor.rawValue)
     }
     
     var emptyStringView: some View {
