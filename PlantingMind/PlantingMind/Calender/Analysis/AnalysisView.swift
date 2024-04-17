@@ -18,6 +18,7 @@ struct AnalysisView: View {
                 .font(.title3)
                 .bold()
                 .padding()
+                .accessibilityIdentifier(AccessibilityIdentifiers.emptyMoodText.rawValue)
         } else {
             Text("mood_statistics")
                 .font(.title3)
@@ -50,6 +51,7 @@ struct AnalysisView: View {
                 }
             }
             .frame(height: 45)
+            .accessibilityIdentifier(AccessibilityIdentifiers.moodChart.rawValue)
         }
     }
 }

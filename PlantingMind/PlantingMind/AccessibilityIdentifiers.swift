@@ -19,4 +19,21 @@ enum AccessibilityIdentifiers: String {
     case yearPicker
     case monthPicker
     case doneButton
+    
+    // MoodAnalysis
+    case emptyMoodText
+    case moodChart
+    
+    // MoodRecord
+    case moodTitleText
+    case moodReasonTextEditor
+    case saveButton
+    case cancelButton
+    case confirmButton
+    case removeButton
+    case nice
+    case good
+    case normal
+    case notBad
+    case bad
 }
