@@ -25,6 +25,7 @@
 		7B34415D2BA1B87A00DA43F6 /* MonthPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */; };
 		7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */; };
 		7B3FA1BF2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3FA1BE2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift */; };
+		7B3FA1C12BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3FA1C02BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift */; };
 		7B4C07B62BB6B42E00B60CCD /* MoodAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */; };
 		7B4C07B82BB6B6B200B60CCD /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */; };
 		7B4C07BC2BB6C1F200B60CCD /* AnalysisViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */; };
@@ -69,6 +70,7 @@
 		7BA66A8B2BCFEC21009BD9E8 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA66A892BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift */; };
 		7BA66A8D2BCFFB0D009BD9E8 /* XCTestsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA66A8C2BCFFB0D009BD9E8 /* XCTestsExtension.swift */; };
 		7BA66A922BD00C0F009BD9E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
+		7BA66A942BD0DCCE009BD9E8 /* LocalizedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA66A932BD0DCCE009BD9E8 /* LocalizedHelper.swift */; };
 		7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
 		7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */; };
 		7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
@@ -78,7 +80,6 @@
 		7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F62B5E525900059068 /* CalendarModel.swift */; };
 		7BC300F92B5E5F8E00059068 /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F82B5E5F8E00059068 /* CalendarViewModelTests.swift */; };
 		7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */; };
-		7BE2475F2BCA3CA900DD3B76 /* PrivacyPolicyWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2475E2BCA3CA900DD3B76 /* PrivacyPolicyWebview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewModel.swift; sourceTree = "<group>"; };
 		7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewModelTests.swift; sourceTree = "<group>"; };
 		7B3FA1BE2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests_MoodRecord.swift; sourceTree = "<group>"; };
+		7B3FA1C02BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests_Settings.swift; sourceTree = "<group>"; };
 		7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnalysisModel.swift; sourceTree = "<group>"; };
 		7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewModelTests.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		7BA079912BAAD5EA009B5E46 /* PlantingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantingWidgetExtension.entitlements; sourceTree = "<group>"; };
 		7BA66A892BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 		7BA66A8C2BCFFB0D009BD9E8 /* XCTestsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestsExtension.swift; sourceTree = "<group>"; };
+		7BA66A932BD0DCCE009BD9E8 /* LocalizedHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedHelper.swift; sourceTree = "<group>"; };
 		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModelTests.swift; sourceTree = "<group>"; };
 		7BABB0102B5F850200EEEEBB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -186,7 +189,6 @@
 		7BC300F62B5E525900059068 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		7BC300F82B5E5F8E00059068 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
 		7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
-		7BE2475E2BCA3CA900DD3B76 /* PrivacyPolicyWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyWebview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,7 +335,9 @@
 			children = (
 				7B11F8422B4549E000346A41 /* PlantingMindUITests_Calendar.swift */,
 				7B3FA1BE2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift */,
+				7B3FA1C02BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift */,
 				7BA66A8C2BCFFB0D009BD9E8 /* XCTestsExtension.swift */,
+				7BA66A932BD0DCCE009BD9E8 /* LocalizedHelper.swift */,
 			);
 			path = PlantingMindUITests;
 			sourceTree = "<group>";
@@ -419,7 +423,6 @@
 			children = (
 				7B786A722BCD09FE005D69A0 /* Notification */,
 				7B9F19F52BC694BF0063E613 /* MindDocument.swift */,
-				7BE2475E2BCA3CA900DD3B76 /* PrivacyPolicyWebview.swift */,
 				7B9F19EF2BC528980063E613 /* SettingsView.swift */,
 				7B9F19F12BC52FED0063E613 /* SettingsViewModel.swift */,
 			);
@@ -663,7 +666,6 @@
 				7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */,
 				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
 				7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */,
-				7BE2475F2BCA3CA900DD3B76 /* PrivacyPolicyWebview.swift in Sources */,
 				7B907F7A2B9B4FBE0050D05B /* UpdateNoticiationExtension.swift in Sources */,
 				7B34415D2BA1B87A00DA43F6 /* MonthPickerViewModel.swift in Sources */,
 				7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */,
@@ -704,8 +706,10 @@
 			files = (
 				7B11F8432B4549E000346A41 /* PlantingMindUITests_Calendar.swift in Sources */,
 				7BA66A8D2BCFFB0D009BD9E8 /* XCTestsExtension.swift in Sources */,
+				7B3FA1C12BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift in Sources */,
 				7B3FA1BF2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift in Sources */,
 				7BA66A8B2BCFEC21009BD9E8 /* AccessibilityIdentifiers.swift in Sources */,
+				7BA66A942BD0DCCE009BD9E8 /* LocalizedHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,4 +36,7 @@ enum AccessibilityIdentifiers: String {
     case normal
     case notBad
     case bad
+    
+    // Settings
+    case timePicker
 }

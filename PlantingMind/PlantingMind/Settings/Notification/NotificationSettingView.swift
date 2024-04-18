@@ -67,6 +67,7 @@ struct NotificationSettingView: View {
         HStack {
             Text("set_time_picker")
             DatePicker("", selection: $viewModel.pickedTime, displayedComponents: [.hourAndMinute])
+                .accessibilityIdentifier(AccessibilityIdentifiers.timePicker.rawValue)
         }
     }
 }
