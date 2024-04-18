@@ -22,7 +22,7 @@ final class PlantingMindUITests_Calendar: XCTestCase {
     
     func test_01_달력_Picker로_이동() {
         let monthPickerButton = app.buttons[AccessibilityIdentifiers.monthPickerButton.rawValue]
-        tapButton(element: monthPickerButton)
+        tap(element: monthPickerButton)
         
         let yearPicker = app.pickers[AccessibilityIdentifiers.yearPicker.rawValue].pickerWheels.firstMatch
         XCTAssertTrue(yearPicker.waitForExistence(timeout: 1.0))
@@ -33,17 +33,17 @@ final class PlantingMindUITests_Calendar: XCTestCase {
         yearPicker.adjust(toPickerWheelValue: "2024")
         monthPicker.adjust(toPickerWheelValue: "01")
         
-        tapButton(element: app.buttons[AccessibilityIdentifiers.doneButton.rawValue])
+        tap(element: app.buttons[AccessibilityIdentifiers.doneButton.rawValue])
         checkString(element: monthPickerButton, expectedString: "2024. 01")
     }
     
     func test_02_좌우버튼으로_이동() {
         let monthPickerButton = app.buttons[AccessibilityIdentifiers.monthPickerButton.rawValue]
         
-        tapButton(element: app.buttons[AccessibilityIdentifiers.nextMonthButton.rawValue])
+        tap(element: app.buttons[AccessibilityIdentifiers.nextMonthButton.rawValue])
         checkString(element: monthPickerButton, expectedString: "2024. 02")
         
-        tapButton(element: app.buttons[AccessibilityIdentifiers.previousMonthButton.rawValue])
+        tap(element: app.buttons[AccessibilityIdentifiers.previousMonthButton.rawValue])
         checkString(element: monthPickerButton, expectedString: "2024. 01")
     }
     
@@ -60,10 +60,7 @@ final class PlantingMindUITests_Calendar: XCTestCase {
     
     private func removeNotificationAllowAlert() {
         addUIInterruptionMonitor(withDescription: "Allow push") { (alerts) -> Bool in
-            let firstMatchButton = alerts.buttons.element(boundBy: 1)
-            if(firstMatchButton.exists){
-                firstMatchButton.tap();
-            }
+            self.tap(element: alerts.buttons.lastMatch)
             return true;
         }
         
