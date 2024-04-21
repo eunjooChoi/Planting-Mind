@@ -7,13 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B02AD622BA0222900D5C850 /* MonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B02AD612BA0222900D5C850 /* MonthPickerView.swift */; };
+		7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */; };
+		7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */; };
+		7B0A77112B93196D00ADC039 /* MoodRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */; };
+		7B0E1BCE2BAD57940060458D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
+		7B0E1BD32BAD6C240060458D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
+		7B0E1BD62BB15A220060458D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */; };
+		7B0E1BD72BB15A220060458D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */; };
 		7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */; };
 		7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8292B4549DF00346A41 /* ContentView.swift */; };
 		7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82B2B4549E000346A41 /* Assets.xcassets */; };
 		7B11F82F2B4549E000346A41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B11F82E2B4549E000346A41 /* Preview Assets.xcassets */; };
-		7B11F8392B4549E000346A41 /* PlantingMindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8382B4549E000346A41 /* PlantingMindTests.swift */; };
-		7B11F8432B4549E000346A41 /* PlantingMindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8422B4549E000346A41 /* PlantingMindUITests.swift */; };
-		7B11F8452B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */; };
+		7B11F8432B4549E000346A41 /* PlantingMindUITests_Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11F8422B4549E000346A41 /* PlantingMindUITests_Calendar.swift */; };
+		7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */; };
+		7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */; };
+		7B34415D2BA1B87A00DA43F6 /* MonthPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */; };
+		7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */; };
+		7B3FA1BF2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3FA1BE2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift */; };
+		7B3FA1C12BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3FA1C02BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift */; };
+		7B4C07B62BB6B42E00B60CCD /* MoodAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */; };
+		7B4C07B82BB6B6B200B60CCD /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */; };
+		7B4C07BC2BB6C1F200B60CCD /* AnalysisViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */; };
+		7B4C07BE2BB6C85D00B60CCD /* AnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C07BD2BB6C85D00B60CCD /* AnalysisViewModel.swift */; };
+		7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */; };
+		7B571B562B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */; };
+		7B63CA9E2BA9CB4600943DED /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B63CA9D2BA9CB4600943DED /* WidgetKit.framework */; };
+		7B63CAA02BA9CB4600943DED /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B63CA9F2BA9CB4600943DED /* SwiftUI.framework */; };
+		7B63CAA32BA9CB4600943DED /* PlantingWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63CAA22BA9CB4600943DED /* PlantingWidgetBundle.swift */; };
+		7B63CAA52BA9CB4600943DED /* PlantingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63CAA42BA9CB4600943DED /* PlantingWidget.swift */; };
+		7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B63CAA62BA9CB4700943DED /* Assets.xcassets */; };
+		7B63CAAB2BA9CB4700943DED /* PlantingWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B661C372B6393880082F9DB /* MoodRecordView.swift */; };
+		7B786A6F2BCD0458005D69A0 /* NotifiactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A6E2BCD0458005D69A0 /* NotifiactionManager.swift */; };
+		7B786A712BCD08D3005D69A0 /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A702BCD08D3005D69A0 /* NotificationSettingView.swift */; };
+		7B786A772BCD0DC6005D69A0 /* NotificationSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A762BCD0DC6005D69A0 /* NotificationSettingViewModel.swift */; };
+		7B786A792BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786A782BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift */; };
+		7B8430A22BC7C1DE00D5939E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */; };
+		7B8430AB2BC81FC400D5939E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */; };
+		7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */; };
+		7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F722B9981E90050D05B /* DayCellViewModel.swift */; };
+		7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F742B9997060050D05B /* DayCellViewModelTest.swift */; };
+		7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */; };
+		7B907F7A2B9B4FBE0050D05B /* UpdateNoticiationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F792B9B4FBE0050D05B /* UpdateNoticiationExtension.swift */; };
+		7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */; };
+		7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
+		7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
+		7B9F19ED2BC5160F0063E613 /* UTTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19EC2BC5160F0063E613 /* UTTypeExtension.swift */; };
+		7B9F19F02BC528980063E613 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19EF2BC528980063E613 /* SettingsView.swift */; };
+		7B9F19F22BC52FED0063E613 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19F12BC52FED0063E613 /* SettingsViewModel.swift */; };
+		7B9F19F42BC688060063E613 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19F32BC688060063E613 /* SettingsViewModelTests.swift */; };
+		7B9F19F62BC694BF0063E613 /* MindDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F19F52BC694BF0063E613 /* MindDocument.swift */; };
+		7B9F19F72BC69CF00063E613 /* test.mind in Resources */ = {isa = PBXBuildFile; fileRef = 7B9F19EB2BC512510063E613 /* test.mind */; };
+		7B9F19F92BC7AF740063E613 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B9F19F82BC7AF740063E613 /* InfoPlist.xcstrings */; };
+		7BA079922BAAD660009B5E46 /* MoodRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */; };
+		7BA079932BAAD662009B5E46 /* MoodRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */; };
+		7BA079942BAAD666009B5E46 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */; };
+		7BA079952BAAD669009B5E46 /* MoodRecords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */; };
+		7BA079962BAAD834009B5E46 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
+		7BA079972BAAD87A009B5E46 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
+		7BA66A8A2BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA66A892BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift */; };
+		7BA66A8B2BCFEC21009BD9E8 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA66A892BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift */; };
+		7BA66A8D2BCFFB0D009BD9E8 /* XCTestsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA66A8C2BCFFB0D009BD9E8 /* XCTestsExtension.swift */; };
+		7BA66A922BD00C0F009BD9E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B95D1792BA1645C00484F9D /* Localizable.xcstrings */; };
+		7BA66A942BD0DCCE009BD9E8 /* LocalizedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA66A932BD0DCCE009BD9E8 /* LocalizedHelper.swift */; };
+		7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F32B9466BC00948CF2 /* Mood.swift */; };
+		7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */; };
+		7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABB0102B5F850200EEEEBB /* ColorExtension.swift */; };
+		7BAEFB282BBBE4EF00116B9E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95D17B2BA166AC00484F9D /* StringExtension.swift */; };
+		7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */; };
+		7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F42B5E4CE100059068 /* CalendarView.swift */; };
+		7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F62B5E525900059068 /* CalendarModel.swift */; };
+		7BC300F92B5E5F8E00059068 /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC300F82B5E5F8E00059068 /* CalendarViewModelTests.swift */; };
+		7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,19 +97,98 @@
 			remoteGlobalIDString = 7B11F8232B4549DF00346A41;
 			remoteInfo = PlantingMind;
 		};
+		7B63CAA92BA9CB4700943DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B11F81C2B4549DF00346A41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B63CA9A2BA9CB4600943DED;
+			remoteInfo = PlantingWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7B63CAAC2BA9CB4700943DED /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7B63CAAB2BA9CB4700943DED /* PlantingWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7B02AD612BA0222900D5C850 /* MonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerView.swift; sourceTree = "<group>"; };
+		7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodRecords.xcdatamodel; sourceTree = "<group>"; };
+		7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModel.swift; sourceTree = "<group>"; };
+		7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		7B0E1BD82BB15AAD0060458D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7B11F8242B4549DF00346A41 /* PlantingMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantingMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindApp.swift; sourceTree = "<group>"; };
 		7B11F8292B4549DF00346A41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B11F82B2B4549E000346A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B11F82E2B4549E000346A41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B11F8342B4549E000346A41 /* PlantingMindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantingMindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B11F8382B4549E000346A41 /* PlantingMindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindTests.swift; sourceTree = "<group>"; };
 		7B11F83E2B4549E000346A41 /* PlantingMindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantingMindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B11F8422B4549E000346A41 /* PlantingMindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests.swift; sourceTree = "<group>"; };
-		7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B11F8422B4549E000346A41 /* PlantingMindUITests_Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests_Calendar.swift; sourceTree = "<group>"; };
+		7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
+		7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
+		7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewModel.swift; sourceTree = "<group>"; };
+		7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewModelTests.swift; sourceTree = "<group>"; };
+		7B3FA1BE2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests_MoodRecord.swift; sourceTree = "<group>"; };
+		7B3FA1C02BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingMindUITests_Settings.swift; sourceTree = "<group>"; };
+		7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnalysisModel.swift; sourceTree = "<group>"; };
+		7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
+		7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewModelTests.swift; sourceTree = "<group>"; };
+		7B4C07BD2BB6C85D00B60CCD /* AnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewModel.swift; sourceTree = "<group>"; };
+		7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlantingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B63CA9D2BA9CB4600943DED /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7B63CA9F2BA9CB4600943DED /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7B63CAA22BA9CB4600943DED /* PlantingWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingWidgetBundle.swift; sourceTree = "<group>"; };
+		7B63CAA42BA9CB4600943DED /* PlantingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingWidget.swift; sourceTree = "<group>"; };
+		7B63CAA62BA9CB4700943DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B63CAA82BA9CB4700943DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B661C372B6393880082F9DB /* MoodRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordView.swift; sourceTree = "<group>"; };
+		7B715EDB2BAC734400B4F720 /* PlantingMind.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlantingMind.xctestplan; sourceTree = "<group>"; };
+		7B786A6E2BCD0458005D69A0 /* NotifiactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiactionManager.swift; sourceTree = "<group>"; };
+		7B786A702BCD08D3005D69A0 /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
+		7B786A762BCD0DC6005D69A0 /* NotificationSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewModel.swift; sourceTree = "<group>"; };
+		7B786A782BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewModelTests.swift; sourceTree = "<group>"; };
+		7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsLog.swift; sourceTree = "<group>"; };
+		7B907F722B9981E90050D05B /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
+		7B907F742B9997060050D05B /* DayCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModelTest.swift; sourceTree = "<group>"; };
+		7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotificationSpy.swift; sourceTree = "<group>"; };
+		7B907F792B9B4FBE0050D05B /* UpdateNoticiationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNoticiationExtension.swift; sourceTree = "<group>"; };
+		7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7B95D1792BA1645C00484F9D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		7B95D17B2BA166AC00484F9D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7B9F19EB2BC512510063E613 /* test.mind */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.mind; sourceTree = "<group>"; };
+		7B9F19EC2BC5160F0063E613 /* UTTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTTypeExtension.swift; sourceTree = "<group>"; };
+		7B9F19EF2BC528980063E613 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7B9F19F12BC52FED0063E613 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		7B9F19F32BC688060063E613 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
+		7B9F19F52BC694BF0063E613 /* MindDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindDocument.swift; sourceTree = "<group>"; };
+		7B9F19F82BC7AF740063E613 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		7BA079902BAAD5CB009B5E46 /* PlantingMind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantingMind.entitlements; sourceTree = "<group>"; };
+		7BA079912BAAD5EA009B5E46 /* PlantingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantingWidgetExtension.entitlements; sourceTree = "<group>"; };
+		7BA66A892BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		7BA66A8C2BCFFB0D009BD9E8 /* XCTestsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestsExtension.swift; sourceTree = "<group>"; };
+		7BA66A932BD0DCCE009BD9E8 /* LocalizedHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedHelper.swift; sourceTree = "<group>"; };
+		7BAB04F32B9466BC00948CF2 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewModelTests.swift; sourceTree = "<group>"; };
+		7BABB0102B5F850200EEEEBB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		7BC300F42B5E4CE100059068 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		7BC300F62B5E525900059068 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		7BC300F82B5E5F8E00059068 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
+		7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8430AB2BC81FC400D5939E /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,15 +214,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B63CA982BA9CB4600943DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B63CAA02BA9CB4600943DED /* SwiftUI.framework in Frameworks */,
+				7B63CA9E2BA9CB4600943DED /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B0A76CF2B906FCF00ADC039 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */,
+				7B0A76D02B906FE100ADC039 /* CoreDataStack.swift */,
+				7B571B532B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift */,
+				7B571B542B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7B0A76D22B92DA3200ADC039 /* MoodRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7BAB04F32B9466BC00948CF2 /* Mood.swift */,
+				7B661C372B6393880082F9DB /* MoodRecordView.swift */,
+				7B0A77102B93196D00ADC039 /* MoodRecordViewModel.swift */,
+			);
+			path = MoodRecord;
+			sourceTree = "<group>";
+		};
+		7B0E1BD42BB159CD0060458D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7B0E1BD52BB15A220060458D /* Pretendard-Black.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		7B11F81B2B4549DF00346A41 = {
 			isa = PBXGroup;
 			children = (
+				7B715EDB2BAC734400B4F720 /* PlantingMind.xctestplan */,
+				7BA079912BAAD5EA009B5E46 /* PlantingWidgetExtension.entitlements */,
 				7B11F8262B4549DF00346A41 /* PlantingMind */,
+				7B63CAA12BA9CB4600943DED /* PlantingWidget */,
 				7B11F8372B4549E000346A41 /* PlantingMindTests */,
 				7B11F8412B4549E000346A41 /* PlantingMindUITests */,
+				7B63CA9C2BA9CB4600943DED /* Frameworks */,
 				7B11F8252B4549DF00346A41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +275,7 @@
 				7B11F8242B4549DF00346A41 /* PlantingMind.app */,
 				7B11F8342B4549E000346A41 /* PlantingMindTests.xctest */,
 				7B11F83E2B4549E000346A41 /* PlantingMindUITests.xctest */,
+				7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,10 +283,25 @@
 		7B11F8262B4549DF00346A41 /* PlantingMind */ = {
 			isa = PBXGroup;
 			children = (
+				7B0E1BD82BB15AAD0060458D /* Info.plist */,
+				7BA079902BAAD5CB009B5E46 /* PlantingMind.entitlements */,
 				7B11F8272B4549DF00346A41 /* PlantingMindApp.swift */,
 				7B11F8292B4549DF00346A41 /* ContentView.swift */,
+				7BABB0102B5F850200EEEEBB /* ColorExtension.swift */,
+				7B907F792B9B4FBE0050D05B /* UpdateNoticiationExtension.swift */,
+				7B907F7B2B9C6F1B0050D05B /* DateExtension.swift */,
+				7B95D17B2BA166AC00484F9D /* StringExtension.swift */,
+				7B9F19EC2BC5160F0063E613 /* UTTypeExtension.swift */,
+				7BA66A892BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift */,
+				7B9F19EE2BC528820063E613 /* Settings */,
+				7BC300F32B5E4C2100059068 /* Calender */,
+				7B0A76D22B92DA3200ADC039 /* MoodRecord */,
+				7B0A76CF2B906FCF00ADC039 /* CoreData */,
 				7B11F82B2B4549E000346A41 /* Assets.xcassets */,
 				7B11F82D2B4549E000346A41 /* Preview Content */,
+				7B0E1BD42BB159CD0060458D /* Font */,
+				7B95D1762BA1627500484F9D /* Localization */,
+				7B8430AC2BC8DD7B00D5939E /* Firebase */,
 			);
 			path = PlantingMind;
 			sourceTree = "<group>";
@@ -113,7 +317,15 @@
 		7B11F8372B4549E000346A41 /* PlantingMindTests */ = {
 			isa = PBXGroup;
 			children = (
-				7B11F8382B4549E000346A41 /* PlantingMindTests.swift */,
+				7BC300F82B5E5F8E00059068 /* CalendarViewModelTests.swift */,
+				7BAB04F52B946B8700948CF2 /* MoodRecordViewModelTests.swift */,
+				7B907F742B9997060050D05B /* DayCellViewModelTest.swift */,
+				7B907F772B9B4CCE0050D05B /* FetchNotificationSpy.swift */,
+				7B34415E2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift */,
+				7B4C07BB2BB6C1F200B60CCD /* AnalysisViewModelTests.swift */,
+				7B9F19F32BC688060063E613 /* SettingsViewModelTests.swift */,
+				7B786A782BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift */,
+				7B9F19EB2BC512510063E613 /* test.mind */,
 			);
 			path = PlantingMindTests;
 			sourceTree = "<group>";
@@ -121,10 +333,115 @@
 		7B11F8412B4549E000346A41 /* PlantingMindUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7B11F8422B4549E000346A41 /* PlantingMindUITests.swift */,
-				7B11F8442B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift */,
+				7B11F8422B4549E000346A41 /* PlantingMindUITests_Calendar.swift */,
+				7B3FA1BE2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift */,
+				7B3FA1C02BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift */,
+				7BA66A8C2BCFFB0D009BD9E8 /* XCTestsExtension.swift */,
+				7BA66A932BD0DCCE009BD9E8 /* LocalizedHelper.swift */,
 			);
 			path = PlantingMindUITests;
+			sourceTree = "<group>";
+		};
+		7B3441582BA1903300DA43F6 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				7B907F722B9981E90050D05B /* DayCellViewModel.swift */,
+				7B2CFC1A2B5A6DE900641F6D /* DayCellView.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		7B3441592BA190AE00DA43F6 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				7B02AD612BA0222900D5C850 /* MonthPickerView.swift */,
+				7B34415C2BA1B87A00DA43F6 /* MonthPickerViewModel.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		7B4C07B02BB6A4DD00B60CCD /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				7B4C07B52BB6B42E00B60CCD /* MoodAnalysisModel.swift */,
+				7B4C07B72BB6B6B200B60CCD /* AnalysisView.swift */,
+				7B4C07BD2BB6C85D00B60CCD /* AnalysisViewModel.swift */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		7B63CA9C2BA9CB4600943DED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B63CA9D2BA9CB4600943DED /* WidgetKit.framework */,
+				7B63CA9F2BA9CB4600943DED /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B63CAA12BA9CB4600943DED /* PlantingWidget */ = {
+			isa = PBXGroup;
+			children = (
+				7B63CAA22BA9CB4600943DED /* PlantingWidgetBundle.swift */,
+				7B63CAA42BA9CB4600943DED /* PlantingWidget.swift */,
+				7B63CAA62BA9CB4700943DED /* Assets.xcassets */,
+				7B63CAA82BA9CB4700943DED /* Info.plist */,
+			);
+			path = PlantingWidget;
+			sourceTree = "<group>";
+		};
+		7B786A722BCD09FE005D69A0 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				7B786A6E2BCD0458005D69A0 /* NotifiactionManager.swift */,
+				7B786A762BCD0DC6005D69A0 /* NotificationSettingViewModel.swift */,
+				7B786A702BCD08D3005D69A0 /* NotificationSettingView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		7B8430AC2BC8DD7B00D5939E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				7B8430A12BC7C1DE00D5939E /* GoogleService-Info.plist */,
+				7B8430AE2BC8DE7100D5939E /* CrashlyticsLog.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		7B95D1762BA1627500484F9D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7B95D1792BA1645C00484F9D /* Localizable.xcstrings */,
+				7B9F19F82BC7AF740063E613 /* InfoPlist.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		7B9F19EE2BC528820063E613 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7B786A722BCD09FE005D69A0 /* Notification */,
+				7B9F19F52BC694BF0063E613 /* MindDocument.swift */,
+				7B9F19EF2BC528980063E613 /* SettingsView.swift */,
+				7B9F19F12BC52FED0063E613 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7BC300F32B5E4C2100059068 /* Calender */ = {
+			isa = PBXGroup;
+			children = (
+				7BC300F62B5E525900059068 /* CalendarModel.swift */,
+				7BC300F12B5E4A3E00059068 /* CalendarViewModel.swift */,
+				7BC300F42B5E4CE100059068 /* CalendarView.swift */,
+				7BDA3CD62B58F25F006D74FB /* CalendarHeaderView.swift */,
+				7B2CFC1C2B5A6FFB00641F6D /* CalendarGridView.swift */,
+				7B3441582BA1903300DA43F6 /* Day */,
+				7B3441592BA190AE00DA43F6 /* Picker */,
+				7B4C07B02BB6A4DD00B60CCD /* Analysis */,
+			);
+			path = Calender;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,12 +454,18 @@
 				7B11F8202B4549DF00346A41 /* Sources */,
 				7B11F8212B4549DF00346A41 /* Frameworks */,
 				7B11F8222B4549DF00346A41 /* Resources */,
+				7B63CAAC2BA9CB4700943DED /* Embed Foundation Extensions */,
+				7B8430A82BC7E79700D5939E /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7B63CAAA2BA9CB4700943DED /* PBXTargetDependency */,
 			);
 			name = PlantingMind;
+			packageProductDependencies = (
+				7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */,
+			);
 			productName = PlantingMind;
 			productReference = 7B11F8242B4549DF00346A41 /* PlantingMind.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +506,23 @@
 			productReference = 7B11F83E2B4549E000346A41 /* PlantingMindUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7B63CA9A2BA9CB4600943DED /* PlantingWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B63CAAF2BA9CB4700943DED /* Build configuration list for PBXNativeTarget "PlantingWidgetExtension" */;
+			buildPhases = (
+				7B63CA972BA9CB4600943DED /* Sources */,
+				7B63CA982BA9CB4600943DED /* Frameworks */,
+				7B63CA992BA9CB4600943DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlantingWidgetExtension;
+			productName = PlantingWidgetExtension;
+			productReference = 7B63CA9B2BA9CB4600943DED /* PlantingWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +544,9 @@
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 7B11F8232B4549DF00346A41;
 					};
+					7B63CA9A2BA9CB4600943DED = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 7B11F81F2B4549DF00346A41 /* Build configuration list for PBXProject "PlantingMind" */;
@@ -213,8 +556,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 7B11F81B2B4549DF00346A41;
+			packageReferences = (
+				7B8430A92BC81FC400D5939E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7B11F8252B4549DF00346A41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +569,7 @@
 				7B11F8232B4549DF00346A41 /* PlantingMind */,
 				7B11F8332B4549E000346A41 /* PlantingMindTests */,
 				7B11F83D2B4549E000346A41 /* PlantingMindUITests */,
+				7B63CA9A2BA9CB4600943DED /* PlantingWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -232,7 +580,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B11F82F2B4549E000346A41 /* Preview Assets.xcassets in Resources */,
+				7B9F19F92BC7AF740063E613 /* InfoPlist.xcstrings in Resources */,
 				7B11F82C2B4549E000346A41 /* Assets.xcassets in Resources */,
+				7B0E1BD62BB15A220060458D /* Pretendard-Black.otf in Resources */,
+				7B95D17A2BA1645C00484F9D /* Localizable.xcstrings in Resources */,
+				7B8430A22BC7C1DE00D5939E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +592,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9F19F72BC69CF00063E613 /* test.mind in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +600,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA66A922BD00C0F009BD9E8 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B63CA992BA9CB4600943DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0E1BCE2BAD57940060458D /* Localizable.xcstrings in Resources */,
+				7B0E1BD32BAD6C240060458D /* Assets.xcassets in Resources */,
+				7B0E1BD72BB15A220060458D /* Pretendard-Black.otf in Resources */,
+				7B63CAA72BA9CB4700943DED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B8430A82BC7E79700D5939E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B11F8202B4549DF00346A41 /* Sources */ = {
@@ -258,7 +649,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B11F82A2B4549DF00346A41 /* ContentView.swift in Sources */,
+				7BC300F72B5E525900059068 /* CalendarModel.swift in Sources */,
+				7BC300F22B5E4A3E00059068 /* CalendarViewModel.swift in Sources */,
+				7B95D17C2BA166AC00484F9D /* StringExtension.swift in Sources */,
+				7B571B562B95E5DA0019DEB8 /* MoodRecord+CoreDataProperties.swift in Sources */,
+				7B0A76D12B906FE100ADC039 /* CoreDataStack.swift in Sources */,
+				7B9F19ED2BC5160F0063E613 /* UTTypeExtension.swift in Sources */,
+				7B907F7C2B9C6F1B0050D05B /* DateExtension.swift in Sources */,
+				7B02AD622BA0222900D5C850 /* MonthPickerView.swift in Sources */,
+				7B4C07B62BB6B42E00B60CCD /* MoodAnalysisModel.swift in Sources */,
+				7BABB0112B5F850200EEEEBB /* ColorExtension.swift in Sources */,
+				7B0A77112B93196D00ADC039 /* MoodRecordViewModel.swift in Sources */,
+				7B4C07B82BB6B6B200B60CCD /* AnalysisView.swift in Sources */,
+				7B0A76CE2B904A1200ADC039 /* MoodRecords.xcdatamodeld in Sources */,
+				7B786A772BCD0DC6005D69A0 /* NotificationSettingViewModel.swift in Sources */,
+				7BC300F52B5E4CE100059068 /* CalendarView.swift in Sources */,
+				7B2CFC1D2B5A6FFB00641F6D /* CalendarGridView.swift in Sources */,
+				7B661C382B6393880082F9DB /* MoodRecordView.swift in Sources */,
+				7B907F7A2B9B4FBE0050D05B /* UpdateNoticiationExtension.swift in Sources */,
+				7B34415D2BA1B87A00DA43F6 /* MonthPickerViewModel.swift in Sources */,
+				7BAB04F42B9466BC00948CF2 /* Mood.swift in Sources */,
+				7B2CFC1B2B5A6DE900641F6D /* DayCellView.swift in Sources */,
+				7B786A6F2BCD0458005D69A0 /* NotifiactionManager.swift in Sources */,
+				7B9F19F02BC528980063E613 /* SettingsView.swift in Sources */,
+				7B9F19F62BC694BF0063E613 /* MindDocument.swift in Sources */,
+				7BDA3CD72B58F25F006D74FB /* CalendarHeaderView.swift in Sources */,
+				7B4C07BE2BB6C85D00B60CCD /* AnalysisViewModel.swift in Sources */,
+				7B907F732B9981E90050D05B /* DayCellViewModel.swift in Sources */,
+				7B8430AF2BC8DE7100D5939E /* CrashlyticsLog.swift in Sources */,
+				7B571B552B95E5DA0019DEB8 /* MoodRecord+CoreDataClass.swift in Sources */,
 				7B11F8282B4549DF00346A41 /* PlantingMindApp.swift in Sources */,
+				7BA66A8A2BCFEB41009BD9E8 /* AccessibilityIdentifiers.swift in Sources */,
+				7B786A712BCD08D3005D69A0 /* NotificationSettingView.swift in Sources */,
+				7B9F19F22BC52FED0063E613 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +689,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B11F8392B4549E000346A41 /* PlantingMindTests.swift in Sources */,
+				7BAB04F62B946B8700948CF2 /* MoodRecordViewModelTests.swift in Sources */,
+				7B34415F2BA1F85600DA43F6 /* MonthPickerViewModelTests.swift in Sources */,
+				7B786A792BCD6318005D69A0 /* NotificationSettingsViewModelTests.swift in Sources */,
+				7B4C07BC2BB6C1F200B60CCD /* AnalysisViewModelTests.swift in Sources */,
+				7B9F19F42BC688060063E613 /* SettingsViewModelTests.swift in Sources */,
+				7B907F782B9B4CCE0050D05B /* FetchNotificationSpy.swift in Sources */,
+				7B907F752B9997060050D05B /* DayCellViewModelTest.swift in Sources */,
+				7BC300F92B5E5F8E00059068 /* CalendarViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +704,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B11F8432B4549E000346A41 /* PlantingMindUITests.swift in Sources */,
-				7B11F8452B4549E000346A41 /* PlantingMindUITestsLaunchTests.swift in Sources */,
+				7B11F8432B4549E000346A41 /* PlantingMindUITests_Calendar.swift in Sources */,
+				7BA66A8D2BCFFB0D009BD9E8 /* XCTestsExtension.swift in Sources */,
+				7B3FA1C12BCFDEF0007C3633 /* PlantingMindUITests_Settings.swift in Sources */,
+				7B3FA1BF2BCFDE6C007C3633 /* PlantingMindUITests_MoodRecord.swift in Sources */,
+				7BA66A8B2BCFEC21009BD9E8 /* AccessibilityIdentifiers.swift in Sources */,
+				7BA66A942BD0DCCE009BD9E8 /* LocalizedHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B63CA972BA9CB4600943DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA079942BAAD666009B5E46 /* CoreDataStack.swift in Sources */,
+				7BA079922BAAD660009B5E46 /* MoodRecord+CoreDataProperties.swift in Sources */,
+				7B63CAA52BA9CB4600943DED /* PlantingWidget.swift in Sources */,
+				7BA079972BAAD87A009B5E46 /* ColorExtension.swift in Sources */,
+				7BA079962BAAD834009B5E46 /* Mood.swift in Sources */,
+				7BAEFB282BBBE4EF00116B9E /* StringExtension.swift in Sources */,
+				7BA079952BAAD669009B5E46 /* MoodRecords.xcdatamodeld in Sources */,
+				7B63CAA32BA9CB4600943DED /* PlantingWidgetBundle.swift in Sources */,
+				7BA079932BAAD662009B5E46 /* MoodRecord+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +741,11 @@
 			isa = PBXTargetDependency;
 			target = 7B11F8232B4549DF00346A41 /* PlantingMind */;
 			targetProxy = 7B11F83F2B4549E000346A41 /* PBXContainerItemProxy */;
+		};
+		7B63CAAA2BA9CB4700943DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B63CA9A2BA9CB4600943DED /* PlantingWidgetExtension */;
+			targetProxy = 7B63CAA92BA9CB4700943DED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -347,7 +802,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +859,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -417,58 +872,81 @@
 		7B11F8492B4549E000346A41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlantingMind/PlantingMind.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"PlantingMind/Preview Content\"";
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingMind/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7B11F84A2B4549E000346A41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlantingMind/PlantingMind.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantingMind/Preview Content\"";
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingMind/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -481,13 +959,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMindTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantingMind.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlantingMind";
 			};
 			name = Debug;
@@ -501,13 +982,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMindTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantingMind.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlantingMind";
 			};
 			name = Release;
@@ -520,12 +1004,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMindUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = PlantingMind;
 			};
 			name = Debug;
@@ -538,13 +1026,81 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PS5XYD2TU9;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMindUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = PlantingMind;
+			};
+			name = Release;
+		};
+		7B63CAAD2BA9CB4700943DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PlantingWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PS5XYD2TU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PlantingWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind.PlantingWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7B63CAAE2BA9CB4700943DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PlantingWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PS5XYD2TU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantingWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PlantingWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eunjoo.planting-mind.PlantingMind.PlantingWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -587,7 +1143,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7B63CAAF2BA9CB4700943DED /* Build configuration list for PBXNativeTarget "PlantingWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B63CAAD2BA9CB4700943DED /* Debug */,
+				7B63CAAE2BA9CB4700943DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B8430A92BC81FC400D5939E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B8430AA2BC81FC400D5939E /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B8430A92BC81FC400D5939E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7B0A76CC2B904A1200ADC039 /* MoodRecords.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */,
+			);
+			currentVersion = 7B0A76CD2B904A1200ADC039 /* MoodRecords.xcdatamodel */;
+			path = MoodRecords.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B11F81C2B4549DF00346A41 /* Project object */;
 }

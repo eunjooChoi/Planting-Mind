@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            CalendarView(calendarViewModel: CalendarViewModel(today: Date(), context: context))
         }
-        .padding()
+        .padding([.horizontal, .top])
+        .onAppear {
+            UNUserNotificationCenter.current().setBadgeCount(0, withCompletionHandler: nil)
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environment(\.managedObjectContext, CoreDataStack(.inMemory).persistentContainer.viewContext)
 }

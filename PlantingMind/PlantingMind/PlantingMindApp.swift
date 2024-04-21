@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct PlantingMindApp: App {
+    @StateObject private var coreDataStack = CoreDataStack()
+    
+    init() {
+        FirebaseApp.configure()
+        
+        let notificationManager = NotificationManager()
+        notificationManager.requestPermission()
+        notificationManager.addNotification(date: nil)
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext,
+                              coreDataStack.persistentContainer.viewContext)
         }
     }
 }
