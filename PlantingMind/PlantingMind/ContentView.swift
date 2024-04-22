@@ -19,6 +19,7 @@ struct ContentView: View {
         .onChange(of: scenePhase, perform: { newValue in
             if newValue == .active {
                 UNUserNotificationCenter.current().setBadgeCount(0, withCompletionHandler: nil)
+                NotificationCenter.default.post(name: .activeNotification,object: nil)
             }
         })
     }

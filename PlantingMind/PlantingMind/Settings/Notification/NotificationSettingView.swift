@@ -29,11 +29,6 @@ struct NotificationSettingView: View {
         .onAppear(perform: {
             viewModel.checkPermission()
         })
-        .onChange(of: scenePhase, perform: { newValue in
-            if newValue == .active {
-                viewModel.checkPermission()
-            }
-        })
     }
     
     var notificationOnOff: some View {
