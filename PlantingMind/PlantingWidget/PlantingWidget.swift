@@ -112,7 +112,7 @@ struct PlantingWidgetEntryView : View {
                         .frame(width: 15)
                 } else {
                     RoundedRectangle(cornerRadius: 2)
-                        .foregroundStyle(Color.Custom.widgetBackground)
+                        .foregroundStyle(.clear)
                         .frame(width: 15)
                 }
             }
