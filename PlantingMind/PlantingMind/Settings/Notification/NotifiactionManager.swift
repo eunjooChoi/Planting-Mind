@@ -11,6 +11,7 @@ import UserNotifications
 enum UserDefaultsKeys: String {
     case hour
     case minute
+    case firstLaunch
 }
 
 struct LocalNotification {
@@ -85,8 +86,7 @@ class NotificationManager: Notificable {
             var dateComponents = DateComponents()
             dateComponents.calendar = Calendar.current
             
-            let hour = self.hour
-            dateComponents.hour = self.hour == 0 ? 22 : hour
+            dateComponents.hour = self.hour
             dateComponents.minute = self.minute
             
             let content = UNMutableNotificationContent()
@@ -107,6 +107,4 @@ class NotificationManager: Notificable {
             }
         }
     }
-    
-    
 }
