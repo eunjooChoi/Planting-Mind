@@ -9,15 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var context
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         VStack {
             CalendarView(calendarViewModel: CalendarViewModel(today: Date(), context: context))
         }
         .padding([.horizontal, .top])
-        .onAppear {
-            UNUserNotificationCenter.current().setBadgeCount(0, withCompletionHandler: nil)
-        }
+        .onChange(of: scenePhase, perform: { newValue in
+            if newValue == .active {
+                UNUserNotificationCenter.current().setBadgeCount(0, withCompletionHandler: nil)
+            }
+        })
     }
 }
 

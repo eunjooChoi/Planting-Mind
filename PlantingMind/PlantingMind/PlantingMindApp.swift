@@ -15,9 +15,15 @@ struct PlantingMindApp: App {
     init() {
         FirebaseApp.configure()
         
+        if UserDefaults.standard.bool(forKey: UserDefaultsKeys.firstLaunch.rawValue) == false {
+            UserDefaults.standard.set(22, forKey: UserDefaultsKeys.hour.rawValue)
+            UserDefaults.standard.set(true, forKey: UserDefaultsKeys.firstLaunch.rawValue)
+        }
+        
         let notificationManager = NotificationManager()
         notificationManager.requestPermission()
         notificationManager.addNotification(date: nil)
+        UNUserNotificationCenter.current().setBadgeCount(0, withCompletionHandler: nil)
     }
     
     var body: some Scene {
