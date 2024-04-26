@@ -23,16 +23,12 @@ struct Provider: TimelineProvider {
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [MoodRecordEntry] = []
-        let currentDate = Calendar.current.nextDate(after: Date(), matching: DateComponents(minute: 0), matchingPolicy: .nextTime) ?? Date()
-        
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let data = self.fetchMoods()
-            entries = [MoodRecordEntry(date: entryDate, moods: data)]
-        }
-        
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let currentDate = Date()
+        let startOfDay = Calendar.current.startOfDay(for: currentDate)
+        let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
+        let data = self.fetchMoods()
+        let entry = MoodRecordEntry(date: startOfDay, moods: data)
+        let timeline = Timeline(entries: [entry], policy: .after(endOfDay))
         completion(timeline)
     }
     
@@ -78,11 +74,10 @@ struct PlantingWidgetEntryView : View {
     
     var body: some View {
         let day = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
-        let dayCount = Calendar.current.component(.weekday, from: Date())
+        let dayCount = Calendar.current.component(.weekday, from: entry.date)
         
         // 위젯에 기분이 표시되는 날은 오늘 날짜가 표시되는 칸까지
         let blockDisplayRange = brickCount - (weekday - dayCount)
-        
         
         let gridItem = GridItem(.flexible(maximum: 15), spacing: 2)
         
