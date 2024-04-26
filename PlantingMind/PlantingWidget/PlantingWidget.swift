@@ -24,7 +24,7 @@ struct Provider: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [MoodRecordEntry] = []
-        let currentDate = Date()
+        let currentDate = Calendar.current.nextDate(after: Date(), matching: DateComponents(minute: 0), matchingPolicy: .nextTime) ?? Date()
         
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
@@ -32,7 +32,7 @@ struct Provider: TimelineProvider {
             entries = [MoodRecordEntry(date: entryDate, moods: data)]
         }
         
-        let timeline = Timeline(entries: entries, policy: .never)
+        let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
     
