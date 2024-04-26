@@ -55,7 +55,7 @@ final class MoodRecordViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.reason, expectedReason)
     }
     
-    func test_수정_후_저장_확인() throws {
+    func test_100자로_수정_후_저장_확인() throws {
         let moodRecord = MoodRecord(context: coreDataStack.persistentContainer.viewContext)
         moodRecord.mood = Mood.nice.rawValue
         moodRecord.reason = "reason reason"
@@ -67,7 +67,7 @@ final class MoodRecordViewModelTests: XCTestCase {
         viewModel.save()
         
         let expectedMood = Mood.normal
-        let expectedReason = "Change Reason"
+        let expectedReason = "100자 테스트👍🫶🏻💫🙌🏼 100자 테스트👍🫶🏻💫🙌🏼 100자 테스트👍🫶🏻💫🙌🏼 100자 테스트👍🫶🏻💫🙌🏼 100자 테스트👍🫶🏻💫🙌🏼 100자 테스트👍🫶🏻💫🙌🏼 100자 테스트👍🫶🏻💫🙌🏼 abcrdgpeu"
         
         viewModel.mood = expectedMood
         viewModel.reason = expectedReason

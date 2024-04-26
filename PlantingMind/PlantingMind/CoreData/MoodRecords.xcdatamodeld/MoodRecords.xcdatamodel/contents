@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="MoodRecord" representedClassName="MoodRecord" syncable="YES">
         <attribute name="mood" attributeType="String" defaultValueString="normal"/>
-        <attribute name="reason" optional="YES" attributeType="String" minValueString="0" maxValueString="100"/>
+        <attribute name="reason" optional="YES" attributeType="String" minValueString="0" maxValueString="101"/>
         <attribute name="timestamp" attributeType="Date" defaultDateTimeInterval="725731200" usesScalarValueType="NO"/>
     </entity>
 </model>
