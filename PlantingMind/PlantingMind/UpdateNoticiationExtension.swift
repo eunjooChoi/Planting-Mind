@@ -9,4 +9,5 @@ import Foundation
 
 extension Notification.Name {
     static let fetchNotification = Notification.Name("fetch_notification")
+    static let activeNotification = Notification.Name("active_notification")
 }

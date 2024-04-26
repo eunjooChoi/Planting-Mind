@@ -28,6 +28,8 @@ class NotificationSettingViewModel: ObservableObject {
             self?.notificationManager.addNotification(date: newValue)
         }
         .store(in: &cancellables)
+        
+        self.bindActiveNotification()
     }
     
     func checkPermission() {
@@ -36,5 +38,15 @@ class NotificationSettingViewModel: ObservableObject {
                 .receive(on: DispatchQueue.main)
                 .assign(to: &self.$permission)
         }
+    }
+    
+    func bindActiveNotification() {
+        NotificationCenter.default.publisher(for: .activeNotification)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                self.checkPermission()
+            }
+            .store(in: &cancellables)
     }
 }
