@@ -43,6 +43,9 @@ struct MoodRecordView: View {
                         
                         if viewModel.reason.isEmpty {
                             emptyStringView
+                                .onTapGesture(perform: {
+                                    isFocused = true
+                                })
                         }
                         
                         limitStringView
