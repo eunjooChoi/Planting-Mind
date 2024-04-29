@@ -4,9 +4,12 @@
 
 ## Download
 
-[<img src = "https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg">]([https://apps.apple.com/app/emojicommit/id1575926400](https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%8C%EC%8B%AC%EA%B8%B0/id6499114351)) 
+[<img src = "https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg">](https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%8C%EC%8B%AC%EA%B8%B0/id6499114351)
 
 ## About
+
+<img width="660" alt="image" src="https://github.com/eunjooChoi/Planting-Mind/assets/22000470/ff5b9da0-007b-4273-a052-afcc889a4e22">
+
 
 그날의 기분을 잔디 심듯 심어보세요, 심어둔 기록은 위젯으로 확인할 수 있습니다.
 
